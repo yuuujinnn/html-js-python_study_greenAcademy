@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>함수</title>
+    <script>
+        // 카멜(낙타) 표기법 - 합성된 단어는 두번째부터 첫글자가 대문자임
+        // function 함수이름{}
+        // 함수 정의(생성) - 매개변수가 있는 함수
+        function sayHello(name){
+            document.write("Hello~" + name + "<br>");
+        }
+        
+        function getNum(num){
+            document.write("가져온 수 : " + num + "<br>");
+        }
+
+        // sayHello() 호출
+        sayHello("유진");
+        sayHello("Tom");
+        sayHello("Elsa");
+
+        // getNum() 호출
+        getNum(100);
+        getNum(123.56);
+        getNum(0.5466);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

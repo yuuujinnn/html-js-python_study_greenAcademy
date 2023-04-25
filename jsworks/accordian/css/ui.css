@@ -1,0 +1,16 @@
+/* 공통 스타일 */
+* {margin: 0; padding: 0;}
+ol, ul, li {list-style: none;}
+a {text-decoration: none; color: #919090;}
+
+
+/* content 영역 */
+#content {width: 1000px; margin: 30px auto;}
+#content h3 {padding: 20px;}
+.accordio_box ol li {border-top: 4px solid rgb(202, 81, 0);}
+.accordio_box ol li h4 {margin: 20px 30px; cursor: pointer;
+    background: url(../images/bullet_down.png) no-repeat right;}
+.accordio_box ol li.on h4 {background: url(../images/bullet_up.png) no-repeat right;}
+.accordio_box ol li h4 span {margin-right: 10px; font-weight: 900;}
+.accordio_box ol li p {visibility: hidden; line-height: 2;}
+.accordio_box ol li.on p {visibility: visible; background: #eee; padding: 30px 100px;}

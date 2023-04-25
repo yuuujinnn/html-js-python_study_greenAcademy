@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열의 사용</title>
+    <script>
+        // 배열의 크기 생성
+        // 1부터 10까지 자연수 저장
+        let arrNum = new Array(10);
+        console.log(arrNum.length);
+        console.log(arrNum);
+
+        //저장
+        for(let i=0; i<arrNum.length; i++){
+            arrNum[i] = i +1;
+        }
+        console.log(arrNum);
+        // 조회 1 열의크기
+        for(let i = 0; i<arrNum.length; i++){
+            document.write(arrNum[i]+" ");
+            document.write("<br>");
+        }
+
+
+        // 조회 2 (출력) 반복변수 in 배열이름
+        for(let i in arrNum){
+            document.write(arrNum[i]+ " ");
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,11 @@
+#container{width: 500px; margin: 30px auto;}
+fieldset{border: 1px solid #ccc; margin-bottom: 30px;}
+legend{font-size: 1.2em; font-weight: bold; margin-left: 10px;}
+ul li{list-style: none; margin: 20px;}
+/* 입력 상자(input) 정렬, width를 반드시 줘야함*/
+.field{width: 70px; float: left; text-align: right; 
+    margin-right: 10px;}
+.input-box{width: 250px; height: 30px; border: 1px solid #aaa;
+    border-radius: 5px;}
+.order{width: 100%; padding: 10px; font-size: 1em;
+    border: 1px solid #ccc;}

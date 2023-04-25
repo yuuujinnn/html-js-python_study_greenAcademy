@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display:flex 속성</title>
+    <style>
+        #wrap{
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+            display: flex;
+            /* 주축 : 가로, 순서:왼쪽에서 오른쪽  */
+            /* flex-direction: row; */
+            /* 주축 : 가로, 순서:오른쪽에서 왼쪽 */
+            /* flex-direction: row-reverse; */
+            /* 주축 : 세로, 순서:위쪽에서 아래쪽으로 */
+            /* flex-direction: column; */
+            /* 주축 : 세로, 순서:아래쪽에서 위쪽으로 */
+            flex-direction: column-reverse;
+        }
+        #wrap div{
+            flex: 1; /* 비율 100px 1:1:1 */
+            /*-ms-flex: 1;  /* IE 10 지원 */
+        }
+    </style>
+</head>
+<body>
+    <h1>flex 속성</h1>
+    <div id="wrap">
+        <div style="background: coral;">RED</div>
+        <div style="background: lightblue;">BLUE</div>
+        <div style="background: lightgreen;">Green Green Green Green</div>
+    </div>
+</body>
+</html>

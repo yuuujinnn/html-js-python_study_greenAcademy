@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DoM 노드 추가</title>
+</head>
+<body>
+    <div>
+        <h1>DOM 노드 추가하기</h1>
+        <a href="#" onclick="addP(); this.onclick='' ">더보기</a>
+        <div id="info"></div>
+    </div>
+
+    <script>
+        function addP(){
+            let newP = document.createElement("p"); //p태그 요소(노드) 생성
+            let text = document.createTextNode("안녕하세요~ 숨겨진 텍스트입니다."); //text 노드
+            //부모객체.appendChild(자식객체)
+            newP.appendChild(text);
+            
+            //<p>태그를 부모 <div>에 포함시킴
+            let div = document.getElementById("info")
+            div.appendChild(newP);
+            //document.getElementById("info").appendChild(newP);
+        }
+    </script>
+</body>
+</html>

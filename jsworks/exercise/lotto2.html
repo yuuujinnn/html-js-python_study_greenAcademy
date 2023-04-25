@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>행운의 추첨(Good Luck)</title>
+</head>
+<body>
+    <section>
+        <h1>행운의 추첨(Good Luck)</h1>
+    </section>
+
+    <script>
+        let name = ['이진성', '노승우', '박성호', '권지혜', '김은효', '이경철', '성의석', '이유진', '유성길', '한주훈', 
+             '강정현', '김현우', '이영준', '김민정', '유세현', '윤기은', '오화룡', '조은별', '이가은', '이준범'];
+        let people = new Array(5); 
+       
+        document.write("<p>이름 : ");
+        for(let i = 0; i < people.length; i++){
+            let num = Math.floor(Math.random() * name.length); //랜덤 번호
+            people[i] = num;      
+            console.log(people);
+
+            // 중복 제거
+            for(let j = 0; j < i; j++){
+                if(people[j] == people[i]){
+                    console.log("중복 번호 : " + people[i])
+                    i--;  //중복된 인덱스 삭제함
+                }
+            }
+        }
+
+        //출력
+        for(let i = 0; i < people.length; i++){
+            if(i == people.length-1){
+                document.write(name[people[i]] + "");
+            }
+            else{
+                document.write(name[people[i]] + ", ");
+            }
+        }
+        document.write("</p>");
+    </script>
+</body>
+</html>

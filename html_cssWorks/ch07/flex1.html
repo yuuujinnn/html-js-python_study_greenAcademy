@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>display:flex 속성</title>
+        <style>
+            /* display:flex 속성은 부모 박스에서 사용
+               자식 박스를 원하는 방식으로 배치할 수 있음 */
+            #wrap{
+                display: flex;
+            }
+            div.box{
+                width: 200px;
+                height: 100px;
+                background: #0f0;
+                margin: 10px;
+                /* display: inline-block; */
+                /* float: left; */
+            }
+        </style>
+    </head>
+    <body>
+        <div id="wrap">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </body>
+</html>

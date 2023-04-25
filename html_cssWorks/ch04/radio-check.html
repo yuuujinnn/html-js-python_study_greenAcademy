@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>라디오버튼, 체크 박스</title>
+    <style>
+        form{
+            width: 600px;
+        }
+        fieldset{
+            margin-bottom: 20px;
+        }
+        legend{
+            font-size: 15px;
+            font-weight: bold;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <fieldset>
+            <legend>신청 과목</legend>
+            <p>이 달에 신청할 과목을 선택하세요(1 과목만 가능)</p>
+            <!-- lable의 역할 : 글자를 눌러도 버튼 선택이 가능(작은 기기에 유리) 
+                 name의 속성의 값을 동일하게 해야함(이름이 다르면 여러개 선택가능)-->
+            <label><input type="radio" name="subject" value="speaking">회화</label>
+            <label><input type="radio" name="subject" value="grammer">문법</label>
+            <label><input type="radio" name="subject" value="writing">작문</label>
+        </fieldset>
+        <fieldset>
+            <legend>메일링</legend>
+            <p>메일로 받고 싶은 뉴스 주제를 선택해 주세요(복수 선택 가능)</p>
+            <label><input type="checkbox" name="mailing1" value="news">해외 단신</label>
+            <label><input type="checkbox" name="mailing2" value="dialog">5분 회화</label>
+            <label><input type="checkbox" name="mailing3" value="pops">pops</label>
+        </fieldset>
+    </form>
+</body>
+</html>

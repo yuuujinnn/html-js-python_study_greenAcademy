@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>location 객체</title>
+    <style>
+        #content{width: 600px; margin: 0 auto;}
+        .display{border: 1px solid #222; padding: 10px; margin-bottom: 10px;}
+    </style>
+</head>
+<body>
+    <section id="content">
+        <h2>location 객체</h2>
+        <div class="display">
+            <script>
+                //현재 파일(페이지) 위치 url 경로
+                document.write("<p><b>location.href :</b>" + location.href + "</p>");
+                //호스트 컴퓨터의 주소
+                document.write("<p><b>location.host :</b>" + location.host + "</p>");
+                //url의 프로토콜 - http
+                document.write("<p><b>location.protocol :</b>" + location.protocol + "</p>");
+            </script>
+        </div>
+        <button onclick="location.href='https://www.hrd.go.kr'">
+            고용노동부
+        </button>
+    </section>
+</body>
+</html>

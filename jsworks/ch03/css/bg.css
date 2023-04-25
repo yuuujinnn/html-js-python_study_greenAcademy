@@ -1,0 +1,31 @@
+.menu{
+    width: 400px;
+    margin: 10px 20px 10px 50px;
+}
+ul li{  
+    display: inline-block;
+    list-style-type: none;
+    border: 1px solid #ccc;
+    margin: 10px;
+    padding: 10px 20px;
+}
+ul li a{
+    text-decoration: none;
+    padding: 10px 20px;
+}
+.box{
+    width: 400px;
+    height: 300px;
+    border: 1px solid #ccc;
+    margin-left: 50px;
+}
+ul li:nth-child(1):hover{
+    color: white;
+    background-color: green;
+}
+ul li:nth-child(2):hover{
+    background-color: black;
+}
+ul li:nth-child(3):hover{
+    background-color: pink;
+}

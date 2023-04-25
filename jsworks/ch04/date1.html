@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date 객체</title>
+</head>
+<body>
+    <h2>Date 객체</h2>
+    <p>현재 날짜와 시간 표시</p>
+    <p id="demo"></p>
+
+    <p>특정한 날짜와 시간</p>
+    <p id="display"></p>
+
+    <script>
+        // 현재 날짜 생성(운영체제 시스템의 날짜와 시간)
+        const date = new Date();
+        // document.getElementById("demo").innerHTML = date.toLocaleString();  // 시간 + 날짜
+        // document.getElementById("demo").innerHTML = date.toLocaleDateString(); // 날짜만
+        document.getElementById("demo").innerHTML = date.toLocaleTimeString(); // 시간만
+        console.log(date.toLocaleString());
+
+        // 특정한 날짜
+        const date2 = new Date(2023, 3, 16, 09, 30, 12);
+        document.getElementById("display").innerHTML = date2.toLocaleString();
+
+        // 날짜
+        document.write("현재 년도 : " + date.getFullYear() + "<br>");  //2023 
+        document.write("현재 월 : " + (date.getMonth() + 1) + "<br>");  //3 
+        document.write("현재 일 : " + date.getDate() + "<br>");  // 31
+
+        // 시간
+        document.write("현재 시 : " + date.getHours() + "<br>");  // 18
+        document.write("현재 분 : " + date.getMinutes() + "<br>");  // 11
+        document.write("현재 초 : " + date.getSeconds() + "<br>");  // 10
+        
+        // 현재까지의 시간
+        document.write("현재 시 : " + date.getTime()/1000 + "<br>");
+    </script>
+</body>
+</html>

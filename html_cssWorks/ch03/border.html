@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>테두리 여백 이해하기</title>
+    <style>
+        *{margin: 0px;}
+        .wrap{
+            width: 1200px;
+            height: 1000px;
+            margin: 0px auto; /* 가운데 정렬*/
+            background-color: #eee;
+        }
+        div.box1{
+            width: 200px;
+            height: 100px;
+            border: solid #0000ff;
+            border-width: 2px;
+            margin: 0 auto;
+        }
+        div.box2{
+            width: 200px;
+            height: 100px;
+            border: solid #0000ff;
+            /* top right botton left*/
+            border-width: 2px 5px;
+            margin: 0 auto;
+        }
+        div.box3{
+            width: 200px;
+            height: 100px;
+            border: solid #0000ff;
+            /* top right botton left*/
+            border-width: 2px 5px 2px 5px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="box1"></div>
+        <div class="box2"></div>
+        <div class="box3"></div>
+    </div>
+</body>
+</html>

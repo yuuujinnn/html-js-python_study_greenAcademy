@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열(Array)</title>
+    <script>
+        // 배열을 생성
+        let 동물 = [];  //빈 배열 선언
+        
+        동물[0] = "강아지";
+        동물[1] = "고양이";
+        동물[2] = "소";
+
+        // 동물 = ['강아지', '고양이', '소'] 와 동일
+
+        // '소'를 '말'로 변경
+        동물[2] = "말"
+
+        // '고양이' 삭제
+        delete 동물[1];
+
+        // '돼지' 추가
+        동물[1] = "돼지"
+
+        console.log(동물);
+
+        // 전체 조회
+        for(var i=0; i<동물.length; i++){
+            console.log(동물[i]);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

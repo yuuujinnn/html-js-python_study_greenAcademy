@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>목록 관련 스타일</title>
+    <style>
+        h1{
+            color: rgb(206, 51, 24);
+        }
+        ul{
+            /* list-style: circle; */
+            /* 메뉴 만들때 주로 사용함 */
+            list-style: none;
+        }
+        ul li{
+            color: rgb(0, 0, 255);
+        }
+        /* class 선택자는 .(점)을 앞에 붙여줌 */
+        li.menu1{
+            color: rgb(144, 32, 196);
+        }
+        h2.say1{
+            /* 글자 간격(자간) */
+            letter-spacing: 5px;
+        }
+        h2.say2{
+            letter-spacing: 10px;
+        }
+        h2.say3{
+            letter-spacing: -2px;
+        }
+    </style>
+</head>
+<body>
+    <h1>ABC 주식회사</h1>
+    <ul>
+        <li class="menu1">회사 소개</li>
+        <li>제품 소개</li>
+        <li>회원 가입</li>
+        <li class="menu1">게 시 판</li>
+    </ul>
+    <hr>
+    <h2 class="say1">안녕하세요</h2>
+    <h2 class="say2">안녕하세요</h2>
+    <h2 class="say3">안녕하세요</h2>
+</body>
+</html>

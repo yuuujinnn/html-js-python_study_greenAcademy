@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열</title> 
+    <script>
+      //학생 5명의 국어, 수학 점수
+      //배열 및 변수 선언 및 초기화(저장)
+      var score = [
+        [80, 70],
+        [90, 60],
+        [70, 70],
+        [100, 90],
+        [83, 35]
+      ]
+      var korSum = 0;
+      var mathSum = 0;
+      var korAvg, mathAvg;
+  
+      // 과목별 점수 합계
+      for(var i = 0; i < score.length; i++){
+        korSum += score[i][0];
+        mathSum += score[i][1];
+      }
+  
+      // 과목별 점수 평균
+      korAvg = korSum / score.length;
+      mathAvg = mathSum / score.length;
+      console.log(korAvg);
+  
+      document.write("국어 점수 합계 : " + korSum + '<br>');
+      document.write("수학 점수 합계 : " + mathSum + '<br>');
+      document.write("국어 점수 평균 : " + korAvg + '<br>');
+      document.write("수학 점수 평균 : " + mathAvg + '<br>');
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

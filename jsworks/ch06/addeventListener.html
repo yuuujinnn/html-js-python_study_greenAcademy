@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>addEventListener() 함수</title>
+</head>
+<body>
+    <img src="./images/easys-1.jpg" alt="여자 아이" id="pic">
+
+    <script>
+        let pic = document.querySelector("#pic");
+
+        //마우스를 올리면 여자아이 -> 남자아이로 변경
+        //마우스를 내리면 남자아이 -> 여자아이
+        /*pic.onmouseover = changePic;
+        pic.onmouseout = originPic;*/
+
+        //이벤트 속성의 접두사인 on을 생략함
+        /*pic.addEventListener("mouseover", changePic);
+        pic.addEventListener("mouseout", originPic);
+
+        function changePic(){
+            pic.src = "./images/easys-2.jpg";
+        }
+
+        function originPic(){
+            pic.src = "./images/easys-1.jpg";
+        }*/
+
+        pic.addEventListener("mouseover", function(){
+            pic.src = "./images/easys-2.jpg";
+        });
+
+        pic.addEventListener("mouseout", function(){
+            pic.src = "./images/easys-1.jpg";
+        })
+    </script>
+</body>
+</html>

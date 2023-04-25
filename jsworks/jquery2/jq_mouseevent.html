@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스 이벤트</title>
+    <script src="./js/jquery-3.6.4.js"></script>
+    <style>
+        *{margin: 0; padding: 0;}
+        .pic{background: #ccc;}
+        .pic img{
+            /* top: 0, left: -200px */
+            transform: translateX(-200px);
+            transition: 0.5s ease-out;
+            vertical-align: top;
+        }
+        .pic img.on{
+            transform: translateX(0);
+        }
+        button{
+            width: 200px;
+            height: 50px;
+            background: #333;
+            color: #fff;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="pic">
+        <img src="./images/bear.jpg" alt="곰인형">
+    </div>
+    <button>hover 이벤트</button>
+
+    <script>
+        $(function(){
+            //버튼에 마우스를 올렸을때 이미지 보이고 마우스를 내렸을때 숨김
+            //체인식 방식으로 작성
+            $('button').mouseenter(function(){
+                $('.pic img').toggleClass('on');
+            }).mouseleave(function(){
+                $('.pic img').toggleClass('on');
+            });
+
+            //hover() 사용
+            //mouseenter()와 mouseleave()를 합친 함수
+            /*$('button').hover(function(){
+                $('.pic img').toggleClass('on');
+            });*/
+        })
+    </script>
+</body>
+</html>

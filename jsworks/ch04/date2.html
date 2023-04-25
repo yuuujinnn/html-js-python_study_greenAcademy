@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date 객체</title>
+</head>
+<body>
+    <script>
+        const date = new Date(); // 현재 날짜 및 시간
+        // document.write(date);
+        document.write(date.toLocaleString()+"<br>");
+        document.write(date.toLocaleDateString()+"<br>");
+        document.write(date.toLocaleTimeString()+"<br>");
+        
+        // 현재까지의 시간
+        document.write(date.getTime()/1000+"<br>"); // ms -> s(초 계산)
+        document.write(date.getTime()/(24*60*60*1000)+"<br>"); // 
+
+        // 특정한 날짜
+        const theDay = new Date("2022-11-11");
+        document.write(theDay.toLocaleDateString()+"<br>");
+        
+    </script>
+</body>
+</html>

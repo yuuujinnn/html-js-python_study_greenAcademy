@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열</title> 
+    <script>
+        //이차원 배열 - 2행 3열
+        let numbers = [
+          [1, 2, 3],
+          [4, 5, 6]
+        ]
+    
+        //조회 - 인덱싱
+        document.write(numbers[0][0] + '<br>');
+        document.write(numbers[0][1] + '<br>');
+        document.write(numbers[0][2] + '<br>');
+        document.write(numbers[1][0] + '<br>');
+        document.write(numbers[1][1] + '<br>');
+        document.write(numbers[1][2] + '<br>');
+    
+        //배열의 개수
+        document.write("배열의 개수(행) : " + numbers.length + '<br>');
+        document.write("배열의 개수(1열) : " + numbers[0].length + '<br>');
+        document.write("배열의 개수(2열) : " + numbers[1].length + '<br>');
+    
+        //전체 출력
+        for(let i = 0; i < numbers.length; i++){
+          for(let j = 0; j < numbers[i].length; j++){
+            document.write(numbers[i][j] + ' ');
+          }
+        }
+        
+        for(let i = 0; i < 3; i++){
+          console.log("numbers[0][" + i + "] = " + numbers[0][i] +
+                      ", numbers[1][" + i + "] = " + numbers[1][i]);
+        }
+      </script>
+</head>
+<body>
+    
+</body>
+</html>

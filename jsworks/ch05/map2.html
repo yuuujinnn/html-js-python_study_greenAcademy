@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map 함수</title> 
+</head>
+<body>
+    <h2>map() 함수</h2>
+
+    <p id="demo"></p>
+
+    <script>
+    const persons = [
+        {firstname : "Jobs", lastname: "Steve"},
+        {firstname : "그래", lastname: "장"},
+        {firstname : "Gates", lastname: "Bill"}
+    ];
+
+    document.getElementById("demo").innerHTML = persons.map(getFullName);
+
+    function getFullName(item) { //persons 각 요소를 item으로 할당
+        return [item.lastname, item.firstname].join(" ");
+    }
+    </script>
+</body>
+</html>

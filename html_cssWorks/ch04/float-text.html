@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트와 이미지 배치하기</title>
+    <style>
+        #container{
+            width: 800px;
+            margin: 0 auto;
+        }
+        img{
+            float: left;
+            margin-right: 10px;
+        }
+        p{
+            line-height: 2;
+            /* float: left; */
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <img src="./images/cat.jpg" alt="고양이">
+        <h2>왼쪽이나 오른쪽으로 배치하는 float 속성</h2>
+        <p>웹 문서를 만들다 보면 문단과 이미지를 나란히 표시해야 할 경우가 있다
+            p태그는 블록 레벨 요소이므로 이미지와 나란히 배치할 수 없다.
+            이럴때는 float 속성을 사용하여 이미지를 표시한다.
+        </p>
+    </div>
+</body>
+</html>

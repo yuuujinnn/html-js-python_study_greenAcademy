@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열</title> 
+</head>
+<body>
+    <h3>배열의 요소 추가, 삭제</h3>
+    <script>
+        var nums = [1, 2, 3];
+
+        //요소 추가 - push(1) : 맨 뒤에 추가됨
+        nums.push(4);
+
+        for(var item in nums){
+            document.write(nums[item] + ' ');
+        }
+        document.write('<br>');
+
+        //요소 삭제 - pop() : 맨 뒤(끝) 요소
+        nums.pop();
+
+        for(var i in nums){
+            document.write(nums[i] + ' ');
+        }
+        document.write('<br>');
+
+        //맨 앞에 추가 - unshift(1)
+        nums.unshift(0);
+
+        for(var item in nums){
+            document.write(nums[item] + ' ');
+        }
+        document.write('<br>');
+
+        //맨 앞 삭제 - shift()
+        nums.shift();
+        
+        // for(var item in nums){
+        //     document.write(nums[item] + ' ');
+        // }
+        document.write(nums + " ");
+        document.write(nums.toString() + " ");
+
+    </script>
+</body>
+</html>

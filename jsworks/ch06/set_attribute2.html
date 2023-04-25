@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>setAttribute() 사용</title>
+    <style>
+        #content{
+            width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .small{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <section id="content">
+        <h2>커피의 세계</h2>
+        <div>
+            <img src="./images/coffee-blue.jpg" alt="커피잔"
+                width="300" height="300" id="cup">
+        </div>
+        <div>
+            <img src="./images/coffee-blue.jpg" alt="커피잔" class="small">
+        </div>
+    </section>
+
+    <script>
+        let bigPic = document.querySelector("#cup");
+        let smallPic = document.querySelector(".small");
+
+        //클릭을 했을때 이미지 변경
+        smallPic.onclick = function(){
+            bigPic.setAttribute("src", "./images/coffee-gray.jpg");
+        }
+    </script>
+</body>
+</html>

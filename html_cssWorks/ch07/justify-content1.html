@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex의 justify-content</title>
+    <style>
+        .container{
+            border: 1px solid #000;
+            background: #eee;
+            display: flex;
+            /* 가로 축의 정렬 - 왼쪽정렬 */
+            /* justify-content: flex-start; */
+            /* 가로 축의 정렬 - 가운데정렬 */
+            /* justify-content: center; */
+            /* 가로 축의 정렬 - 오른쪽정렬 */
+            /* justify-content: flex-end; */
+            /* 주축에서 시작과 끝점에 배치한 후 동일한 간격으로 배치 */
+            justify-content: space-between;
+            /* 주축에 동일한 간경으로 배치 */
+            /* justify-content: space-around; */
+        }
+        .box{
+            width: 80px;
+            background: #000;
+            color: #fff;
+            text-align: center;
+            margin: 5px;
+            padding: 20px 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+        <div class="box">6</div>
+    </div>
+</body>
+</html>

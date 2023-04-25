@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/major.css">
+    <script src="js/major.js"></script>
+</head>
+<body>
+    <div id="container">
+        <h1>수강 신청</h1>
+        <form action="register.jsp" method="get" name="testForm">
+         <fieldset>
+            <legend>신청인</legend>
+            <ul>
+                <li>
+                    <label for="username" class="reg">이 름</label>
+                    <input type="text" id="username" name="username" autofocus>
+                </li>
+                <li>
+                    <label for="class" class="reg">학 과</label>
+                    <select name="major" id="major" onchange="displaySelect()">
+                       <!-- <option>----  ----</option> -->
+                       <option value="건축학과">건축학과</option>
+                       <option value="기계공학과">기계공학과</option>
+                       <option value="전자공학과">전자공학과</option>
+                       <option value="컴퓨터학과">컴퓨터학과</option>
+                       <option value="화학공학과">화학공학과</option>
+                    </select>
+                </li>
+            </ul>
+         </fieldset>
+         <fieldset>
+             <legend>신청 과목</legend>
+             <p>이 달에 신청할 과목을 선택하세요.</p>
+             <label><input type="radio" name="subject" value="speaking">5분 회화</label>
+             <label><input type="radio" name="subject" value="news">해외 단신</label>
+             <label><input type="radio" name="subject" value="pops">모닝팝스</label>
+         </fieldset>
+        </form>
+     </div>
+</body>
+</html>

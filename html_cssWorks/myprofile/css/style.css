@@ -1,0 +1,58 @@
+/* 태블릿 기준 - 780px 이상 */
+@media screen and (min-width: 780px) {
+    nav #topMenu li{display: inline-block; line-height: 300px;
+        margin: 0 30px;}
+    section{height: 400px;}
+    #intro, #skill, #portfolio{float: left; width: 100%;}
+}
+
+/* pc 기준 - 1200px 이상 */
+@media screen and (min-width: 1200px) {
+    #container{width: 1200px; margin: 0 auto;}
+    section{height: 350px; margin: 0;}
+    #intro, #skill, #portfolio{width: 100%;}
+}
+
+/* -------------------------------------------- 아래는 이전꺼 ---*/
+
+/* 전체 스타일
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@500&family=Nanum+Gothic+Coding&display=swap');
+
+ *{margin: 0; padding: 0; box-sizing: border-box;}
+#container{width: 100%; background-color: #dddfd1;}
+
+/* header 스타일 */
+#logo h1{text-align: center; line-height: 100px; float: left; margin-left: 30px;}
+nav{width: 100%; height: 100px; background: #9ba986;
+    /*position: fixed; -상단 메뉴 계속 떠있음*/}
+nav #topMenu{list-style: none;} 
+nav #topMenu li{display: inline-block; line-height: 50px;
+    margin: 0 20px; ;}
+nav #topMenu li a{text-decoration: none; color: white; 
+    font-size: 16px; font-weight: 500; ;}
+nav #topMenu li a:hover{color: rgb(21, 97, 65); font-weight: 700;}
+
+/* main 영역 스타일 */
+#logo h1 a{text-decoration: none; color: white;}
+h1 {color :#595c56}
+section {border: 1px solid #ccc; background-color: #f3f3ea;
+    height: 300px; margin: 10px 10px; padding: 15px 5%}
+section h2 {margin: 10px; color: #717a64;}
+
+
+
+/* 태블릿 기준 - 780px 이상 */
+@media screen and (min-width: 780px) {
+    nav #topMenu li{display: inline-block; line-height: 300px;
+        margin: 0 30px;}
+    section{height: 400px;}
+    #intro, #skill, #portfolio{float: left; width: 100%;}
+}
+
+/* pc 기준 - 1200px 이상 */
+@media screen and (min-width: 1200px) {
+    #container{width: 1200px; margin: 0 auto;}
+    section{height: 350px; margin: 0;}
+    #intro, #skill, #portfolio{width: 100%;}
+}
+*/

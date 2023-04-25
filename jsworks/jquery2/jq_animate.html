@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>애니메이션 효과</title>
+    <script src="./js/jquery-3.6.4.js"></script>
+    <style>
+        button{
+            margin: 10px;
+        }
+        .box{
+            width: 100px;
+            height: 100px;
+            background: #0f0;
+        }
+    </style>
+</head>
+<body>
+    <button type="button">Start</button>
+    <button type="button">Stop</button>
+    <button type="button">Delay</button>
+
+    <div class="box"></div>
+
+    <script>
+        $(document).ready(function(){
+            // Start - 인텍스가 0번에서 시작
+            $('button:eq(0)').click(function(){
+                // animate(객체, 시간, 속도)
+                $('.box').animate({height: 300}, 2000)
+                         .animate({width: 300}, 2000);
+            });
+
+            $('button:eq(1)').click(function(){
+                // stop() - 애니메이션 중지
+                $('.box').stop();
+            });
+            $('button:eq(2)').click(function(){
+                // delay(시간 - 밀리초)
+                $('.box').delay(2000).slideUp();
+            });
+        });
+
+    </script>
+</body>
+</html>

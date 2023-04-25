@@ -1,0 +1,18 @@
+h1{
+    color: #0000ff;
+}
+p{
+    /* text-align: left; */
+    /* text-align: center; */
+    /* text-align: right; */
+    /* 양쪽정렬 */
+    text-align: justify;
+    line-height: 2;
+}
+a{
+    text-decoration: none;
+}
+/* 마우스를 올렸을때 동작함 */
+a:hover{
+    text-decoration: underline;
+}

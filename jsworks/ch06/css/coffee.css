@@ -1,0 +1,21 @@
+#content{width: 600px; margin: 0 auto;}
+
+/* prodPic 스타일 */
+.smallPic{margin: 10px 5px;}
+.small{width: 60px; height: 60px;}
+#prodPic{float: left; margin: 20px 10px;}
+
+/* desc 스타일 */
+#desc{float: left; width: 300px; padding-top: 10px; 
+    margin-bottom: 50px;}
+hr{clear: both;}
+#desc ul li{list-style: none; line-height: 1.8;}
+#desc button{width: 80%; margin: 20px 5px; padding: 10px;}
+#desc a{text-decoration: none; color: blue; padding-left: 40px;}
+
+/* detail 스타일 */
+#detail{padding: 10px; display: none;}
+#detail li{font-size: 0.9em; line-height: 1.5;}
+#detail h2{font-size: 1.5em; color: #bebebe; font-weight: normal;}
+#detail h3{font-size: 1.1em; color: #222;}
+#detail p{font-size: 0.9em; line-height: 1.5; text-align: justify;}

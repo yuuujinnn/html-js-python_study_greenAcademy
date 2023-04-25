@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>인사말 반복하기</title>
+    <style>
+        section{
+            text-align: center;
+        }
+        h3{color: #00f;}
+    </style>
+</head>
+<body>
+    <section>
+        <h2>인사하기</h2>
+        <h3 id="demo"></h3>
+    </section>
+
+    <script>
+        //생일 축하해!!
+        let message = ["생일 축하해!!", "고맙습니다.", "오늘도 좋은 하루"];
+        let msgIdx = 0;
+
+        myGreeting(); //계속 호출
+
+        function myGreeting(){
+            document.getElementById("demo").innerHTML = message[msgIdx];
+            msgIdx = msgIdx + 1;
+            console.log(msgIdx);
+            if(msgIdx == message.length){
+                msgIdx = 0;
+            }
+            
+            //3초 후에 완료된후 계속 함수가 호출되어서 루프 진행됨
+            setTimeout(myGreeting, 3000); //콜백 함수
+        }
+        
+    </script>
+</body>
+</html>

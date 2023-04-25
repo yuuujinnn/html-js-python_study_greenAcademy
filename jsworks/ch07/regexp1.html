@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>정규 표현식 - RegExp 객체</title>
+</head>
+<body>
+    <h2>자바스크립트 정규 표현식</h2>
+
+    <p id="demo"></p>
+
+    <script>
+        //match(/정규 표현식/)  - 대소문자 구분(글자를 찾음)
+        //match(/정규 표현식/i) - 대소문자 구분하지 않음
+        let text = "Visit W3Schools";
+        let result = text.match(/w3Schools/i);
+
+        document.getElementById("demo").innerHTML = result;
+    </script>
+
+</body>
+</html>

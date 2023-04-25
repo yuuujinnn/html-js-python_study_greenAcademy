@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery - each() 함수 : 배열 관련</title>
+    <script src="./js/jquery-3.6.4.js"></script>
+    <script>
+        // 익명 실행함수
+        $(function(){
+            $('button').click(function(){
+                $('li').each(function(element){
+                    // console.log(element);
+                    let text = $(this).text();
+                    alert(text);
+                    console.log(text);
+                });
+
+                // 매개변수 1개 - 인덱싱
+                /* $("li").text(function(index, element){
+                    console.log(index, selement);
+                }) */
+            });
+        });
+    </script>
+</head>
+<body>
+    <button type="button">알림창 실행</button>
+
+    <ul>
+        <li>Coffee</li>
+        <li>Milk</li>
+        <li>Tea</li>
+    </ul>
+</body>
+</html>

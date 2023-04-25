@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자바스크립트</title>
+</head>
+<body>
+    <h1 onclick="chColor()" id="ch">자바스크립트</h1>
+    <p id="demo"></p>
+    <button onclick="sayHello('강아지')">로그인</button>
+    <script>
+         document.getElementById("demo").innerHTML = "그린컴터";
+
+        // 사용자 정의한 함수
+        // 이름이 있는 함수, 익명 함수(anonymous function)
+        // function sayHello(name){
+        let sayHello = function(name){
+            alert("Hello~ Js"+name);
+        }
+        // function chColor(){
+        //    let myH = document.getElementById("ch").style.color="blue";
+        //     myH.style.color ="#000fff";
+        //     myH.innerHTML = "HTML";
+        // }
+        let chColor = function(){
+            let myH = document.getElementById("ch").style.color="blue";
+            myH.style.color ="#000fff";
+            myH.innerHTML = "HTML";
+        }
+    </script>
+    </body>
+</html>

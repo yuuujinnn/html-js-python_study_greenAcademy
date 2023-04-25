@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>객체 정의</title> 
+    <script>
+        //person 객체 만들기
+        let person = {  //속성 : 값
+            name : "추신수", 
+            age : 40, 
+            isMerried : true,
+
+            play : function(){  //메서드 속성 : 함수
+                // person.name 인데 자기자신 일때 this를 사용
+                alert(this.name+"홈런을 칩니다.")
+            }
+        }
+
+        document.write("이름 : " + person.name + '<br>');
+        document.write("나이 : " + person.age + '<br>');
+        document.write("결혼유무 : " + person.isMerried + '<br>');
+        person.play();  //메서드 호출 (객체로 접근)
+    </script>
+</head>
+<body>
+  
+</body>
+</html>

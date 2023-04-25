@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date 내장 객체</title> 
+    <style>
+        #container{
+          width: 300px;
+          height: 300px;
+          margin: 50px auto;
+          border: 2px solid #222;
+          border-radius: 50%;
+          background-color: aliceblue;
+          text-align: center;
+          position: relative;
+        }
+        h2{position: absolute; left: 60px; top: 60px;}
+        p{position: absolute; left: 50px; top: 120px;;}
+        .accent{color:red; font-size: 1.5rem; font-weight: bold;}
+      </style>
+</head>
+<body>
+    <div id="container">
+        <h2>지금까지 몇 일?</h2>
+        <p>개강 이후 <span id="day" class="accent"></span>일 지났습니다.</p>
+      </div>
+    
+    <script>
+        let now = new Date();  //날짜 객체 생성
+        let firstDay = new Date("2023-3-16");
+
+        let passedTime = now.getTime() - firstDay.getTime();  //지난 시간 계산(밀리초)
+        console.log(passedTime + "ms");
+
+        passedTime = Math.round(passedTime/(24*60*60*1000)); 
+        //밀리초(ms) ->초(s)로 환산후 일(day)로 환산.. 24시간 60분 60초 1000밀리초
+
+        document.querySelector("#day").innerText = passedTime;
+        //document.getElementById("day").innerHTML = passedTime;
+    </script>
+</body>
+</html>

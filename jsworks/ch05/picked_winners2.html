@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>당첨자 발표</title>
+  <style>
+    section {
+      width: 800px;
+      margin: 0 auto;
+      text-align: center;
+    }
+
+    h1 {
+      background-color: #eee;
+      border: 1px solid #ccc;
+      display: inline-block;
+      padding: 10px 20px;
+    }
+
+    p {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <h1>당첨자 발표</h1>
+  </section>
+
+  <script>
+    let member = parseInt(prompt("전체 응모자 수 : "));   //응모자 수
+    let num = parseInt(prompt("당첨자 수 : "));
+    //let winner = new Array(5);   //당첨자 수를 5명으로 정한 배열
+
+    if (member == null || num == null
+      || isNaN(member) || isNaN(num)) {
+      document.write("<p>입력이 취소되었습니다.</p>");
+    }
+    else {
+      let winner = new Array(num); //당첨자 수에 따른 배열 선언
+      //발표
+      document.write("<p>전체 응모자 수 : " + member + "명</p>");
+      document.write("<p>당첨자 : ");
+
+      //랜덤 번호 추첨 - 5번
+      for (let i = 0; i < winner.length; i++) {
+        let pickedOne = Math.floor(Math.random() * member) + 1;
+        winner[i] = pickedOne;  //당첨 번호를 배열에 저장
+        for (let j = 0; j < i; j++) {
+          if (winner[j] == winner[i]) {
+            i--;       //이전 인덱스의 값과 일치하면 인덱스 1감소
+          }
+        }
+      }
+      /*
+        중복 불허 
+        winner = [5, 20, 11, 11, 16]
+        예)응모자가 20명인 경우
+        i=0, winner[0]=5,   j=0, false
+        i=1, winner[1]=20,  j=0, winner[0]=5, j=1, false
+        i=2, winner[2]=11,  j=0, winner[0]=5, j=1, winner[1]=20
+        i=3, winner[3]=11,  j=0, winner[0]=5, j=1, winner[1]=20, j=2, winner[2]=11(중복 발생)
+                            i를 1감소하여 다시 winner[3]을 추첨
+        i=3, winner[3]=7    j=0, winner[0]=5, j=1, winner[1]=20, j=2, winner[2]=11,
+        i=4, winner[4]=16   j=0, winner[0]=5, j=1, winner[1]=20, j=2, winner[2]=11, winner[3]=7
+      */
+
+      //랜덤 번호 출력
+      for (let i = 0; i < winner.length; i++) {
+        //document.write(winner[i] + "번, ");
+        if (i == winner.length - 1)
+          document.write(winner[i] + "번");
+        else
+          document.write(winner[i] + "번, ");
+      }
+      document.write("</p>");
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>당첨자 발표</title> 
+    <style>
+      section{
+        width: 800px;
+        margin: 0 auto;
+        text-align: center;
+      }
+      h1{
+        background-color: #eee;
+        border: 1px solid #ccc;
+        display: inline-block;
+        padding: 10px 20px;
+      }
+      p{text-align: center;}
+    </style>
+</head>
+<body>
+  <section>
+    <h1>당첨자 발표</h1>
+  </section>
+
+  <script>
+    let member = prompt("전체 응모자 수 : ");
+
+    //추첨
+    let pickedOne = Math.floor(Math.random() * member) + 1;
+
+    //발표
+    document.write("<p>전체 응모자 수 : " + member + "명</p>");
+    document.write("<p>당첨자 : ")
+    document.write(pickedOne + "번</p>");
+  </script>
+</body>
+</html>

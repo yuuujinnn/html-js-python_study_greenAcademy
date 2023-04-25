@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>체크 박스의 checked 속성</title>
+</head>
+<body>
+    Checkbox : <input type="checkbox" id="myCheck">
+
+    <button onclick="check()">Check Checkbox</button>
+    <button onclick="uncheck()">Uncheck Checkbox</button>
+
+    <script>
+        function check(){
+            //checked의 값은 true/false
+            // document.getElementById("myCheck").checked = true;
+            let check = document.getElementById("myCheck");
+            check.checked = true;
+        }
+
+        function uncheck(){
+            document.getElementById("myCheck").checked = false;
+        }
+    </script>
+</body>
+</html>

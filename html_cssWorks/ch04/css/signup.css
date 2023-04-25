@@ -1,0 +1,48 @@
+#container{
+    width: 1000px; margin: 0 auto;
+}
+h1{
+    text-align: center;
+}
+form{
+    width: 700px; margin: 0 auto;
+}
+fieldset{
+    margin-bottom: 20px;
+}
+ul li{
+    list-style: none;
+    margin: 20px;
+}
+/* input 필드 정렬 */
+#field1 label{
+    /* 크기가 없으면 적용 안됨 */
+    width: 110px;
+    float: left;
+}
+/* 텍스트 필드 스타일 */
+#field1 input{
+    width: 250px;
+    height: 30px;
+}
+#field2{
+    padding: 20px 40px;
+}
+/* 드롭다운 메뉴 스타일 */
+select{
+    width: 120px;
+    height: 30px;
+}
+/* 버튼 스타일 */
+#button{
+    width: 400px; margin: 20px auto;
+}
+#button input{
+    width: 150px; height: 50px;
+    font-size: 20px;
+    margin: 5px;
+}
+#button input:hover{
+    background: rgb(16, 90, 16); color: #fff;
+    border-color: #fff;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경 이미지 크기 조정</title>
+    <style>
+        div{
+            width: 400px;
+            height: 400px;
+            background: url(./images/wolf.png) no-repeat;
+            border: 1px solid #ccc;
+            margin-bottom: 10px;
+        }
+        .box1{
+            background-size: auto; /* 실제 이미지 크기 */
+        }
+        .box2{
+            background-size: 200px;
+        }
+        .box3{
+            background-size: 60%; /* 해당 요소의 너비 400px * 0.6 = 240px */
+            background-position: top right;
+        }
+        .box4{
+            /* contain : 이미지가 축소되어 비율대로 보여줌 */
+            background-size: contain;
+        }
+        .box5{
+            /* cover : 이미지가 박스의 크기 만큼 꽉 채워짐(나머지 부분은 잘림) */
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div> 
+    <div class="box2"></div>
+    <div class="box3"></div>
+    <div class="box4"></div>
+    <div class="box5"></div>
+</body>
+</html>

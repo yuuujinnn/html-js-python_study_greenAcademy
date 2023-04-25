@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scrollTop() 사용</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/jquery-3.6.4.js"></script>
+</head>
+<body>
+    <div id="wrap"></div>
+    <div id="up"><a href="#">TOP</a></div>
+
+    <script>
+        $(function(){
+            $(window).scroll(function(){
+                // $(this) 브라우저의 window 객체 y좌표(top)
+                console.log($(this).scrollTop());
+
+                if($(this).scrollTop() > 100){
+                    $("#up").addClass("on");
+                } else {
+                    $("#up").removeClass("on");
+                }
+            });  //scroll() 함수 닫기
+
+            // Top을 클릭했을때 y좌표를 0으로 설정
+            $('#up a').click(function(){
+                $(window).scrollTop(0);
+            });
+        })
+    </script>
+</body>
+</html>

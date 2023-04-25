@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>after 선택자 사용</title>
+    <style>
+        #container{
+            width: 700px;
+            margin: 0 auto;
+        }
+        nav {
+            border-bottom: 1px solid #000;
+        }
+        nav ol{
+            list-style: none;
+        }
+        nav ol li{
+            display: inline-block;
+        }
+        nav a{
+            text-decoration: none;
+        }
+        nav a::after{
+            content: '>';
+            color: #000;
+            padding: 0 5px;
+            font-size: 80%;
+            font-weight: bold;
+        }
+        section{
+            margin-left: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <nav>
+                <ol>
+                    <li><a href="#">모델</a></li>
+                    <li><a href="#">승용</a></li>
+                    <li>SONATA</li>
+                </ol>
+            </nav>
+        </header>
+        <section>
+            <h1>SONATA</h1>
+            <p>다시 한번 성장하다</p>
+            <p>SONATA 2021년형 출시</p>
+        </section>
+    </div>
+</body>
+</html>

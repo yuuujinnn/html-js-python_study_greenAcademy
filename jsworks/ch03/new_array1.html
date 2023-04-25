@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열 - Array객체를 이용한 배열</title>
+    <script>
+        let num = new Array(); //빈 배열 생성
+
+        // let num = new Array(1, 2, 3, 4);
+        // 배열 자료 추가(저장)
+        num[0] = 1;
+        num[1] = 2;
+        num[2] = 3;
+        num[3] = 4; 
+
+        // 자료 수정(1을 5로 변경)
+        num[1] = 5;
+
+        // 자료 삭제 - 3을 삭제(null)
+        delete num[2];
+
+        // 자료 추가
+        num[2] = 6
+        console.log(num);
+
+        // 전체 조회
+        console.log("개수: " + num.length);
+        for(var i=0; i<num.length; i++){
+            // console.log(num[i]);
+            document.write(num[i] + " ")
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

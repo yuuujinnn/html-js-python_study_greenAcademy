@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>이미지 숨기기/보이기</title>
+    <style>
+        img{
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <button type="button" onclick="show()">보이기</button>
+    <button onclick="hide()">숨기기</button>
+    <img src="./images/flower.jpg" alt="꽃" id="pic">
+
+    <script>
+        function show(){
+            document.getElementById("pic").style.display = "block";
+        }
+
+        function hide(){
+            document.getElementById("pic").style.display = "none";
+        }
+
+
+        
+    </script>
+</body>
+</html>

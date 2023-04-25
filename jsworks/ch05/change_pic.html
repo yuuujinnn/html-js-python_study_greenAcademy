@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>클릭해서 이미지 바꾸기</title>
+</head>
+<body>
+    <img src="./images/cup-1.png" alt="컵" onclick="changePic()" id="pic">
+
+    <script>
+        // 객체.src = "파일의 위치(경로)"
+        let pic = document.getElementById("pic");
+
+        function changePic(){
+            // pic.src = "./images/cup-2.png";
+
+            setTimeout(function(){
+                pic.src = "./images/cup-2.png";
+            }, 1000);  //1초 후에 완료
+        }
+
+    </script>
+</body>
+</html>

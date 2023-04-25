@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Date 내장 객체</title> 
+</head>
+<body>
+    <h2>Date 객체</h2>
+
+    <p>현재 날짜와 시간 표시</p>
+    <p id="demo"></p>
+
+    <p>특정한 날짜와 시간</p>
+    <p id="demo2"></p>
+
+    <script>
+        let date = new Date();  //현재 날짜
+
+        document.getElementById("demo").innerHTML = date;  //날짜, 시간
+        document.getElementById("demo").innerHTML = date.toLocaleString() //한국 날짜와 시간
+        // document.getElementById("demo").innerHTML = date.toLocaleDateString(); //날짜
+        // document.getElementById("demo").innerHTML = date.toLocaleTimeString(); //시간   
+    
+        date = new Date("2021-12-26");  //특정한 날짜
+
+        //document.getElementById("demo2").innerHTML = date;  //날짜, 시간
+        document.getElementById("demo2").innerHTML = date.toLocaleString() //한국 날짜와 시간
+    
+        document.write("<br>======= 날짜 ========<br>") 
+        document.write("현재 년도 : " + date.getFullYear() + '<br>');
+        document.write("현재 월 : " + (date.getMonth() + 1) + '<br>');
+        document.write("현재 일 : " + date.getDate() + '<br>');
+        document.write("현재 요일 : " + date.getDay() + '<br>');
+
+        document.write("<br>======= 시간 ========<br>") 
+        document.write("현재 시: " + date.getHours() + '<br>');
+        document.write("현재 분: " + date.getMinutes() + '<br>');
+        document.write("현재 초: " + date.getSeconds() + '<br>');
+        document.write("현재까지 시간 : " + date.getTime()/1000 + '초<br>');
+    </script>
+</body>
+</html>

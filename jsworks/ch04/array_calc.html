@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열</title> 
+    <script>
+        let num = new Array();  //num 이름의 인스턴스 생성
+        
+        //저장
+        num[0] = 11;
+        num[1] = 24;
+        num[2] = 30;
+        num[3] = 40;
+
+        //배열의 연산
+        console.log(num[0] + num[1]);   //산술
+        console.log(num[0] > num[1]);   //비교
+        console.log(num[0] !== num[1]);   //비교 - 같지않다
+
+        //합계와 평균
+        let sum = 0;
+        let avg;
+
+        for(let i = 0; i < num.length; i++){
+            sum += num[i];   //누적 합계
+        }
+        avg = sum / num.length;   //평균 = 합계 / 개수
+
+        console.log("sum = " + sum);
+        console.log("avg = " + avg);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

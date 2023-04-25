@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clearInterval() 함수</title>
+</head>
+<body>
+    <h2>디지털 시계</h2>
+    <p id="display"></p>
+    <button onclick="myStop()">중지</button>
+    
+    <script>
+        // window() 객체 - 브라우저 실행되면 작동
+        let timer = setInterval(setWatch, 1000);
+
+        function setWatch(){
+            const date = new Date();
+            let now = date.toLocaleTimeString();
+            document.getElementById("display").innerHTML = now;
+        }
+        function myStop(){
+            clearInterval(timer);  // 시계 작동 중지
+        }
+    </script>
+</body>
+</html>

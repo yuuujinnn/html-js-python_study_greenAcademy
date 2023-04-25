@@ -1,0 +1,25 @@
+.wrap{
+    width: 600px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    padding: 10px;
+    
+}
+h1{
+    border-bottom: 3px solid #000;
+    padding-bottom: 5px;
+}
+p{
+    border: 2px dotted #00f;
+    padding: 10px;
+}
+.bg{
+    width: 500px;
+    height: 500px;
+    /* 반지름의 길이 - 10px */
+    border-radius: 10px;
+    /* 상위 폴더의 위치 : ../, 같은 위치 폴더 ./ */
+    background: url("../images/wolf.png") no-repeat;
+    background-size: cover;
+    margin: 0 auto;
+}

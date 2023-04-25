@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>구구단</title>
+    <script>
+        /*
+            2x1=2
+            2x2=4
+            2x3=6
+            2x4=8
+            ...
+            2x9=18
+        */
+       let dan = parseInt(prompt("단을 입력하세요. ", "1"));
+       let result = "";
+
+       for(var i=1; i<10; i++){
+        // result = result + dan + " x " + i + " = " + (dan * i) + "<br>"
+        // result += dan + " x " + i + " = " + (dan * i) + "<br>"
+        let current_value = dan + " x " + i + " = " + (dan * i) + "<br>"
+        result += current_value // 누적값 = 누적값 + 현재값
+       }
+       document.write(result)
+       
+       /* for(var i = 1; i < 10; i++){
+            document.write(dan + " x " + i + " = " + (dan * i) + "<br>")
+       } */
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

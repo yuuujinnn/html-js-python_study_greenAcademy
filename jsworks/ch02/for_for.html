@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>중첩 for문</title>
+    <script>
+        // 5행 5열 테이블 - "가" 출력
+        for(var i=0; i<5; i++){
+            for(var j=0; j<5; j++){
+                document.write("가");
+            }
+            document.write("<br>")
+        }
+
+        /*
+            i=0, j=0 가 
+                 j=1 가
+                 j=2 가
+                 j=3 가
+                 j=4 가
+
+            i=1, j=0 가 
+                 j=1 가
+                 j=2 가
+                 j=3 가
+                 j=4 가 
+             ...
+        */
+
+
+
+        for(var i=0; i<5; i++){
+            for(var j=0; j<=i; j++){
+                document.write("*");
+            }
+            document.write("<br>")
+        }  
+
+        /*
+        i=0, j=0            *
+        i=1, j=0,1          **
+        i=2, j=0,1,2        ***
+        i=3, j=0,1,2,3      ****
+        i=4, j=0,1,2,3,4    *****
+        */
+
+
+
+        for(var i=0; i<5; i++){
+            for(var j=0; j<5-i; j++){
+                document.write("*");
+            }
+            document.write("<br>")
+        }  
+
+        /*
+        i=0, j=5,4,3,2,1     *****
+        i=1, j=5,4,3,2       ****
+        i=2, j=5,4,3         ***
+        i=3, j=5,4           **
+        i=4, j=3             *
+        */
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
