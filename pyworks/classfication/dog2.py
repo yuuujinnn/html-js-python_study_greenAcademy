@@ -1,5 +1,7 @@
 # Dog 클래스
 class Dog:
+    # tricks = []   # 클래스 리스트
+
     def __init__(self, name):
         self.name = name
         self.tricks = [] # 인스턴스 리스트

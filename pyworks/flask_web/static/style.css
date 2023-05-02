@@ -1,0 +1,7 @@
+/* 공통 스타일 */
+#container{width: 90%; margin: 0 auto; text-align: center}
+h1{color: #00f;}
+ul li{list-style: none;}
+
+/* even_odd 스타일 */
+#even_odd .error{color : red; font-weight : bold;}

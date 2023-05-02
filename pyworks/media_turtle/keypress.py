@@ -22,7 +22,7 @@ def clear():
     t.clear()   # 화면 지우기
 
 t.shape('turtle')
-t.color('red')
+t.color('navy')
 # 함수 호출 시 괄호가 없음 - 주의!, Right - 첫 글자 대문자(상수)
 t.onkeypress(turn_right, "Right")
 t.onkeypress(turn_up, "Up")

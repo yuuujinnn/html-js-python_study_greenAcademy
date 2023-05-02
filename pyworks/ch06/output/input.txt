@@ -1,0 +1,7 @@
+python
+java
+html
+css
+javascript
+바나나
+감

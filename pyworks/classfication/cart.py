@@ -1,7 +1,7 @@
 # Cart 클래스 정의
 # 클래스 리스트
 class Cart:
-    li = []
+    li = []  # 클래스 리스트
 
     def add_cart(self, goods):  # 제품 추가
         Cart.li.append(goods)
@@ -17,7 +17,6 @@ print(Cart.li)
 cart3 = Cart()
 cart3.add_cart("콩나물")
 print(Cart.li)
-
 
 # for문 출력
 for i in Cart.li:

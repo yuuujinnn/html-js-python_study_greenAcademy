@@ -4,10 +4,49 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a8311f52-35f0-458c-a03a-6d588a4d4d47" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ch06/typing_game.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/media_turtle/turtle_run2.py" afterDir="false" />
+    <list default="true" id="69811672-8e82-436b-b03f-d8e3cdd6d96a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/ch07/tryexcept1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch07/tryexcept2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/ch07/tryexcept3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classfication/customer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classfication/employee.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/classfication/goldcustomer.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_web/templates/calc_result.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/flask_web/templates/even_odd.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/member/templates/login.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyui/control-tool.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyui/control-tool2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyui/converter1.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyui/converter2.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pyui/converter3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06/f99.py" beforeDir="false" afterPath="$PROJECT_DIR$/ch06/f99.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06/fread1.py" beforeDir="false" afterPath="$PROJECT_DIR$/ch06/fread1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06/fread2.py" beforeDir="false" afterPath="$PROJECT_DIR$/ch06/fread2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06/fword.py" beforeDir="false" afterPath="$PROJECT_DIR$/ch06/fword.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06/fwrite1.py" beforeDir="false" afterPath="$PROJECT_DIR$/ch06/fwrite1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06/fwrite2.py" beforeDir="false" afterPath="$PROJECT_DIR$/ch06/fwrite2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06/method1.py" beforeDir="false" afterPath="$PROJECT_DIR$/ch06/method1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06/os1.py" beforeDir="false" afterPath="$PROJECT_DIR$/ch06/os1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06/param_var.py" beforeDir="false" afterPath="$PROJECT_DIR$/ch06/param_var.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06/sys1.py" beforeDir="false" afterPath="$PROJECT_DIR$/ch06/sys1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06/typing_game.py" beforeDir="false" afterPath="$PROJECT_DIR$/ch06/typing_game.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ch06/use_method.py" beforeDir="false" afterPath="$PROJECT_DIR$/ch06/use_method.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classfication/airplane.py" beforeDir="false" afterPath="$PROJECT_DIR$/classfication/airplane.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classfication/cart.py" beforeDir="false" afterPath="$PROJECT_DIR$/classfication/cart.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classfication/city.py" beforeDir="false" afterPath="$PROJECT_DIR$/classfication/city.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classfication/counter.py" beforeDir="false" afterPath="$PROJECT_DIR$/classfication/counter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classfication/dog.py" beforeDir="false" afterPath="$PROJECT_DIR$/classfication/dog.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classfication/dog2.py" beforeDir="false" afterPath="$PROJECT_DIR$/classfication/dog2.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classfication/extend/converters.py" beforeDir="false" afterPath="$PROJECT_DIR$/classfication/extend/converters.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classfication/person.py" beforeDir="false" afterPath="$PROJECT_DIR$/classfication/person.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/classfication/scale_converter.py" beforeDir="false" afterPath="$PROJECT_DIR$/classfication/scale_converter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media_turtle/cannon.py" beforeDir="false" afterPath="$PROJECT_DIR$/media_turtle/cannon.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media_turtle/keypress.py" beforeDir="false" afterPath="$PROJECT_DIR$/media_turtle/keypress.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media_turtle/move.py" beforeDir="false" afterPath="$PROJECT_DIR$/media_turtle/move.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media_turtle/turtle_run1.py" beforeDir="false" afterPath="$PROJECT_DIR$/media_turtle/turtle_run1.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media_turtle/turtle_run2.py" beforeDir="false" afterPath="$PROJECT_DIR$/media_turtle/turtle_run2.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +56,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="HTML File" />
         <option value="Python Script" />
       </list>
     </option>
@@ -24,23 +64,37 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
-  <component name="ProjectId" id="2OuDRFEs5bbmrpqJNo97JdouqW3" />
-  <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
-  </component>
+  <component name="ProjectId" id="2Og57PQ62lHlH3XxJIzkxK6nssP" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
-    "settings.editor.selected.configurable": "editor.preferences.fonts.default"
+    "last_opened_file_path": "C:/green_project/pyworks/member/templates",
+    "settings.editor.selected.configurable": "com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable"
   }
 }]]></component>
-  <component name="RunManager" selected="Python.turtle_run2">
-    <configuration name="fword" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\green_project\pyworks\member\templates" />
+      <recent name="C:\green_project\pyworks\pyui" />
+      <recent name="C:\green_project\pyworks\flask_web\templates" />
+      <recent name="C:\green_project\pyworks\ch06" />
+      <recent name="C:\green_project\pyworks\flask_web\static" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\green_project\pyworks\member\templates" />
+      <recent name="C:\green_project\pyworks\classfication\extend" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Python.start_app">
+    <configuration name="converter1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pyworks" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -48,11 +102,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ch06" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pyui" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ch06/fword.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyui/converter1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -61,7 +115,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="move" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="converter2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pyworks" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -69,11 +123,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/media_turtle" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pyui" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/media_turtle/move.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyui/converter2.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -82,7 +136,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="turtle_run1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="converter3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pyworks" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -90,11 +144,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/media_turtle" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/pyui" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/media_turtle/turtle_run1.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/pyui/converter3.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -103,7 +157,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="turtle_run2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="sql_connect" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pyworks" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -111,11 +165,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/media_turtle" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/member" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/media_turtle/turtle_run2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/member/sql_connect.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -124,7 +178,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="typing_game" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="start_app" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pyworks" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -132,11 +186,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ch06" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/member" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ch06/typing_game.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/member/start_app.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -147,23 +201,39 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.turtle_run2" />
-        <item itemvalue="Python.turtle_run1" />
-        <item itemvalue="Python.move" />
-        <item itemvalue="Python.typing_game" />
-        <item itemvalue="Python.fword" />
+        <item itemvalue="Python.start_app" />
+        <item itemvalue="Python.sql_connect" />
+        <item itemvalue="Python.converter3" />
+        <item itemvalue="Python.converter2" />
+        <item itemvalue="Python.converter1" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="a8311f52-35f0-458c-a03a-6d588a4d4d47" name="Changes" comment="" />
-      <created>1682401562972</created>
+      <changelist id="69811672-8e82-436b-b03f-d8e3cdd6d96a" name="Changes" comment="" />
+      <created>1681969216677</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1682401562972</updated>
+      <updated>1681969216677</updated>
     </task>
     <servers />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/pyui/entry1.py</url>
+          <line>10</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/pyui/dictionary1.py</url>
+          <line>15</line>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

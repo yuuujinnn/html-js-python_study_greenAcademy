@@ -1,0 +1,38 @@
+<header>
+    <div id="logo">
+        <a href="{{ url_for('index') }}"><h1>Gangnam</h1></a>
+    </div>
+    <nav>
+        <ul id="topMenu">
+            {% if session %}
+            <li><a href="">회원</a>
+                <ul>
+                    <li><a href="{{ url_for('register') }}">회원 가입</a></li>
+                    <li><a href="{{ url_for('memberlist') }}">회원 목록</a></li>
+                </ul>
+            </li>
+            <li><a href="">게시판</a>
+                <ul>
+                    <li><a href="">글 목록</a></li>
+                    <li><a href="">글 쓰기</a></li>
+                </ul>
+            </li>
+            <li><a href="{{ url_for('logout') }}">로그아웃</a></li>
+            {% else %}
+            <li><a href="">회원</a>
+                <ul>
+                    <li><a href="{{ url_for('register') }}">회원 가입</a></li>
+                    <li><a href="{{ url_for('memberlist') }}">회원 목록</a></li>
+                </ul>
+            </li>
+            <li><a href="">게시판</a>
+                <ul>
+                    <li><a href="">글 목록</a></li>
+                    <li><a href="">글 쓰기</a></li>
+                </ul>
+            </li>
+            <li><a href="{{ url_for('login') }}">로그인</a></li>
+            {% endif %}
+        </ul>
+    </nav>
+</header>

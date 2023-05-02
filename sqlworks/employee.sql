@@ -16,10 +16,10 @@ CREATE TABLE employee(
 -- 1. 사원이 소속된 부서를 삭제할때 '자식 레코드가 있다'는 오류발생
 -- 2. 부서번호가 없는 사원 자료를 추가할 때 '부모키가 없다'는 오류발생
 
-INSERT INTO employee VALUES (100, '이강', 2500000, SYSDATE, '남자', '1000');
+INSERT INTO employee VALUES (100, '이강', 2500000, SYSDATE, '남자', '1001');
 INSERT INTO employee VALUES (101, '이산', 2000000, SYSDATE, '여자', '1001');
 INSERT INTO employee VALUES (102, '박달', 1500000, SYSDATE, '남자', '1002');
-INSERT INTO employee VALUES (103, '강하늘', 3500000, SYSDATE, '', '1003');
+INSERT INTO employee VALUES (103, '강하늘', 3500000, SYSDATE,  '', '1003');
 INSERT INTO employee VALUES (104, '양우주', 4500000, SYSDATE, '여자', '1000');
 INSERT INTO employee VALUES (105, '강남', 2600000, SYSDATE, '여자', '1000');
 INSERT INTO employee VALUES (106, '이해', 2500000, SYSDATE, '여자', '1000');
@@ -67,4 +67,4 @@ HAVING AVG(sal) >= 3000000
 ORDER BY AVG(sal) DESC;     -- 정렬이 5번(ORDER BY)
 
 
-
+DROP TABLE employee;

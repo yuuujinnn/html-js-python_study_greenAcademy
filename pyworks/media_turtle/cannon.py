@@ -20,7 +20,7 @@ def fire():
         t.right(5)
 
         d = t.distance(target, 0)   # 거북이와 목표 지점과의 거리
-        t.write(d)
+        # t.write(d)
         t.sety(random.randint(10, 100))     # y 좌표 - 성공 또는 실패를 표시할 위치
         if d < 25:  # 명중 - 목표 지점에 닿음
             t.color('blue')

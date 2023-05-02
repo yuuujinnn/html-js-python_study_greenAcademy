@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>회원 목록입니다.</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div id="container">
+        <!--세션이 없는 경우(로그인안된 상태) 로그인 페이지로 이동 시킴-->
+        {% if not session %}
+            <script>
+                alert("로그인을 해주세요")
+                location.href = "http://127.0.0.1:5000/login"
+            </script>
+        {% endif %}
+        {% include 'header.html' %}
+        <section id="memberlist">
+            <h2>회원 목록</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>아이디</th>
+                        <th>비밀번호</th>
+                        <th>이름</th>
+                        <th>성별</th>
+                        <th>가입일</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for i in rs %}
+                    <tr>
+                        <td>{{ i[0] }}</td>
+                        <td>{{ i[1] }}</td>
+                        <td>{{ i[2] }}</td>
+                        <td>{{ i[3] }}</td>
+                        <td>{{ i[4] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+<!--            {{ rs }}<br>-->
+<!--            {% for i in rs %}-->
+<!--                {{ i }}<br>-->
+<!--            {% endfor %}-->
+        </section>
+        {% include 'footer.html' %}
+    </div>
+</body>
+</html>

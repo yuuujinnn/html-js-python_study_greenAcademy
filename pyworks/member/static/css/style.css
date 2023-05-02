@@ -1,0 +1,70 @@
+/* common 스타일*/
+*{margin: 0; padding: 0;}
+#container{width: 90%; margin: 0 auto;}
+a{text-decoration: none;}
+ul li{list-style: none;}
+h2{text-align: center;}
+
+/* navbar 스타일 */
+header{width: 100%; height: 100px; background: #0077cc;}
+#logo{float: left; width: 30%; line-height: 100px;}
+#logo h1{color: #fff; padding-left: 30px}
+nav{float: right; width: 70%; padding-top: 40px;}
+/* 주메뉴 */
+#topMenu{height: 60px;}
+#topMenu > li{float: left; position: relative;}
+#topMenu > li > a{display: block; padding: 20px 50px;
+    color: #fff;}
+#topMenu > li > a:hover{color: #444;}
+
+/* 부메뉴 */
+#topMenu > li > ul{position: absolute; display: none;
+    width: 140px; background: rgba(246, 248, 213, 0.6);
+    text-align: center;}
+#topMenu > li:hover > ul{display: block;}
+#topMenu > li > ul > li{padding: 10px 30px;}
+#topMenu > li > ul > li> a{font-size: 14px;
+    padding: 5px; color: #000;}
+#topMenu > li > ul > li > a:hover{color: red;}
+
+/* main 스타일 */
+#main{clear: both; margin: 80px auto;}
+#main .img1{margin: 20px auto; text-align: center;}
+#main .img1 img{border-radius: 5px;}
+
+/* footer 스타일 */
+footer{height: 80px; border-top: 2px solid #222;}
+#bottomMenu{margin: 10px 10px 10px 40px;}
+#bottomMenu li{display:inline-block; margin: 10px 0; padding: 0 10px;
+                border-right: 1px solid #ccc;}
+                #bottomMenu li a{color: #444;}
+#bottomMenu li:last-child{border:none;}
+
+/* memberlist 스타일 */
+#memberlist{margin: 40px auto;}
+#memberlist table{width:700px; margin: 30px auto;}
+#memberlist table, th, td{border: 1px solid #ccc;
+                        border-collapse: collapse; text-align:center;}
+#memberlist table, th, td{padding:10px 0;}
+#memberlist table thead{background:#eee;}
+
+/* register 스타일 */
+#register {width: 500px; margin: 40px auto;}
+#register form {margin: 40px auto;}
+#register form ul li {margin: 30px 30px 30px 40px;}
+#register form label {width: 120px; float: left; padding-left: 30px;}
+#register form input[type='text'], input[type='password'] {width: 200px; height: 25px}
+#register form li label.radio {width: 40px; padding-left: 0}
+#register form li.button {clear: both; padding-top: 30px; margin-left: 150px;}
+#register form input[type='submit'], input[type='reset'] {width: 80px; height: 30px}
+
+/* login 스타일 */
+#login {width: 500px; margin: 40px auto;}
+#login form {margin: 40px auto;}
+#login form ul li {margin: 30px 70px;}
+#login form label {width: 100px; float: left}
+#login form input[type='text'], input[type='password'] {width: 200px; height: 30px}
+#login form input[type='submit'] {width: 100px; height: 30px;}
+#login form ul li:nth-of-type(3) {margin-left: 200px}
+#login form p.error {text-align: center; color: #f00; font-weight: bold;
+    padding-top: 15px}
