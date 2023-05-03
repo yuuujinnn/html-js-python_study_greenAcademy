@@ -48,6 +48,7 @@ def register():
         cursor = conn.cursor()
         sql = f"INSERT INTO member(memberid, passwd, name, gender) " \
               f"VALUES ('{id}', '{pw}', '{name}', '{gender}');"
+        session['userid'] = request.form['memberid']
         cursor.execute(sql)  # 검색 수행
         conn.commit()  # 커밋 완료
         conn.close()

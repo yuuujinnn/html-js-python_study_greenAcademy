@@ -5,6 +5,7 @@
     <title>강남 커뮤니티입니다.</title>
     <link rel="stylesheet"
           href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/main-js.js') }}"></script>
 </head>
 <body>
     <div id="container">
@@ -14,6 +15,8 @@
             <div class="img1">
                 <img src="{{ url_for('static', filename='images/gangnam.jpg')}}">
             </div>
+            <!--시계 위치-->
+            <p id="demo"></p>
         </section>
         {% include 'footer.html' %}
     </div>
