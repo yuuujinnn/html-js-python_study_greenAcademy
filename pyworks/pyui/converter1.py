@@ -14,8 +14,7 @@ class App:
 
 root = Tk()
 root.title("온도 변환기")
-root.geometry("250x50")
+root.geometry("200x50")
 app = App(root)
-
 
 root.mainloop()
