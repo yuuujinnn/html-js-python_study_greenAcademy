@@ -1,15 +1,18 @@
 
 SELECT * FROM board ORDER BY bno DESC;
 
--- ï¿½Û¼ï¿½ï¿½Ú°ï¿½ 'admin'ï¿½ï¿½ ï¿½Ô½Ã±ï¿½
-SELECT * FROM board
+-- ÀÛ¼ºÀÚ°¡ 'admin'ÀÎ °Ô½Ã±Û
+SELECT * FROM board 
 WHERE writer = 'admin';
 
--- ï¿½Îµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+-- ÀÎµ¦½º »ý¼º
 CREATE INDEX idx_admin ON board(writer);
 
--- ï¿½Îµï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½
+CREATE INDEX idx_title ON board(title);
+
+-- ÀÎµ¦½º »èÁ¦
 DROP INDEX idx_admin;
 
--- ì‹¤í–‰ ê³„íš ë³´ëŠ” ì½”ë“œ
+-- ½ÇÇà °èÈ¹ º¸´Â ÄÚµå
 SELECT * FROM TABLE(DBMS_XPLAN.DISPLAY_CURSOR(null, null, 'ALLSTATS LAST'));
+

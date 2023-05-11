@@ -2,15 +2,15 @@
 # 객체화를 위해 코드로 정의한 것 - 클래스
 
 class Student:
-    # 멤버 변수
-    name = ""   # 자료형 문자
-    grade = 0   # 자료형 숫자
+    #멤버 변수
+    name = ""  # 자료형 문자
+    grade = 0  # 자료형 숫자
 
-    def info(self):   # self를 붙여야 함
+    def info(self):  # self를 붙여야 함
         print(self.name, self.grade)
 
 
-std1 = Student()    # 객체 생성(인스턴스)
+std1 = Student()  # 객체 생성(인스턴스)
 std1.name = '김하나'
 std1.grade = 1
 #print(std1.name, std1.grade)

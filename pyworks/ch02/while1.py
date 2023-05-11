@@ -3,7 +3,7 @@
 # i++는 사용할 수 없음
 """
 i = 1
-while i < 10:
+while i <= 10:
     print('hello~', i)
     i += 1
 """
@@ -20,28 +20,45 @@ while i < 10:
 print(f'합계 : {sum_v}')
 """
 
-#반복 조건문(break)
+# 반복 조건문(break)
 """
 i = 0
 sum_v = 0
 while True:
     i += 1
     if i > 10:
-        break
+       break 
     sum_v += i
     print(f'i={i}, sum_v={sum_v}')
     
 print(f'합계 : {sum_v}')
 """
 
-#무한 반복 - break문
+# 'y'를 입력하면 '반복 계속', 'n'을 입력 '반복중단' 그외 '정상 답변이 아님'
 while True:
-    answer = input('반복을 계속 할까요?(y/n)')
-
+    answer = input("반복을 계속 할까요?(y/n)")
     if answer == 'y' or answer == 'Y':
-        print('반복을 계속 합니다.')
+        print("반복을 계속합니다.")
     elif answer == 'n' or answer == 'N':
-        print('반복을 중단합니다.')
-    else :
-        print('정상 답변이 아닙니다.')
+        print("반복을 중단합니다.")
         break
+    else:
+        print("정상 답변이 아닙니다.")
+
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+

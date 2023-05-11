@@ -1,56 +1,54 @@
 -- Mytest
 CREATE TABLE Mytest(
-    class   VARCHAR2(1),
+    class   VARCHAR2(1), 
     name    VARCHAR2(6)
 );
 
-INSERT INTO Mytest VALUES ('A', 'ì¡°ì¡°');
-INSERT INTO Mytest VALUES ('A', 'ì¡°ì¡°');
-INSERT INTO Mytest VALUES ('A', 'ì¡°ì¡°');
-INSERT INTO Mytest VALUES ('B', 'ìœ ë¹„');
-INSERT INTO Mytest VALUES ('B', 'ê´€ìš°');
-INSERT INTO Mytest VALUES ('C', 'ì—¬í¬');
-INSERT INTO Mytest VALUES ('C', 'ì—¬í¬');
+INSERT INTO Mytest VALUES ('A', 'Á¶Á¶');
+INSERT INTO Mytest VALUES ('A', 'Á¶Á¶');
+INSERT INTO Mytest VALUES ('A', 'Á¶Á¶');
+INSERT INTO Mytest VALUES ('B', 'À¯ºñ');
+INSERT INTO Mytest VALUES ('B', '°ü¿ì');
+INSERT INTO Mytest VALUES ('C', '¿©Æ÷');
+INSERT INTO Mytest VALUES ('C', '¿©Æ÷');
 
--- ê²€ìƒ‰
 SELECT * FROM Mytest;
 
-
--- ë°˜ë³„, í•™ìƒë³„ í•™ìƒìˆ˜ë¥¼ êµ¬í•˜ì‹œì˜¤
-SELECT class, COUNT(NAME) í•™ìƒìˆ˜
+-- ¹Ýº°, ÇÐ»ýº° ÇÐ»ý¼ö¸¦ ±¸ÇÏ½Ã¿À
+SELECT class, COUNT(NAME) RESULT1
 FROM Mytest
 GROUP BY class;
 
--- ì´ë¦„ - ì¤‘ë³µ ì œê±°
+-- ÀÌ¸§ - Áßº¹ Á¦°Å
 SELECT class, COUNT(DISTINCT NAME) RESULT2
 FROM Mytest
 GROUP BY class;
 
+/*
+CASE 
+  WHEN Á¶°Ç 1 THEN °ª1
+  WHEN Á¶°Ç 2 THEN °ª2
+  ELSE °ª 3
+END
+*/
 
--- CASE WHEN
-/* 
-CASE
-    WHEN ì¡°ê±´ 1 THEN ê°’ 1
-    WHEN ì¡°ê±´ 2 THEN ê°’ 2
-    ELSE ê°’ 3
-    END
-*/ 
-
-SELECT
+SELECT 
     COUNT(CASE WHEN class = 'A' THEN 1
-        END) AS A,
+          END) AS A,
     COUNT(CASE WHEN class = 'B' THEN 1
-        END) AS B,
+          END) AS B,
     COUNT(CASE WHEN class = 'C' THEN 1
-        END) AS C
-FROM Mytest;
+          END) AS C        
+FROM MYtest;
+
+-- DECODE(Ä®·³, Á¶°Ç, ÂüÀÎ°ª, °ÅÁþÀÎ°ª)
+SELECT 
+    COUNT(DECODE(class, 'A', 1)) AS A, 
+    COUNT(DECODE(class, 'B', 1)) AS B, 
+    COUNT(DECODE(class, 'C', 1)) AS C 
+FROM MYtest;
 
 
--- DECODE(ì¹¼ëŸ¼, ì¡°ê±´, ì°¸ì¸ê°’, ê±°ì§“ì¸ê°’)
-SELECT
-    COUNT(DECODE(class, 'A', 1)) AS A,
-    COUNT(DECODE(class, 'B', 1)) AS B,
-    COUNT(DECODE(class, 'C', 1)) AS C
-FROM Mytest;
+
 
 

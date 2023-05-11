@@ -1,38 +1,41 @@
--- bookmall ê´€ë ¨
-select * from book;
-select * from customer;
-select * from orders;
+-- bookmall °ü·Ã Å×ÀÌºí
+SELECT * FROM book;
+SELECT * FROM customer;
+SELECT * FROM orders;
 
--- ê³ ê°ì´ ì£¼ë¬¸í•œ ë„ì„œì˜ ì´ íŒë§¤ì•¡ êµ¬í•˜ê¸°
+-- °í°´ÀÌ ÁÖ¹®ÇÑ µµ¼­ÀÇ ÃÑ ÆÇ¸Å¾× ±¸ÇÏ±â
+SELECT SUM(saleprice) ÃÑÆÇ¸Å¾× 
+FROM orders;
 
-select sum(salprice) ì´íŒë§¤ì•¡ 
-from orders;
+-- °í°´º°, µµ¼­º° ÃÑÆÇ¸Å¾× °è»ê
+SELECT custid,
+       bookid,
+       SUM(saleprice) ÃÑÆÇ¸Å¾× 
+FROM orders
+GROUP BY custid, bookid;
 
-select custid,
-        bookid,
-    sum(salprice) ì´íŒë§¤ì•¡
-    from orders
-    group by custid, bookid;
-    
--- ê³ ê°ë³„ ì´íŒë§¤ì•¡ ê³„ì‚°, ì†Œê³„, ì´ê³„ êµ¬í•˜ê¸°
--- rollup(), cube()
-select custid,
-        bookid,
-    sum(salprice)ì´íŒë§¤ì•¡
-    from orders
-    group by rollup(custid,bookid)
-    order by custid;
--- cube()    
-select custid,
-        bookid,
-    sum(salprice)ì´íŒë§¤ì•¡
-    from orders
-    group by cube(custid,bookid)
-    order by custid,bookid;
--- grouping sets    
-select custid,
-        bookid,
-    sum(salprice)ì´íŒë§¤ì•¡
-    from orders
-    group by grouping sets(custid,bookid)
-    order by custid,bookid;    
+-- °í°´º° ÃÑÆÇ¸Å¾× °è»ê, ¼Ò°è, ÃÑ°è ±¸ÇÏ±â
+-- ROLLUP() : ºÎ¼­º° ¼Ò°è, ÃÑ°è
+SELECT custid, bookid,
+       SUM(saleprice) ÃÑÆÇ¸Å¾× 
+FROM orders
+GROUP BY ROLLUP(custid, bookid)
+ORDER BY custid;
+
+-- CUBE() : ºÎ¼­º°, µµ¼­º° ¼Ò°è ¹× ÃÑ°è
+SELECT custid, bookid,
+       SUM(saleprice) ÃÑÆÇ¸Å¾× 
+FROM orders
+GROUP BY CUBE(custid, bookid)
+ORDER BY custid;
+
+-- GROUPING SETS() : °í°´º°, µµ¼­º° ¼Ò°è
+SELECT custid, bookid,
+       SUM(saleprice) ÃÑÆÇ¸Å¾× 
+FROM orders
+GROUP BY GROUPING SETS(custid, bookid)
+ORDER BY custid, bookid;
+
+
+
+

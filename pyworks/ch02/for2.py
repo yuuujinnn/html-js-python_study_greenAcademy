@@ -1,13 +1,11 @@
 # for ~ in
-languages = ['python', 'C', 'Java', 'Javascript']
+languages = ['Python', 'C', 'Java', 'Javascript']
 
 for lang in languages:
     if lang in ['Python', 'Javascript']:
-        print(f'{lang} need interpreter') #인터프리터
-    else: 
-        print(f'{lang} need compiler') #컴파일러
-
-
+        print(f'{lang} need interpreter')  #인터프리터
+    else:
+        print(f'{lang} need complier')  #컴파일러
 
 # 구구단 출력
 dan = 4
@@ -19,8 +17,7 @@ for i in range(1, 10):
 print(result)
 
 
-
 """
 for i in range(1, 10):
-    print(f'{dan} X {i} = {dan * i}\n')
+    print(f'{dan} x {i} = {dan * i}')
 """

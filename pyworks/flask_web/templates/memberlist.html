@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>회원 목록</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>회원 목록</h1>
+        </header>
+        <section id="list">
+           <table>
+               <thead>
+                  <tr>
+                      <th>아이디</th><th>비밀번호</th><th>이름</th><th>성별</th>
+                  </tr>
+               </thead>
+               <tbody>
+                   <tr>
+                       <td>{{ mid }}</td>
+                       <td>{{ pwd }}</td>
+                       <td>{{ name }}</td>
+                       <td>{{ gender }}</td>
+                   </tr>
+               </tbody>
+           </table>
+        </section>
+    </div>
+</body>
+</html>

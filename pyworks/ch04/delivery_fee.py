@@ -12,10 +12,9 @@ else:
 
 print(price)
 """
-
-def get_price(unit_price, num):     # 매개변수 - 가격, 수량
+def get_price(unit_price, num):  # 매개변수 - 가격, 수량
     delivery_fee = 2500 # 배송비
-    price = unit_price * num        # 주문 가격 = 단위 가격 x 수량
+    price = unit_price * num  # 주문가격 = 단위가격 x 수량
     if price < 20000:
         price += delivery_fee
         return price
@@ -26,3 +25,5 @@ order1 = get_price(15000, 2)
 order2 = get_price(5000, 3)
 print(f'주문1 가격은 {order1}원 입니다.')
 print(f'주문2 가격은 {order2}원 입니다.')
+
+

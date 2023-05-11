@@ -1,44 +1,50 @@
 -- function
--- null ê°’ ì²˜ë¦¬í•˜ê¸°
-create table k1(
-    id varchar2(3),
-    cnt number(2)
+-- NULL °ª Ã³¸®ÇÏ±â
+
+SELECT * 
+FROM customer
+WHERE phone IS NULL;
+
+-- NVL(Ä®·³°ª, Æ¯Á¤°ª) : Ä®·³ÀÌ¸§ NULLÀÎ °æ¿ì´Â Æ¯Á¤°ªÀ» Ãâ·Â, NULLÀÌ ¾Æ´Ï¸é Ä®·³°ª Ãâ·Â
+SELECT custid, name, address, NVL(phone, '010-1234-5678') phone
+FROM customer;
+
+CREATE TABLE K1(
+    ID  VARCHAR2(3),
+    CNT NUMBER(2)
 );
 
-select * from customer
-where phone is not null;
+INSERT INTO K1 VALUES('°¡', 5);
+INSERT INTO K1 VALUES('³ª', NULL);
+INSERT INTO K1 VALUES('´Ù', 5);
+INSERT INTO K1 VALUES('¶ó', NULL);
+INSERT INTO K1 VALUES('¸¶', 10);
 
--- nal (ì¹¼ëŸ¼ì´ë¦„, ê°’) : ì¹¼ëŸ¼ì´ë¦„ nullì¸ ê²½ìš°ëŠ” íŠ¹ì • ê°’ìœ¼ë¡œ ì¶œë ¥
-select custid, name, address, nvl(phone, '010-1234-5678') ì „í™”ë²ˆí˜¸
-from customer;
+SELECT * FROM K1;
 
-insert into k1 values ('ê°€',5);
-insert into k1 values ('ë‚˜',null);
-insert into k1 values ('ë‹¤',5);
-insert into k1 values ('ë¼',null);
-insert into k1 values ('ë§ˆ',10);
+-- ÀüÃ¼ °³¼ö, ÇÕ°è, Æò±Õ, ÃÖ¼Ò°ª
+SELECT COUNT(CNT) FROM K1;  --3°³
+-- NULLÀ» 0À¸·Î ¹Ù²Ş
+SELECT COUNT(NVL(CNT, 0)) COUNT FROM K1; --5
 
-select * from k1;
+SELECT SUM(NVL(CNT, 0))/4 SUM FROM K1;   --5
 
-commit;
+SELECT AVG(NVL(CNT, 0)) AVERAGE FROM K1; --4
+-- NULLÀ» 5·Î º¯°æ
+SELECT MIN(NVL(CNT, 5)) AVERAGE FROM K1; --5
 
--- ì „ì²´ ê°¯ìˆ˜, í•©ê³„, í‰ê· , ìµœì†Œê°’
-select count(cnt)from k1; -- 3ê°œ
--- nullì„ 0ìœ¼ë¡œ ë°”ê¿ˆ
-select count(nvl(cnt,0)) count from k1; -- 5ê°œ
+COMMIT;
 
-select sum(nvl(cnt,0))/4 sum from k1; -- 5ê°œ
+--RANK() ÇÔ¼ö
+SELECT ename,
+       sal,
+       RANK() OVER(ORDER BY sal DESC) ±Ş¿©_RANK,
+       DENSE_RANK() OVER(ORDER BY sal DESC) ±Ş¿©_DENSE_RANK
+FROM employee;
 
-select avg(nvl(cnt,0))avg from k1; -- 4ê°œ
--- nullì„ 5ë¡œ ë³€ê²½
-select min(nvl(cnt,5)) min from k1; -- 5ê°œ
 
--- rank() í•¨ìˆ˜
-select ename,
-        sal,
-        rank() over(order by sal desc) ê¸‰ì—¬_rank,
-        dense_rank() over(order by sal desc) ê¸‰ì—¬_desnse_rank
-from employee;
+
+
 
 
 

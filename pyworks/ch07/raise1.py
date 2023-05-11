@@ -3,9 +3,9 @@
 # 클래스와 상속
 class Animal:
     def breathe(self):
-        print("동물이 숨울 쉰다")
+        print("동물이 숨을 쉰다")
 
-    # 반드시 구현해야 되는 메서드
+    # 반드시 구현해야되는 메서드
     def cry(self):
         raise NotImplementedError
 
@@ -22,6 +22,7 @@ class Cat(Animal):
 
 dog = Dog()
 dog.breathe()
+dog.sleep()
 dog.cry()
 
 cat = Cat()

@@ -3,7 +3,7 @@
 class Cart:
     li = []  # 클래스 리스트
 
-    def add_cart(self, goods):  # 제품 추가
+    def add_cart(self, goods): # 제품 추가
         Cart.li.append(goods)
 
 cart1 = Cart()

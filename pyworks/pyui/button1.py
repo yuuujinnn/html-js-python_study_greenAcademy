@@ -1,22 +1,22 @@
 # 버튼 이벤트
 # 버튼을 클릭하면 문자열이 출력되는 윈도우
-# root -> 프레임(frame) pack() -> 버튼(Button) 생성
+# root -> 프레임(Frame) pack() -> 버튼(Button) 생성 grid()
 
 from tkinter import *
 
 def click():
     demo_lbl.config(text='안녕! 파이썬!')
-    # print("Hello~ Python!!")- 콘솔에 출력
+    #print("Hello~ Python!!") - 콘솔에 출력
 
-root = Tk()     # root 객체 생성
+root = Tk()  # root 객체 생성
 root.title('버튼 클릭')
 root.geometry('300x200')
 # 전체 폰트 설정
 root.option_add("*Font", "맑은고딕 15")
 frame = Frame(root)
-frame.pack()    # 가운데 정렬
+frame.pack()  # 가운데 정렬
 
-Label(frame, text="").grid(row=0, column=0) # 라벨(레이블-출력)
+Label(frame, text="").grid(row=0, column=0)  #라벨(레이블 - 출력)
 lbl = Label(frame)
 lbl.config(text="Hello python!!")
 lbl.grid(row=1, column=0)

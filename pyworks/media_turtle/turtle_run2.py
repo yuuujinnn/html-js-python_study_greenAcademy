@@ -1,5 +1,25 @@
-import turtle as t
 import random
+import turtle as t
+
+playing = False  # 게임 실행 상태 변수
+score = 0        # 점수
+
+# 악당 거북이(빨간색)
+te = t.Turtle()
+te.shape("turtle")
+te.shapesize(1.5)
+te.color("red")
+te.speed(0)
+te.up()
+te.goto(0, 200)
+
+# 먹이(초록색 동그라미)
+tf = t.Turtle()
+tf.shape("circle")
+tf.color("green")
+tf.speed(0)
+tf.up()
+tf.goto(0, -200)
 
 def turn_right():
     t.setheading(0)
@@ -13,90 +33,68 @@ def turn_left():
 def turn_down():
     t.setheading(270)
 
-def start():    # 게임을 시작하는 함수
-    global playing  # playing을 전역변수로 설정
+def start():
+    global playing
     if playing == False:
         playing = True
-        t.clear()   # 메시지를 지움
+        t.clear()
         play()
 
 def play():
-    global score
     global playing
-    # 적 거북이가 주인공 거북이 쪽 보며 쫓아가기
+    global score
+
+    if playing:  # playing == True
+        t.ontimer(play, 100)  # 0.1초 간격으로 계속 play
+
     t.forward(10)
-    if random.randint(1, 5) == 3: # 3을 뽑을 확률은 20%
+
+    if random.randint(1, 5) == 3:
         ang = te.towards(t.pos())
         te.setheading(ang)
-
     speed = score + 5
+
     if speed > 15:
         speed = 15
-    te.forward(speed)   # 적 거북이의 속도(거리)
+    te.forward(speed) # 적 거북이 속도
 
-    # 주인공 거북이가 적 거북이에 닿으면 게임 종료
-    if t.distance(te) < 12:
+    if t.distance(te) < 12:  # 적 거북이에 닿으면 게임 종료
         text = "Score : " + str(score)
         message("Game Over", text)
         playing = False
         score = 0
 
-    # 주인공 거북이가 먹이에 닿으면 점수가 올라감
-    if t.distance(tf) < 12:
+    if t.distance(tf) < 12:  # 주인공과 먹이의 거리가 12보다 작으면(가까우면)
         score = score + 1
-        t.write(score)  # 점수 출력
+        t.write(score)
         start_x = random.randint(-230, 230)
         start_y = random.randint(-230, 230)
         tf.goto(start_x, start_y)
 
-    # 게임 실행(0.1초 콜백)
-    if playing:
-        t.ontimer(play, 100)
-
-def message(m1, m2):    # 메시지를 화면에 표시하는 함수
+def message(m1, m2):
     t.clear()
     t.goto(0, 100)
-    t.write(m1, False, "center", ("", 20))
+    t.write(m1, False, "center", ("", 20))  # 글꼴 크기 20
     t.goto(0, -100)
-    t.write(m2, False, "center", ("", 15))
-    t.home()
+    t.write(m2, False, "center", ("", 15))  # 글꼴 크기 15
+    t.home()  # 주인공 거북이의 처음 위치(0, 0)
 
-# 주인공 거북이
+t.title("Turtle Run")
 t.setup(500, 500)
-t.bgcolor('skyblue')
+t.bgcolor('orange')
 t.shape('turtle')
+t.shapesize(1.5)
+t.color('white')    # 주인공 거북이(흰색)
 t.speed(0)
 t.up()
-t.color('white')
 
-# 점수와 게임 스위치 변수
-score = 0
-playing = False
-
-# 적 거북이
-te = t.Turtle()
-te.shape('turtle')
-te.color('red')
-te.speed(0)
-te.up()
-te.goto(0, 200)
-
-# 먹이
-tf = t.Turtle()
-tf.shape('circle')
-tf.color('green')
-tf.speed(0)
-tf.up()
-tf.goto(0, -200)
-
-# 키 조종
 t.onkeypress(turn_right, "Right")
 t.onkeypress(turn_up, "Up")
 t.onkeypress(turn_left, "Left")
 t.onkeypress(turn_down, "Down")
-t.onkeypress(start, 'space')
+t.onkeypress(start, "space")
 t.listen()
 message("Turtle Run", "[Space]")
 
-t.mainloop()
 
+t.mainloop()

@@ -3,7 +3,7 @@
 # bin 확장자 파일 생성
 with open("./output/data.bin", 'wb') as f:
     text = "바람이 분다."
-    f.write(text.encode())  # encode() - 0과 1로 코드화함
+    f.write(text.encode())  #encode() - 0과 1로 코드화함
 
 # data.bin 읽기
 with open("./output/data.bin", 'rb') as f:

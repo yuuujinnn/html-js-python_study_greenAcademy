@@ -1,119 +1,128 @@
--- ì¡°ì¸ê³¼ ì„œë¸Œì¿¼ë¦¬
+-- Á¶ÀÎ(Join)°ú ¼­ºêÄõ¸®(Subquery)
 
-select * from customer;
-select * from book;
-select * from orders;
+SELECT * FROM customer;
+SELECT * FROM book;
+SELECT * FROM orders;
 
+-- °í°´°ú °í°´ÀÇ ÁÖ¹®¿¡ °üÇÑ µ¥ÀÌÅÍ¸¦ ¸ğµÎ °Ë»öÇÏ½Ã¿À
+SELECT cus.custid, cus.name, ord.saleprice, ord.orderdate 
+FROM customer cus, orders ord
+WHERE cus.custid = ord.custid
+--AND cus.name = '±è¿¬¾Æ';    -- ±è¿¬¾Æ °í°´ÀÇ ÁÖ¹®³»¿ª
+--AND saleprice >= 20000;    -- ÆÇ¸Å°¡°İÀÌ 20000¿ø ÀÌ»óÀÎ ÁÖ¹® ³»¿ª
+AND orderdate >= '2018-7-8';  -- ÁÖ¹®ÀÏÀÌ 2018-7-8 ÁÖ¹® ³»¿ª
 
--- ê³ ê°ê³¼ ê³ ê°ì˜ ì£¼ë¬¸ì— ê´€í•œ ë°ì´í„°ë¥¼ ëª¨ë‘ ê²€ìƒ‰í•˜ì‹œì˜¤
-select cus.custid, cus.name, ord.salprice, ord.orderdate 
-    from customer cus, orders ord
-    where cus.custid = ord.custid
-    -- and cus.name ='ë°•ì§€ì„±'; -- ê¹€ì—°ì•„ ê³ ê°ì˜ ì£¼ë¬¸ë‚´ì—­
-   -- and salprice >= 20000;  -- íŒë§¤ê°€ê²©ì´ 20000ì› ì´ìƒì¸ ì£¼ë¬¸ë‚´ì—­
-   and orderdate = '2018-7-8'; -- ì£¼ë¬¸ì¼ì´ 2018-7-8ì¸ ì£¼ë¬¸ ë‚´ì—­
-   
--- ê³ ê° ì´ë¦„ë³„ë¡œ ì£¼ë¬¸í•œ ëª¨ë“  ë„ì„œì˜ ì´ íŒë§¤ì•¡ì„ êµ¬í•˜ì‹œì˜¤
-select cus.name, sum(salprice)íŒë§¤ê¸ˆì•¡,
-    rank() over(order by sum(salprice)desc)ìˆœìœ„
-    from customer cus, orders ord
-    where cus.custid = ord.custid
-    group by cus.name;
+-- °í°´(ÀÌ¸§)º°·Î ÁÖ¹®ÇÑ ¸ğµç µµ¼­ÀÇ ÃÑ ÆÇ¸Å¾×À» ±¸ÇÏ½Ã¿À
+SELECT cus.name, SUM(saleprice) ÆÇ¸Å±İ¾×,
+       RANK() OVER(ORDER BY SUM(saleprice) DESC) ¼øÀ§
+FROM customer cus, orders ord
+WHERE cus.custid = ord.custid
+GROUP BY cus.name;
+
+-- °í°´ÀÇ ÀÌ¸§°ú °í°´ÀÌ ÁÖ¹®ÇÑ µµ¼­ÀÇ ÀÌ¸§À» °Ë»öÇÏ½Ã¿À
+SELECT cus.name, boo.bookname, ord.saleprice, ord.orderdate 
+FROM customer cus, orders ord, book boo
+WHERE cus.custid = ord.custid
+    AND boo.bookid = ord.bookid
+    ORDER BY cus.name;  -- Á¤·ÄÀ» ÇÏ¸é ±×·ìÈ­µµ µÊ
     
--- ê³ ê°ì˜ ì´ë¦„ê³¼ ê³ ê°ì´ ì£¼ë¬¸í•œ ë„ì„œì˜ ì´ë¦„ì„ ê²€ìƒ‰í•˜ì‹œì˜¤
-select cus.custid, cus.name, ord.salprice, ord.orderdate 
-    from customer cus, orders ord, book boo
-    where cus.custid = ord.custid
-    and boo.bookid = ord.bookid
-    order by cus.name; -- ì •ë ¬ì„ í•˜ë©´ ê·¸ë£¹í™”ë„ ê°€ëŠ¥
+-- °¡Àå ºñ½Ñ µµ¼­ÀÇ ÀÌ¸§À» °Ë»öÇÏ½Ã¿À
+--SELECT bookname, MAX(price) FROM book; --¿À·ù ¹ß»ı
+SELECT MAX(price) FROM book; --35000
 
--- ê°€ì¥ ë¹„ì‹¼ ë„ì„œì˜ ì´ë¦„ì„ ê²€ìƒ‰í•˜ì‹œì˜¤
-select max(sal) from book; -- 35000
+SELECT bookname FROM book  -- °ñÇÁ¹ÙÀÌºí
+WHERE price = 35000;  
 
-select bookname from book -- ê³¨í”„ ë°”ì´ë¸”
-where sal = 35000;
-
--- ì¤‘ì²©ì¿¼ë¦¬
-select bookname, price
-from book
-where price = (select max(price) from book);
-
--- ë„ì„œë¥¼ êµ¬ë§¤í•œ ì ì´ ìˆëŠ” ê³ ê°ì˜ ì´ë¦„ì„ ê²€ìƒ‰í•˜ì‹œì˜¤
--- 1. ì£¼ë¬¸ í…Œì´ë¸”ì—ì„œ ê³ ê°ì•„ì´ë”” ê²€ìƒ‰
-select custid from orders;
--- 2. ê³ ê° ì•„ì´ë””ê°€ ìˆëŠ” ê³ ê° ì´ë¦„ ê²€ìƒ‰
-select name from customer
+-- ÁßÃ¸ Äõ¸®
+SELECT bookname, price 
+FROM book 
+WHERE price = (SELECT MAX(price) 
+                 FROM book);
+    
+-- µµ¼­¸¦ ±¸¸ÅÇÑ ÀûÀÌ ÀÖ´Â °í°´ÀÇ ÀÌ¸§À» °Ë»öÇÏ½Ã¿À
+-- 1. ÁÖ¹®Å×ÀÌºí¿¡¼­ °í°´¾ÆÀÌµğ °Ë»ö
+SELECT custid FROM orders;
+-- 2. °í°´ ¾ÆÀÌµğ°¡ ÀÖ´Â °í°´ ÀÌ¸§ °Ë»ö
+SELECT name FROM customer
 WHERE custid IN(1, 2, 3, 4);
 
-WHERE custid in(select custid from orders);
-
--- ë„ì„œë¥¼ êµ¬ë§¤í•œ ì ì´ ì—†ëŠ” ê³ ê°ì˜ ì´ë¦„ì„ ê²€ìƒ‰í•˜ì‹œì˜¤
-select name from customer
-where custid not in(select custid from orders);
-
--- 'ê¹€ì—°ì•„' ê³ ê°ì˜ ì£¼ë¬¸ë‚´ì—­ì„ ê²€ìƒ‰í•˜ì‹œì˜¤
---1. ê¹€ì—°ì•„ ê³ ê°ì˜ ì•„ì´ë”” ê²€ìƒ‰
---2. ê¹€ì—°ì•„ ê³ ê°ì˜ ì•„ì´ë””ë¡œ ì£¼ë¬¸í…Œì´ë¸”ì—ì„œ ê²€ìƒ‰
+SELECT custid, name FROM customer
+WHERE custid IN(
+                SELECT custid 
+                FROM orders
+               );
+               
+-- µµ¼­¸¦ ±¸¸ÅÇÑ ÀûÀÌ ¾ø´Â °í°´ÀÇ ÀÌ¸§À» °Ë»öÇÏ½Ã¿À
+SELECT custid, name FROM customer
+WHERE custid NOT IN(SELECT custid 
+                    FROM orders);
+                    
+-- '±è¿¬¾Æ' °í°´ÀÇ ÁÖ¹®³»¿ªÀ» °Ë»öÇÏ½Ã¿À   
+-- 1. ±è¿¬¾Æ °í°´ÀÇ ¾ÆÀÌµğ °Ë»ö
+-- 2. ±è¿¬¾Æ °í°´ÀÇ ¾ÆÀÌµğ·Î ÁÖ¹®Å×ÀÌºí¿¡¼­ °Ë»ö
 SELECT custid
 FROM customer
-WHERE name = 'ê¹€ì—°ì•„';
+WHERE name = '±è¿¬¾Æ';
 
 SELECT *
 FROM orders
-where custid=(select custid from customer where name = 'ê¹€ì—°ì•„');
+WHERE custid = (SELECT custid
+                FROM customer
+                WHERE name = '±è¿¬¾Æ');
 
-
--- ì¸ë¼ì¸ ë·° : FROM ë¶€ì†ì§ˆì˜
--- ê³ ê°ë²ˆí˜¸ê°€ 2ì´í•˜ì¸ ê³ ê°ì˜ íŒë§¤ì•¡ì„ ê²€ìƒ‰í•˜ì‹œì˜¤.
-SELECT cus.name, SUM(ord.saleprice)
+-- ÀÎ¶óÀÎ ºä : From ºÎ¼ÓÁúÀÇ
+-- °í°´¹øÈ£°¡ 2ÀÌÇÏÀÎ °í°´ÀÇ ÆÇ¸Å¾×À» °Ë»öÇÏ½Ã¿À.
+SELECT cus.name, SUM(ord.saleprice) total
 FROM (SELECT custid, name FROM customer WHERE custid <= 2) cus, orders ord
 WHERE cus.custid = ord.custid
 GROUP BY cus.name;
 
--- ë·°(View) ìƒì„±
--- ì£¼ì†Œì— 'ëŒ€í•œë¯¼êµ­'ì„ í¬í•¨í•˜ëŠ” ê³ ê°ë“¤ë¡œ êµ¬ì„±ëœ ë·°ë¥¼ ë§Œë“¤ê³  ì¡°íšŒí•˜ì‹œì˜¤
--- CREATE VIEW ë·°ì´ë¦„
--- AS SELECT ë¬¸
-
+-- ºä(View) »ı¼º
+-- ÁÖ¼Ò¿¡ '´ëÇÑ¹Î±¹'À» Æ÷ÇÔÇÏ´Â °í°´µé·Î ±¸¼ºµÈ ºä¸¦ ¸¸µé°í Á¶È¸ÇÏ½Ã¿À
+-- CREATE VIEW ºäÀÌ¸§
+-- AS SELECT ¹®
 CREATE VIEW vw_Customer
-AS SELECT * FROM customer
-WHERE address LIKE '%ëŒ€í•œë¯¼êµ­%';
--- ë·° ê²€ìƒ‰
+AS SELECT * FROM customer 
+WHERE address LIKE '%´ëÇÑ¹Î±¹%';
+-- ºä °Ë»ö
 SELECT * FROM vw_Customer;
--- ë·° ì‚­ì œ
+-- ºä »èÁ¦
 DROP VIEW vw_Customer;
 
--- ë·° ë§Œë“¤ê¸° : ê³ ê°ì˜ ì´ë¦„ê³¼ ì£¼ë¬¸í•œ ë„ì„œì˜ ì´ë¦„ê³¼ ê°€ê²©ì„ ê²€ìƒ‰í•˜ì‹œì˜¤
+-- ºä ¸¸µé±â : °í°´ÀÇ ÀÌ¸§°ú ÁÖ¹®ÇÑ µµ¼­ÀÇ ÀÌ¸§°ú °¡°İÀ» °Ë»öÇÏ½Ã¿À
 CREATE VIEW vw_Orders
 AS SELECT cus.name, bo.bookname, ord.saleprice
 FROM customer cus, orders ord, book bo
 WHERE cus.custid = ord.custid
 AND bo.bookid = ord.bookid;
 
--- ë·°ë¡œ ê²€ìƒ‰
+-- ºä·Î °Ë»ö
 SELECT * FROM vw_Orders;
 
 
-
--- ê³ ê°ê³¼ ê³ ê°ì˜ ì£¼ë¬¸ì— ê´€í•œ ë°ì´í„°ë¥¼ ëª¨ë‘ ê²€ìƒ‰í•˜ì‹œì˜¤
-select cus.name, ord.saleprice
+-- °í°´°ú °í°´ÀÇ ÁÖ¹®¿¡ °üÇÑ µ¥ÀÌÅÍ¸¦ ¸ğµÎ °Ë»öÇÏ½Ã¿À
+SELECT cus.name, ord.saleprice
 FROM customer cus, orders ord
 WHERE cus.custid = ord.custid
 ORDER BY cus.name;
 
--- STANDARD JOIN (FROM ì ˆì— INNER JOIN ~ ON : ë™ë“±ì¡°ì¸)
-select cus.name, ord.saleprice
+-- STANDART JOIN (FROM Àı¿¡ INNER JOIN ~ ON : µ¿µîÁ¶ÀÎ)
+SELECT cus.name, ord.saleprice
 FROM customer cus INNER JOIN orders ord
-    ON cus.custid = ord.custid
-    ORDER BY cus.name;
-    
--- OUTER JOIN : ì™¸ë¶€ ì¡°ì¸
--- JOIN ì¡°ê±´ì— ì¶©ì¡±í•˜ëŠ” ë°ì´í„°ê°€ ì•„ë‹ˆì–´ë„ ì¶œë ¥ë  ìˆ˜ ìˆëŠ” ë°©ì‹
+     ON cus.custid = ord.custid
+     ORDER BY cus.name;
+
+-- OUTER JOIN : ¿ÜºÎ Á¶ÀÎ
+-- JOIN Á¶°Ç¿¡ ÃæÁ·ÇÏ´Â µ¥ÀÌÅÍ°¡ ¾Æ´Ï¾îµµ Ãâ·ÂµÉ ¼ö ÀÖ´Â ¹æ½Ä
 -- LEFT OUTER JOIN, RIGHT OUTER JOIN
--- ì£¼ë¬¸ì´ ì—†ëŠ” ê³ ê°ì„ í¬í•¨í•˜ì—¬ ê³ ê°ì˜ ì£¼ë¬¸ì— ê´€í•œ ë°ì´í„°ë¥¼ ëª¨ë‘ ê²€ìƒ‰í•˜ì‹œì˜¤.
-select cus.name, ord.saleprice
+-- ÁÖ¹®ÀÌ ¾ø´Â °í°´À» Æ÷ÇÔÇÏ¿© °í°´ÀÇ ÁÖ¹®¿¡ °üÇÑ µ¥ÀÌÅÍ¸¦ ¸ğµÎ °Ë»öÇÏ½Ã¿À
+SELECT cus.name, ord.saleprice
 FROM customer cus LEFT OUTER JOIN orders ord
-    ON cus.custid = ord.custid
-    ORDER BY cus.name;
+     ON cus.custid = ord.custid
+     ORDER BY cus.name;
+
+
+
+
 
 

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>글쓰기 폼</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div id="container">
+        {% include 'header.html' %}
+        <div id="main-pic">
+            <img src="{{ url_for('static', filename='images/header1.jpg') }}">
+        </div>
+        <section id="writing">
+            <h2>글쓰기</h2>
+            <form action="" method="post">
+                <table>
+                    <tbody>
+                        <tr>
+                            <td><input type="text" name="title"
+                                    placeholder="글 제목" required></td>
+                        </tr>
+                        <tr>
+                            <td><textarea name="content" placeholder="글 내용" required></textarea></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <input type="submit" value="등록">
+                                <input type="reset" value="취소">
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </form>
+        </section>
+        {% include 'footer.html' %}
+    </div>
+</body>
+</html>

@@ -1,11 +1,12 @@
+// 이미지 - 마우스 이벤트
 let pic = document.getElementById('pic')
-pic.onmouseover = changePic;    //changePic() 함수 호출
+pic.onmouseover = changePic;  //changePic() 함수 호출
 pic.onmouseout = originPic;
 
 function changePic(){
-pic.src = "../static/coffee-gray.jpg";
+  pic.src = "../static/coffee-gray.jpg";
 }
 
 function originPic(){
-pic.src = "../static/coffee-blue.jpg";
+  pic.src = "../static/coffee-blue.jpg";
 }

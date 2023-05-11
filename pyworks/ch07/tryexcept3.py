@@ -10,3 +10,5 @@ except FileNotFoundError as e:
 else:
     for i in team:
         print(i, end='')
+
+

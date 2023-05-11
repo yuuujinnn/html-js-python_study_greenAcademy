@@ -7,9 +7,9 @@ def click():
 
 root = Tk()
 root.title("UI 구성")
-root.geometry("200x50")
+root.geometry("200x100")
 frame = Frame(root)
-frame.pack()
+frame.pack()  # 가운데 정렬
 
 Label(frame, text="").grid(row=0, column=0)
 Button(frame, text='제출', command=click).grid(row=1, column=0)

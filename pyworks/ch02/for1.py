@@ -11,21 +11,20 @@ print()
 """
 
 # 1부터 10까지의 합계
-"""
+'''
 sum_v = 0
 for i in range(1, 11):
     sum_v += i
     print(f'i={i}, sum_v={sum_v}')
-    
+
 print(f'합계 : {sum_v}')
-"""
+'''
 
 # 1부터 10까지의 홀수 출력
 """
-for i in range(1, 11):
+for i in range(1, 11, 1):
     if i % 2 == 1:
-        print(i, end = ' ')
-print()
+        print(i, end=' ')
 """
 
 num = [10, 50, 30, 70]
@@ -47,9 +46,34 @@ for i in num:
 city = ['Seoul', 'Incheon', 'Gwangju']
 for i in city:
     #print(i)
-    print(i[0])
+    print(i[0], end='')
 """
-# city[0] : 첫번째 i = Seoul -> i[0] - 'S'
-# city[1] : 두번째 i = Incheon -> i[1] - 'I'
-# city[2] : 세번째 i = Gwangju -> i[2] - 'G'
+# city[0] : 첫번째 i = Seoul  -> i[0] - 'S'
+# city[1] : 두번째 i = Incheon -> i[0] - 'I'
+# city[2] : 세번째 i = Gwangju -> i[0] - 'G'
 """
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,7 +1,7 @@
 import student2
+#import 모듈이름
 from student2 import Student
-
-
+# from 모듈이름 import 클래스 이름
 
 # 파일이름.클래스 이름
 """

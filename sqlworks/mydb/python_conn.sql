@@ -1,10 +1,9 @@
--- python ì—°ê²° í…Œì´ë¸” ìž‘ì„±
+-- python ¿¬°á Å×ÀÌºí ÀÛ¼º
 CREATE TABLE pytest(
     message VARCHAR2(50)
 );
 
-INSERT INTO pytest VALUES ('PYTHONê³¼ ORACLE DB ì—°ë™');
+INSERT INTO pytest VALUES ('PYTHON°ú ORACLE DB ¿¬µ¿');
 
 SELECT * FROM pytest;
-
 

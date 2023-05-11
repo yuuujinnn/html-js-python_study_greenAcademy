@@ -2,10 +2,10 @@ import time
 
 start = time.time()
 def getgob(n):
-    gob = 1     # 곱셈에서는 1을 기억
+    gob = 1  # 곱셈에서는 1을 기억
     for i in range(1, n+1):
         gob *= i
-        # print(i, gob)
+        #print(i, gob)
     return gob
 
 print(getgob(995))
@@ -20,6 +20,6 @@ def facto(n):
     else:
         return n * facto(n-1)
 
-print(facto(100))
+print(facto(995))
 end = time.time()
-print(f"소요 시간 : {end-start:.2f}")
+print(f"소요 시간 : {end-start:.10f}")

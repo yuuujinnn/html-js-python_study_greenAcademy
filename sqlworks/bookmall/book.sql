@@ -1,65 +1,108 @@
-create table book(
-    bookid NUMBER(10) PRIMARY key,
-    bookname VARCHAR2(50) not null,
-    publisher VARCHAR2(50) not null,
-    price number not null
+-- book Å×ÀÌºí(µµ¼­¹øÈ£, µµ¼­ÀÌ¸§, ÃâÆÇ»ç, µµ¼­°¡°Ý)
+CREATE TABLE book(
+    bookid  NUMBER PRIMARY KEY,
+    bookname  VARCHAR2(50) NOT NULL,
+    publisher VARCHAR2(50) NOT NULL,
+    price  NUMBER NOT NULL
 );
 
-insert into book values(1,'ì¶•êµ¬ì˜ì—­ì‚¬','êµ¿ìŠ¤í¬ì¸ ','7000');
-insert into book values(2,'ì¶•êµ¬ì•„ëŠ” ì—¬ìž','ë‚˜ë¬´ìˆ˜','13000');
-insert into book values(3,'ì¶•êµ¬ì˜ ì´í•´','ëŒ€í•œë¯¸ë””ì–´','22000');
-insert into book values(4,'ê³¨í”„ ë°”ì´ë¸”','ëŒ€í•œë¯¸ë””ì–´','35000');
-insert into book values(5,'í”¼ê²¨ êµë³¸','êµ¿ìŠ¤í¬ì¸ ','8000');
-insert into book values(6,'ì–‘ê¶ì˜ ì‹¤ì²´','êµ¿ìŠ¤í¬ì¸ ','6000');
-insert into book values(7,'ì•¼êµ¬ì˜ ì¶”ì–µ','ë‚˜ë¬´ìˆ˜','20000');
-insert into book values(8,'ì•¼êµ¬ë¥¼ ë¶€íƒí•´','ëŒ€í•œë¯¸ë””ì–´','13000');
-insert into book values(9,'ì˜¬ë¦¼í”½ ì´ì•¼ê¸°','ì‚¼ì„±ë‹¹','7500');
-insert into book values(10,'olympic champions','person','13000');
+-- ÀÌ¸§ º¯°æ
+-- ALTER TABLE book RENAME COLUMN price To saleprice;
+-- ÀÚ·áÇü º¯°æ
+-- ALTER TABLE book MODIFY bookname VARCHAR2(60);
 
-select * from book;
+DESC book;
 
--- ëª¨ë“  ë„ì„œì˜ ì´ë¦„ê³¼ ê°€ê²©ì„ ê²€ìƒ‰í•˜ì‹œì˜¤
-select bookname, price from book;
+-- book ÀÚ·á ÀÔ·Â
+INSERT INTO book VALUES (1, 'Ãà±¸ÀÇ ¿ª»ç', '±Â½ºÆ÷Ã÷', 7000);
+INSERT INTO book VALUES (2, 'Ãà±¸¾Æ´Â ¿©ÀÚ', '³ª¹«¼ö', 13000);
+INSERT INTO book VALUES (3, 'Ãà±¸ÀÇ ÀÌÇØ', '´ëÇÑ¹Ìµð¾î', 22000);
+INSERT INTO book VALUES (4, '°ñÇÁ ¹ÙÀÌºí', '´ëÇÑ¹Ìµð¾î', 35000);
+INSERT INTO book VALUES (5, 'ÇÇ°Ü ±³º»', '±Â½ºÆ÷Ã÷', 8000);
+INSERT INTO book VALUES (6, '¾ç±ÃÀÇ ½ÇÁ¦', '±Â½ºÆ÷Ã÷', 6000);
+INSERT INTO book VALUES (7, '¾ß±¸ÀÇ Ãß¾ï', 'ÀÌ»ó¹Ìµð¾î', 20000);
+INSERT INTO book VALUES (8, '¾ß±¸¸¦ ºÎÅ¹ÇØ', 'ÀÌ»ó¹Ìµð¾î', 13000);
+INSERT INTO book VALUES (9, '¿Ã¸²ÇÈ ÀÌ¾ß±â', '»ï¼º´ç', 7500);
+INSERT INTO book VALUES (10, 'Olympic Champions', 'Person', 13000);
 
--- ë„ì„œ í…Œì´ë¸”ì— ìžˆëŠ” ëª¨ë“  ì¶œíŒì‚¬ë¥¼ ê²€ìƒ‰í•˜ì‹œì˜¤ (ì¤‘ë³µì œê±°)
-select distinct publisher as ì¶œíŒì‚¬ from book;
+-- ÀÚ·á °Ë»ö
+SELECT * FROM book;
 
--- íŠ¹ì •í•œ ì¡°ê±´ (where ì ˆ)
--- ê°€ê²©ì´ 20000ì› ë¯¸ë§Œì¸ ë„ì„œë¥¼ ê²€ìƒ‰í•˜ì‹œì˜¤
-select * from book where price < 20000;
+-- ¸ðµç µµ¼­ÀÇ ÀÌ¸§°ú °¡°ÝÀ» °Ë»öÇÏ½Ã¿À
+SELECT bookname, price 
+FROM book;
 
--- ê°€ê²©ì´ 10000ì´ìƒ 20000ì› ì´í•˜ì¸ ë„ì„œë¥¼ ê²€ìƒ‰í•˜ì‹œì˜¤
-select * from book where price between 10000 and 20000;
-select * from book where price >= 10000 and price <= 20000;
+-- µµ¼­ Å×ÀÌºí¿¡ ÀÖ´Â ¸ðµç ÃâÆÇ»ç¸¦ °Ë»öÇÏ½Ã¿À(Áßº¹ Á¦°Å)
+SELECT DISTINCT publisher
+FROM book;
 
--- or ì¡°ê±´, IN('a', 'b')
--- ì¶œíŒì‚¬ê°€ 'êµ¿ìŠ¤í¬ì¸ ' ë˜ëŠ” 'ëŒ€í•œë¯¸ë””ì–´ì¸' ë„ì„œë¥¼ ê²€ìƒ‰í•˜ì‹œì˜¤
-select * from book where publisher in ( 'êµ¿ìŠ¤í¬ì¸ ' , 'ëŒ€í•œë¯¸ë””ì–´');
-select * from book where publisher = 'êµ¿ìŠ¤í¬ì¸ ' or publisher = 'ëŒ€í•œë¯¸ë””ì–´';
+-- Æ¯Á¤ÇÑ Á¶°Ç(WHERE Àý)
+-- °¡°ÝÀÌ 20000¿ø ¹Ì¸¸ÀÎ µµ¼­¸¦ °Ë»öÇÏ½Ã¿À
+SELECT * 
+FROM book
+WHERE price < 20000;
 
--- 'ì¶•êµ¬ì˜ ì´í•´'ë¥¼ ì¶œê°„í•œ ì¶œíŒì‚¬ë¥¼ ê²€ìƒ‰í•˜ì‹œì˜¤
-select publisher from book where bookname like 'ì¶•êµ¬ì˜ ì´í•´';
+-- °¡°ÝÀÌ 10000¿ø ÀÌ»ó 20000¿ø ÀÌÇÏÀÎ µµ¼­¸¦ °Ë»öÇÏ½Ã¿À(BETWEEN ~ AND)
+SELECT * 
+FROM book
+WHERE price 
+BETWEEN 10000 AND 20000;
 
--- ë„ì„œ ì´ë¦„ì— 'ì¶•êµ¬' ê°€ í¬í•¨ëœ ì¶œíŒì‚¬ë¥¼ ê²€ìƒ‰í•˜ì‹œì˜¤
-select * from book where bookname like 'ì¶•%';
+SELECT * 
+FROM book
+WHERE price >= 10000 
+AND price <= 20000;
 
--- ì¶•êµ¬ì— ê´€í•œ ë„ì„œ ì¤‘ ê°€ê²©ì´ 20000ì› ì´ìƒì¸ ë„ì„œë¥¼ ì°¾ìœ¼ì‹œì˜¤
-select * from book where bookname like '%ì¶•êµ¬%' and price >= 20000 ;
+-- OR Á¶°Ç, IN('a', 'b')
+-- ÃâÆÇ»ç°¡ '±Â½ºÆ÷Ã÷' È¤Àº '´ëÇÑ¹Ìµð¾î'ÀÎ µµ¼­¸¦ °Ë»öÇÏ½Ã¿À
+SELECT * 
+FROM book
+WHERE publisher IN ('±Â½ºÆ÷Ã÷', '´ëÇÑ¹Ìµð¾î');
 
--- ë„ì„œì˜ ì´ ê°¯ìˆ˜ë¥¼ êµ¬í•˜ì‹œì˜¤
-select count(*) ë„ì„œì´ìˆ˜ from book;
+SELECT * 
+FROM book
+WHERE publisher = '±Â½ºÆ÷Ã÷' OR publisher = '´ëÇÑ¹Ìµð¾î';
 
--- ë„ì„œì¤‘ ê°€ìž¥ ê°€ê²©ì´ ë†’ì€ ë„ì„œë¥¼ êµ¬í•˜ì‹œì˜¤
-select max(price) ë„ì„œê°€ê²© from book;
--- ì„œë¸Œì¿¼ë¦¬()
-select bookname from book where price = (select max(price) ë„ì„œê°€ê²© from book);
+-- 'Ãà±¸ÀÇ ¿ª»ç'¸¦ Ãâ°£ÇÑ ÃâÆÇ»ç¸¦ °Ë»öÇÏ½Ã¿À
+SELECT publisher
+FROM book
+WHERE bookname LIKE 'Ãà±¸ÀÇ ¿ª»ç';
 
--- ì´ë¦„ë³€ê²½
--- alter table book rename column price to sal;
--- ìžë£Œí˜• ë³€ê²½
--- alter table book modify bookname VARCHAR2(60);
+-- µµ¼­ ÀÌ¸§¿¡ 'Ãà±¸'°¡ Æ÷ÇÔµÈ ÃâÆÇ»ç¸¦ °Ë»öÇÏ½Ã¿À
+SELECT * 
+FROM book
+WHERE bookname LIKE '%Ãà±¸%';
 
--- ë„ì„œ ê°€ê²©ì´ ë†’ì€ ìˆœìœ¼ë¡œ ì •ë ¬í•˜ì‹œì˜¤
-select sal from book order by sal desc;
--- ê°€ê²©ì´ ê°™ìœ¼ë©´ ì¶œíŒì‚¬ë¥¼ ì˜¤ë¦„ì°¨ìˆœ ì •ë ¬í•˜ê¸°
-select * from book order by sal desc, publisher asc;
+-- Ãà±¸¿¡ °üÇÑ µµ¼­ Áß °¡°ÝÀÌ 20000¿ø ÀÌ»óÀÎ µµ¼­¸¦ Ã£À¸½Ã¿À
+SELECT * 
+FROM book
+WHERE bookname LIKE '%Ãà±¸%' 
+AND price >= 20000;
+
+-- µµ¼­ÀÇ ÃÑ°³¼ö¸¦ ±¸ÇÏ½Ã¿À
+SELECT COUNT(*) ÃÑµµ¼­¼ö
+FROM book;
+
+--µµ¼­ Áß ÃÖ°í °¡°ÝÀ» °Ë»öÇÏ½Ã¿À
+SELECT MAX(price) 
+FROM book;
+
+-- ¼­ºê Äõ¸®(ÁßÃ¸Äõ¸®, Sub query)
+SELECT bookname, price 
+FROM book
+WHERE price = (SELECT MAX(price) FROM book);
+
+-- µµ¼­ °¡°ÝÀÌ ³ôÀº ¼øÀ¸·Î Á¤·ÄÇÏ½Ã¿À
+-- °¡°ÝÀÌ °°À¸¸é ÃâÆÇ»ç¸¦ ¿À¸§Â÷¼ø Á¤·ÄÇÏ±â
+SELECT *
+FROM book
+ORDER BY price DESC, publisher ASC;
+
+
+
+
+
+
+
+
+

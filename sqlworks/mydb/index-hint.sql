@@ -1,18 +1,21 @@
--- 옵티마이저 - sql 최적화
+-- ��Ƽ������ - SQL ����ȭ
+DROP INDEX idx_writer;
+
 SELECT * FROM board;
 
--- 작성자가 'admin'인 게시글 조회
-SELECT * FROM board 
+-- �ۼ��ڰ� 'admin'�� �Խñ� ��ȸ
+SELECT * FROM board
 WHERE writer = 'admin';
 
--- 작성자가 'admin'인 게시글 조회 - 인덱스로 만들기
--- CREATE INDEX 인덱스이름 ON 테이블이름(칼럼이름)
+-- �ۼ��ڰ� 'admin'�� �Խñ� ��ȸ - �ε����� �����
+-- CREATE INDEX �ε����̸� ON ���̺��̸�(Į���̸�)
 CREATE INDEX idx_writer ON board(writer);
 
--- 오라클 힌트
--- /*+ INDEX(테이블이름 인덱스이름) */
+-- ����Ŭ ��Ʈ
+-- /*+ INDEX(���̺��̸� �ε����̸�) */
 SELECT /*+ INDEX(board idx_writer) */ * FROM board
 WHERE writer = 'admin';
 
--- 실행 계획 보는 코드
+-- ���� ��ȹ ���� �ڵ�
 SELECT * FROM TABLE(DBMS_XPLAN.DISPLAY_CURSOR(null, null, 'ALLSTATS LAST'));
+

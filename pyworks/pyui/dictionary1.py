@@ -6,7 +6,7 @@ def select():
         word = entry.get()
         definition = dic[word] #dic[key] = value
         output.delete(0.0, END)
-        output.insert(END, dic[word])
+        output.insert(END, definition)
     except KeyError:
         output.insert(END, "단어의 정의를 찾을 수 없습니다.")
 
@@ -15,7 +15,7 @@ win.title("용어 사전")
 
 lbl = Label(win)
 lbl.config(text='단어를 입력하고 엔터 키를 누르세요')
-lbl.grid(row=0, column=0)
+lbl.grid(row=0, column=0, sticky=W)
 
 entry = Entry(win, width=20, bg='yellowgreen')
 entry.grid(row=1, column=0, sticky=W)

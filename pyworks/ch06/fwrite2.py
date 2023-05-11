@@ -8,4 +8,4 @@ try:
 
     f.close()
 except FileNotFoundError:
-    print("파일을 쓰기에 실패했습니다.")
+    print("파일 쓰기에 실패했습니다.")

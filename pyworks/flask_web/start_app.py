@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request
 
-app = Flask(__name__)   # app 객체 생성
+app = Flask(__name__)  #app 객체 생성
 
 @app.route('/')
 def index():
@@ -27,8 +27,8 @@ def even_odd():
     # 예외 처리 한 경우
     if request.method == "POST":
         try:
-            num = int(request.form['num'])
-        except ValueError:  # 문자로 입력시 에러
+           num = int(request.form['num'])
+        except ValueError:
             error_message = "숫자를 입력해주세요"
             return render_template('even_odd.html', error_msg = error_message)
         else:
@@ -37,23 +37,38 @@ def even_odd():
             else:
                 result = "홀수입니다."
                 # 결과 페이지로 보냄
-            return render_template('calc_result.html', num=num, result=result)
-
+            return render_template('calc_result.html',
+                                   num=num, result=result)
     else:
         return render_template('even_odd.html')
 
-
-    '''
-    # 예외 처리하지 않은 경우
+    """
+    #예외 처리하지 않은 경우
     if request.method == "POST":
-        num = int(request.form['num'])  # 데이터 가져오기 (문자형 -> 숫자형)
-        if num % 2 == 0:
-            result = "짝수입니다."
-        else:
-            result = "홀수입니다."
-        # 결과 페이지로 보냄
-        return render_template('calc_result.html', num = num, result = result)
-    else:  # request.method == "GET"
+       num = int(request.form['num'])   # 데이터 가져오기(문자형->숫자형)
+       if num % 2 == 0:
+           result = "짝수입니다."
+       else:
+           result = "홀수입니다."
+       # 결과 페이지로 보냄
+       return render_template('calc_result.html',
+                num=num, result=result)
+    else:  #request.method == "GET"
         return render_template('even_odd.html')
-    '''
+    """
+
+# 회원 가입 페이지
+@app.route('/register', methods = ['GET', 'POST'])
+def register():
+    if request.method == "POST":
+        # 데이터 가져오기(넘겨 받기) - name 속성
+        mid = request.form['memberid']
+        pwd = request.form['passwd']
+        name = request.form['name']
+        gender = request.form['gender']
+        return render_template('memberlist.html',
+                mid=mid, pwd=pwd, name=name, gender=gender)
+    else:
+        return render_template('register.html')
+
 app.run()

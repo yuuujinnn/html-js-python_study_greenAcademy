@@ -1,4 +1,4 @@
-# 주식 종목 가져오기 - 네이버 금융 > 증권 > 증권 홈 > 우측 하단(인기 종목 검색)
+# 주식 종목 가져오기 - 네이버 금융 > 증권 > 증권홈 > 우측 하단(인기 종목검색)
 import requests
 from bs4 import BeautifulSoup
 
@@ -10,14 +10,14 @@ def getcontent(item_code):
 
 def getprice(item_code):
     content = getcontent(item_code)  # 호출
-    today = content.find('div', attrs={'class': 'today'})
-    price = today.find('span', attrs={'class': 'blind'})
-    return price
+    today = content.find('div', attrs={'class':'today'})
+    price = today.find('span', attrs={'class':'blind'})
+    return price.text
 
 에코프로 = getprice('086520')
 삼성전자 = getprice('005930')
 네이버 = getprice('035420')
 
-print(f'에코프로 주가: {에코프로.text}원')
-print(f'삼성전자 주가: {삼성전자.text}원')
-print(f'네이버 주가: {네이버.text}원')
+print(f'에코프로 주가: {에코프로}원')
+print(f'삼성전자 주가: {삼성전자}원')
+print(f'네이버 주가: {네이버}원')

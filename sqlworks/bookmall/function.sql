@@ -1,161 +1,159 @@
--- ìˆ«ìž íƒ€ìž… í•¨ìˆ˜
--- ì œê³µëœ í…Œì´ë¸” : dual
-select ABS(-10) from dual;
+-- ¼ýÀÚ Å¸ÀÔ ÇÔ¼ö
+-- Á¦°øµÈ Å×ÀÌºí : dual
+SELECT ABS(-10), ABS(10) FROM dual;
 
--- ë°˜ì˜¬ë¦¼ : round (ìˆ˜, ìžë¦¿ìˆ˜)
-select round(3.875 ,2) from dual;
+-- ¹Ý¿Ã¸² : ROUND(¼ö, ÀÚ¸®¼ö)
+SELECT ROUND(3.875, 2) FROM DUAL;
 
--- salì„ 30ì¼ë¡œ ë‚˜ëˆˆí›„ ì†Œìˆ˜ ìžë¦¬ìˆ˜ì— ë”°ë¼ ë°˜ì˜¬ë¦¼í•œ ê°’ ì¶œë ¥
-select sal ê¸‰ì—¬,
-    sal/30 ì¼ê¸‰, 
-    round(sal/30, 1) ê²°ê³¼1,
-    round(sal/30, 0) ê²°ê³¼2,
-    round(sal/30, -1) ê²°ê³¼3
-from employee;
+-- ¹ö¸² : TRUNC(¼ö, ÀÚ¸®¼ö)
+SELECT TRUNC(3.875, 1) FROM DUAL;
 
--- salì„ 30ì¼ë¡œ ë‚˜ëˆˆí›„ ì†Œìˆ˜ ìžë¦¬ìˆ˜ì— ë”°ë¼ ì ˆì‚­(ë²„ë¦¼) ê°’ ì¶œë ¥
-select sal ê¸‰ì—¬,
-    sal/30 ì¼ê¸‰, 
-    trunc(sal/30, 1) ê²°ê³¼1,
-    trunc(sal/30, 0) ê²°ê³¼2,
-    trunc(sal/30, -1) ê²°ê³¼3
-from employee;
+SELECT * FROM employee;
 
--- ê³ ê°ë³„ í‰ê·  ì£¼ë¬¸ ê¸ˆì•¡ì„ ë°±ì› ë‹¨ìœ„ë¡œ ë°˜ì˜¬ë¦¼í•œ ê°’ì„ êµ¬í•˜ì‹œì˜¤
-select custid ê³ ê°ë²ˆí˜¸, round(avg(salprice), -2) í‰ê· ì£¼ë¬¸ê¸ˆì•¡
-    from orders
-    group by custid;
-    
-select custid ê³ ê°ë²ˆí˜¸, count(*) ì£¼ë¬¸íšŸìˆ˜, sum(salprice) ì´ì•¡
-    from orders
-    group by custid;    
-    
-select custid ê³ ê°ë²ˆí˜¸, round(sum(salprice)/count(*),-2) ì´ì•¡
-    from orders
-    group by custid;  
-    
-select * from customer;
+-- salÀ» 30ÀÏ·Î ³ª´«ÈÄ ¼Ò¼ö ÀÚ¸®¼ö¿¡ µû¶ó ¹Ý¿Ã¸²ÇÑ °ª Ãâ·Â
+SELECT sal ±Þ¿©,
+       sal/30 ÀÏ±Þ,
+       ROUND(sal/30, 1) °á°ú1,
+       ROUND(sal/30, 0) °á°ú2,
+       ROUND(sal/30, -1) °á°ú3
+FROM employee;
 
+-- salÀ» 30ÀÏ·Î ³ª´«ÈÄ ¼Ò¼ö ÀÚ¸®¼ö¿¡ µû¶ó Àý»è(¹ö¸²) °ª Ãâ·Â
+SELECT sal ±Þ¿©,
+       sal/30 ÀÏ±Þ,
+       TRUNC(sal/30, 1) °á°ú1,
+       TRUNC(sal/30, 0) °á°ú2,
+       TRUNC(sal/30, -1) °á°ú3
+FROM employee;
 
--- ë¬¸ìž íƒ€ìž… í•¨ìˆ˜
-select lower('ABCD') from dual;
+SELECT SUM(saleprice) ÃÑÆÇ¸Å±Ý¾×, ROUND(AVG(saleprice), -2) Æò±ÕÁÖ¹®±Ý¾×
+FROM orders;
 
--- substr(ë¬¸ìž, ì¸ë±ìŠ¤, ê¸€ìžìˆ˜)
-select substr('ABC',1,2) result from dual;
+-- °í°´º° Æò±Õ ÁÖ¹® ±Ý¾×À» ½Ê¿ø ´ÜÀ§¿¡¼­ ¹Ý¿Ã¸²ÇÑ °ªÀ» ±¸ÇÏ½Ã¿À
+SELECT custid °í°´¹øÈ£, orderdate, ROUND(AVG(saleprice), -2) Æò±ÕÁÖ¹®±Ý¾×
+FROM orders
+GROUP BY custid, orderdate;
 
--- replace(ë¬¸ìž, ì´ì „ë¬¸ìž, ìƒˆë¡œìš´ë¬¸ìž)
-select replace('ABC','A','E') result from dual;
+SELECT custid °í°´¹øÈ£, COUNT(*) ÁÖ¹®¼ö, SUM(saleprice) ÃÑ¾×
+FROM orders
+GROUP BY custid;
 
--- concat(ë¬¸ìž1, ë¬¸ìž2) - ë¬¸ìž ì—°ê²°
-select concat('A','B') result from dual;
+SELECT custid °í°´¹øÈ£,  ROUND(SUM(saleprice)/COUNT(*), -2) Æò±Õ±Ý¾×
+FROM orders
+GROUP BY custid;
 
--- ì—°ê²°ì—°ì‚°ì‚¬ - '||'
-select 'ì•ˆë…•' || 'í•˜ì„¸ìš”' result from dual;
+-- ¹®ÀÚ Å¸ÀÔ ÇÔ¼ö
+SELECT LOWER('ABCD') RESULT FROM DUAL;
 
--- lpad ëŠ”(ë¬¸ìž,ë¬¸ìžìˆ˜,ê¸°í˜¸) - ê¸°í˜¸ë¥¼ ì™¼ìª½ë¶€í„° ì±„ì›€
-select lpad('cloud',10,'*') result from dual;
-select rpad('cloud',10,'*') result from dual;
+-- SUBSTR(¹®ÀÚ, ÀÎµ¦½º, ±ÛÀÚ¼ö)
+SELECT SUBSTR('ABC', 1, 2) RESULT FROM DUAL;
+-- REPLACE(¹®ÀÚ, ÀÌÀü¹®ÀÚ, »õ·Î¿î¹®ÀÚ)
+SELECT REPLACE('ABC', 'A', 'E') RESULT FROM DUAL;
+-- CONCAT(¹®ÀÚ1, ¹®ÀÚ2) - ¹®ÀÚ ¿¬°á
+SELECT CONCAT('A', 'B') RESULT FROM DUAL;
+-- ¿¬°á¿¬»êÀÚ - '||'
+SELECT '¾È³ç' || 'ÇÏ¼¼¿ä' RESULT FROM DUAL;
+-- LPAD(¹®ÀÚ, ¹®ÀÚ¼ö, ±âÈ£) - ±âÈ£¸¦ ¿ÞÂÊºÎÅÍ Ã¤¿ò
+SELECT LPAD('cloud', 10, '*') RESULT FROM DUAL;
+SELECT RPAD('cloud', 10, '*') RESULT FROM DUAL;
 
--- ë¶€ì„œì´ë¦„ì—ì„œ ì²˜ìŒë¶€í„° ì‹œìž‘í•´ì„œ 2ê°œì˜ ë¬¸ìž ì¶œë ¥
-select substr(deptname, 1,2)ë¶€ì„œëª…
-from dept;
+-- ºÎ¼­ÀÌ¸§¿¡¼­ Ã³À½ºÎÅÍ ½ÃÀÛÇØ¼­ 2°³ÀÇ ¹®ÀÚ Ãâ·Â
+SELECT SUBSTR(deptname, 1, 2) ºÎ¼­¸í 
+FROM DEPT;
 
--- ë„ì„œ ì œëª©ì— 'ì•¼êµ¬'ê°€ í¬í•¨ëœ ë„ì„œë¥¼ 'ë†êµ¬'ë¡œ ë³€ê²½í•˜ì—¬ ê²€ìƒ‰
-select bookid, 
-    replace(bookname, 'ì•¼êµ¬','ë†êµ¬') bookname
-from book;
+-- µµ¼­ Á¦¸ñ¿¡ '¾ß±¸'°¡ Æ÷ÇÔµÈ µµ¼­¸¦ '³ó±¸'·Î º¯°æÇÏ¿© °Ë»ö
+SELECT bookid,
+       REPLACE(bookname, '¾ß±¸', '³ó±¸') bookname
+FROM BOOK;
 
--- êµ¿ìŠ¤í¬ì¸ ì—ì„œ ì¶œíŒí•œ ë„ì„œì˜ ì œëª©ê³¼ ì œëª©ì˜ ë¬¸ìž ìˆ˜, ë°”ì´íŠ¸ ìˆ˜ë¥¼ ê²€ìƒ‰
-select bookname,
-    length(bookname)ë¬¸ìžìˆ˜,
-    lengthb(bookname)ë°”ì´íŠ¸ìˆ˜
-    from book
-    where publisher = 'êµ¿ìŠ¤í¬ì¸ ';
-    
--- ë‚ ì§œ í•¨ìˆ˜
--- 20ì¼ ì „ì˜ ë‚ ì§œ ì¶œë ¥
-select sysdate -20 from dual;
--- 20ì¼ í›„ì˜ ë‚ ì§œ ì¶œë ¥
-select sysdate +20 from dual;
+-- ±Â½ºÆ÷Ã÷¿¡¼­ ÃâÆÇÇÑ µµ¼­ÀÇ Á¦¸ñ°ú Á¦¸ñÀÇ ¹®ÀÚ ¼ö, ¹ÙÀÌÆ® ¼ö¸¦ °Ë»ö
+-- ÇÑ±Û 3Byte, ¿µ¾î, Æ¯¼ö±âÈ£ - 1Byte
+SELECT bookname,
+       LENGTH(bookname)¹®ÀÚ¼ö,
+       LENGTHB(bookname) ¹ÙÀÌÆ®¼ö
+FROM book
+WHERE publisher = '±Â½ºÆ÷Ã÷';
 
+-- ³¯Â¥ ÇÔ¼ö
+-- 20ÀÏÀüÀÇ ³¯Â¥ Ãâ·Â
+SELECT SYSDATE - 20 FROM DUAL;
 
--- 4ì›”1ì¼ì—ì„œ 10ì¼í›„(íŠ¹ì •í•œ ë‚  : ë¬¸ìží˜• -> ë‚ ì§œí˜•)
-SELECT TO_DATE('2023/04/01') + 10 FROM DUAL;
+-- 4¿ù1ÀÏ¿¡¼­ 10ÀÏÈÄ(Æ¯Á¤ÇÑ ³¯: ¹®ÀÚÇü -> ³¯Â¥Çü)
+SELECT TO_DATE('2023/04/01') + 20 FROM DUAL;
 
--- ìž…ì‚¬ì¼ : 2022-1-1, í‡´ì‚¬ì¼ : 2023-1-31(ì›”ìˆ˜ ê³„ì‚°)
+-- ÀÔ»çÀÏ : 2022-1-1, Åð»çÀÏ : 2023-1-31(¿ù¼ö °è»ê)
 SELECT
-    ROUND(MONTHS_BETWEEN(TO_DATE('2023-1-31'), TO_DATE('2022-1-1')), 0) ì´ê°œì›”ìˆ˜
+    ROUND(MONTHS_BETWEEN(TO_DATE('2022-12-31'), 
+            TO_DATE('2022-1-1')), 0) ÃÑ°³¿ù¼ö
 FROM DUAL;
 
 
--- 3ê°œì›” í›„ì˜ ë‚ ì§œ ì¶œë ¥
-select add_months(sysdate,3)ê²°ê³¼
-from dual;
+-- 3°³¿ù ÈÄÀÇ ³¯Â¥ Ãâ·Â
+SELECT ADD_MONTHS(SYSDATE, 3) °á°ú 
+FROM DUAL;
+-- 3°³¿ù ÀüÀÇ ³¯Â¥ Ãâ·Â
+SELECT ADD_MONTHS(SYSDATE, -3) °á°ú 
+FROM DUAL;
 
--- 3ê°œì›” ì „ì˜ ë‚ ì§œ ì¶œë ¥
-select add_months(sysdate,-3)ê²°ê³¼
-from dual;
+-- 3°³¿ù ÀüÀÇ ³¯Â¥ Ãâ·Â
+SELECT ADD_MONTHS('2023/04/01', -3) °á°ú 
+FROM DUAL;
+-- ³¯Â¥¿Í ½Ã°£
+SELECT SYSTIMESTAMP FROM DUAL;
 
--- 3ê°œì›” ì „ì˜ ë‚ ì§œ ì¶œë ¥
-select add_months('2023-4-1',-3)ê²°ê³¼
-from dual;
+-- ÁÖ¹®¹øÈ£°¡ 6¿¡¼­ 10»çÀÌÀÎ µµ¼­ÀÇ ÁÖ¹®ÀÏ¿¡ 3°³¿ùÀ» ´õÇÑ°ªÀ» ±¸ÇÏ½Ã¿À.
+-- 1. ÁÖ¹®¹øÈ£°¡ 6~10ÀÎ µµ¼­ °Ë»ö
+-- 2. ÁÖ¹®ÀÏ¿¡ 3°³¿ù ´õÇÏ±â
+SELECT orderid ÁÖ¹®¹øÈ£,
+       ADD_MONTHS(orderdate, 3) ´õÇÏ±â°á°ú,
+       ADD_MONTHS(orderdate, -3) »©±â°á°ú
+FROM orders
+WHERE orderid >=6 AND orderid <= 10;
 
--- ë‚ ì§œì™€ ì‹œê°„
-select systimestamp from dual;
+-- ÁÖ¹®¹øÈ£°¡ 10ÀÎ µµ¼­ÀÇ ÁÖ¹®ÀÏ·ÎºÎÅÍ ¿À´Ã±îÁöÀÇ ÃÑ °³¿ù¼ö¸¦ ±¸ÇÏ½Ã¿À
+-- MONTHS_BETWEEN(ÀÌÈÄ³¯Â¥, ÀÌÀü³¯Â¥)
+SELECT orderid ÁÖ¹®¹øÈ£, orderdate ÁÖ¹®ÀÏ,
+       TRUNC(MONTHS_BETWEEN(SYSDATE, orderdate), 0) ÃÑ°³¿ù¼ö
+FROM orders
+WHERE orderid = 10;
 
--- ì£¼ë¬¸ ë²ˆí˜¸ê°€ 6ì• ì„œ 10ì‚¬ì´ì¸ ë„ì„œì˜ ì£¼ë¬¸ì¼ì— 3ê°œì›”ì„ ë”í•œê°’ì„ êµ¬í•˜ì‹œì˜¤.
--- 1. ì£¼ë¬¸ë²ˆí˜¸ê°€ 6~10ì¸ ë„ì„œ ê²€ìƒ‰
+-- ¼­Á¡Àº ÁÖ¹®ÀÏ·ÎºÎÅÍ 10ÀÏÈÄ ¸ÅÃâÀ» È®Á¤ÇÑ´Ù. °¢ ÁÖ¹®ÀÇ È®Á¤ÀÏÀÚ¸¦ ±¸ÇÏ½Ã¿À.
+SELECT orderid ÁÖ¹®¹øÈ£, 
+       orderdate ÁÖ¹®ÀÏ,
+       orderdate + 10 È®Á¤ÀÏ
+FROM orders;
 
-select * from orders;
+-- ÀÚµ¿ Å¸ÀÔ º¯È¯
+SELECT 1 + '2' FROM DUAL;
 
-select orderid ì£¼ë¬¸ë²ˆí˜¸ 
-    from orders
-    where orderid >= 6 and orderid <= 10;
--- 2. ì£¼ë¬¸ì¼ì— 3ê°œì›” ë”í•˜ê¸°  
-select orderid ì£¼ë¬¸ë²ˆí˜¸, 
-    add_months(orderdate, -3) ë”í•œê²°ê³¼
-    from orders
-    where orderid >= 6 and orderid <= 10;    
-    
--- ì£¼ë¬¸ ë²ˆí˜¸ê°€ 10ì¸ ë„ì„œì˜ ì£¼ë¬¸ì¼ë¡œë¶€í„° ì˜¤ëŠ˜ê¹Œì§€ì˜ ì´ ê°œì›”ìˆ˜ë¥¼ êµ¬í•˜ì‹œì˜¤.
--- months_between()
-select orderid ì£¼ë¬¸ë²ˆí˜¸, orderdate ì£¼ë¬¸ì¼,
-    trunc(months_between(sysdate, orderdate),0)ì´ê°œì›”ìˆ˜
-    from orders
-    where orderid = 10;
-    
--- ì„œì ì€ ì£¼ë¬¸ì¼ë¡œë¶€í„° 10ì¼ í›„ ë§¤ì¶œì„ í™•ì •í•œë‹¤. ê° ì£¼ë¬¸ì˜ í™•ì •ì¼ìžë¥¼ êµ¬í•˜ì‹œì˜¤
-select orderid ì£¼ë¬¸ë²ˆí˜¸, orderdate ì£¼ë¬¸ì¼, orderdate+10 í™•ì •ì¼
-    from orders;
+-- ¼öµ¿ Å¸ÀÔ º¯È¯
+-- ¹®ÀÚ¸¦ ¼ýÀÚ Çü½ÄÀ¸·Î º¯È¯
+SELECT TO_NUMBER('120') °á°ú FROM DUAL;
 
--- ìžë™ íƒ€ìž… ë³€í™˜
-select 1+'2' from dual;
+-- ³¯Â¥ Çü½Ä 
+SELECT TO_DATE('2022-06-30', 'yy-mm-dd') FROM DUAL;
 
--- ìˆ˜ë™ íƒ€ìž… ë³€í™˜
--- ë¬¸ìžë¥¼ ìˆ«ìž í˜•ì‹ìœ¼ë¡œ ë³€í™˜
-select to_number('120') from dual;
+-- ³¯Â¥ Çü½Ä º¯È¯
+SELECT TO_CHAR(SYSDATE, 'YY-MM-DD') ³¯Â¥,
+       TO_CHAR(SYSDATE, 'YYYY') ¿¬µµ,
+       TO_CHAR(SYSDATE, 'MM') ¿ù,
+       TO_CHAR(SYSDATE, 'DD') ÀÏ
+FROM DUAL;
 
--- ë‚ ì§œ í˜•ì‹ 
-select to_date('2022-6-30', 'yy-mm-dd') from dual;
+-- ½Ã°£ Çü½Ä º¯È¯
+SELECT TO_CHAR(SYSDATE, 'HH:MI:SS AM') ½Ã°£Çü½Ä,
+       TO_CHAR(SYSDATE, 'YYYY/MM/DD HH:MI:SS PM') ³¯Â¥¿Í½Ã°£
+FROM DUAL;
 
--- ë‚ ì§œ í˜•ì‹ ë³€í™˜
-select to_char(sysdate, 'yy-mm-dd')ë‚ ì§œ,
-    to_char(sysdate, 'yyyy') ì—°ë„,
-    to_char(sysdate, 'mm') ì›”,
-    to_char(sysdate, 'dd') ì¼
-    from dual;
 
--- ì‹œê°„ í˜•ì‹ ë³€í™˜
-select to_char(sysdate, 'hh:mi:ss am') ì‹œê°„í˜•ì‹,
-    to_char(sysdate, 'yyyy-mm-dd hh:mi:ss pm') ë‚ ì§œì™€ì‹œê°„
-from dual;
+-- °í°´ ÀÌ¸§(º°)¿¡¼­ °°Àº ¼ºÀ» °¡Áø »ç¶÷ÀÇ ÀÎ¿ø¼ö¸¦ ±¸ÇÏ½Ã¿À
+-- ÈùÆ®, GROUP BYÀý, SUBSTR(), COUNT(*)
+SELECT SUBSTR(name, 1, 1) ¼º, COUNT(*) ÀÎ¿ø
+FROM customer
+GROUP BY SUBSTR(name, 1, 1);
 
--- ê³ ê° ì´ë¦„ì—ì„œ ê°™ì€ ì„±ì„ ê°€ì§„ ì‚¬ëžŒì˜ ì¸ì›ìˆ˜ë¥¼ êµ¬í•˜ì‹œì˜¤
--- í°íŠ¸, group byì ˆ , substr()
-select substr(name,1,1 )ì„±, count(*)ì¸ì›
-    from customer 
-    group by substr(name,1,1);
-    
-    
-    
-    
+
+
+
+
+

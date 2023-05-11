@@ -1,5 +1,5 @@
-# select.one(태그요소.선택자이름) - 1개 검색
-# select(태그요소.선택자이름) - 전체 검색(리스트로 변환)
+# select_one(태그요소.선택자이름) - 1개 검색
+# select(태그요소.선택자이름) - 전체 검색(리스트로 반환)
 
 import requests
 from bs4 import BeautifulSoup
@@ -23,4 +23,4 @@ all_li = ul.select('ul.data_lst li')
 for li in all_li:
     exchange = li.select_one('span.blind')
     value = li.select_one('span.value')
-    print(exchange.string.split(' ')[-1], ':', value.string)
+    print(exchange.string.split(' ')[1], ':', value.string)

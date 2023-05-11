@@ -3,7 +3,7 @@ import datetime
 
 now = datetime.datetime.today()
 print(now)
-print(now.strftime("%Y.%m.%d. %H.%M.%S"))
+print(now.strftime("%Y.%m.%d. %H:%M:%S"))
 
 # 날짜 - 년, 월, 일
 print(f'{now.year}년')
@@ -22,3 +22,5 @@ print(today)
 # 특정한 날짜
 the_day = datetime.date(2022, 12, 12)
 print(the_day)
+
+

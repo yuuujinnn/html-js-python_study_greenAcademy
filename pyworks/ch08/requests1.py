@@ -1,11 +1,11 @@
-# requests 모듈 : python의 HTTP 라이브러리
+# requests 모듈 : python의 HTTP 라이브러리임
 # url을 가져올 수 있음
 
 import requests
 
 url = 'https://www.python.org/'
 response = requests.get(url)
-print(response) # 200 코드는 정상
+print(response)  #200 코드는 정상
 print(response.status_code)
 html = response.text
 print(html)
@@ -26,3 +26,9 @@ for url in urls:
     print(url_path)
     response = requests.get(url_path)
     print(response)
+
+
+
+
+
+

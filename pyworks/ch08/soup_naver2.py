@@ -16,10 +16,12 @@ first_a = first_li.find('a')
 print(first_a.text)
 
 # 다른 메뉴 찾기 - findAll()
-all_a = menu_ul.findAll('a')
+all_a = menu_ul.findAll('a') # 직접 <a>로 검색
 # print(all_a)
-print(all_a[1].text)    # 카페
+print(all_a[1].text) # 카페
 
 for a in all_a:
     print(a)
     print(a.text)
+
+

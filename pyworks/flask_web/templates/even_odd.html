@@ -1,8 +1,8 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
-    <title>안녕하세요</title>
+    <title>짝수/홀수 판정</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
@@ -13,14 +13,15 @@
         <section id="even_odd">
             <form action="" method="post">
                 {% if error_msg %}
-                    <p class = "error">{{ error_msg }}</p>
+                    <p class="error">{{ error_msg }}</p>
                 {% endif %}
                 <p>
-                    <labe>숫자 입력 : </labe>
+                    <label>숫자 입력 : </label>
                     <input type="text" name="num">
                     <input type="submit" value="전송">
                 </p>
             </form>
+
         </section>
     </div>
 

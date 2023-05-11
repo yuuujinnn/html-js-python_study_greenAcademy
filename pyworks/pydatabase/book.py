@@ -12,13 +12,13 @@ def create():
     sql = """
         CREATE TABLE book(
             book_no INTEGER PRIMARY KEY AUTOINCREMENT,
-            title TEXT NOT NULL,
+            title  TEXT NOT NULL,
             author TEXT NOT NULL,
             page INTEGER
         )
     """
-    cursor.execute(sql)      #실행
-    conn.commit()            # 커밋 완료
+    cursor.execute(sql)  # 실행
+    conn.commit()  # 커밋 완료
     conn.close()
 
 # 책 추가
@@ -27,21 +27,21 @@ def insert():
     cursor = conn.cursor()
     sql = "INSERT INTO book(title, author, page) " \
           "VALUES (?, ?, ?)"
-    # cursor.execute(sql, ('혼자 공부하는 자바', '신용권', 600))
+    #cursor.execute(sql, ('혼자 공부하는 자바', '신용권', 600))
     cursor.execute(sql, ('python projects', '켄 유엔스', 500))
     conn.commit()
     conn.close()
 
-# 책 검색
+# 책 전체 검색
 def select():
     conn = getconn()
     cursor = conn.cursor()
     sql = "SELECT * FROM book"
     cursor.execute(sql)
     rs = cursor.fetchall()
-    print(rs)   # 리스트로 출력
+    print(rs)  # 리스트로 출력
     for i in rs:
-        print(i)    # 튜플로 출력
+        print(i)  #튜플로 출력
     conn.close()
 
 # 책 1권 검색
@@ -50,7 +50,7 @@ def select_one():
     cursor = conn.cursor()
     # 동적 바인딩 방식
     sql = "SELECT * FROM book WHERE book_no = ?"
-    cursor.execute(sql, (2, ))  # 튜플 자료구조이므로 1개 사용(쉼표 사용)
+    cursor.execute(sql, (2, )) # 튜플 자료구조이므로 1개일때 (쉼표 사용)
     rs = cursor.fetchone()
     print(rs)
     conn.close()
@@ -74,10 +74,10 @@ def delete():
     conn.commit()
     conn.close()
 
-# print(getconn(), "연결 객체 생성")
-# create()
-# insert()
+#print(getconn(), "연결 객체 생성")
+#create()
+#insert()
 update()
-# delete()
+#delete()
 select()
-# select_one()
+#select_one()

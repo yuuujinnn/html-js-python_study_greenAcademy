@@ -5,12 +5,8 @@ def say_hello():
 def say_hello2(name):
     print("안녕!", name)
 
-
-
-# 호출
+# 호출  
 say_hello()
 say_hello2("Javascript")
-
-
 
 # 메인 영역(main())

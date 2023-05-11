@@ -8,7 +8,7 @@ try:
                 f.write(gugudan)
             f.write('\n')
 except FileNotFoundError:
-        print("파일을 쓸 수 없습니다.")
+    print("파일을 쓸 수 없습니다.")
 
 # 파일 읽기
 try:
@@ -16,4 +16,4 @@ try:
         gugudan = f.read()
         print(gugudan)
 except FileNotFoundError:
-        print("파일을 찾을 수 없습니다.")
+    print("파일을 찾을 수 없습니다.")
