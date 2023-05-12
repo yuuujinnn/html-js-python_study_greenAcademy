@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>글 수정</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<div id="container">
+    {% include 'header.html' %}
+    <div id="main-pic">
+        <img src="{{ url_for('static', filename='images/header1.jpg') }}" alt="배경 사진" id="pic">
+    </div>
+    <section id="update">
+        <h2>글 수정</h2>
+        <form action="" method="post">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>
+                            <input type="text" name="title" value="{{ board[1] }}">
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <textarea name="content">{{ board[2] }}</textarea>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="text" name="memberid" value="글쓴이 : {{ board[5] }}" readonly>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <input type="submit" value="저장">
+                            <input type="reset" value="취소">
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </section>
+    {% include 'footer.html' %}
+</div>
+</body>
+</html>

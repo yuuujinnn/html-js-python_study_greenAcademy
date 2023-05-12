@@ -28,7 +28,7 @@ def main():
 
     # 정렬 기능 구현
     if args.sorted:
-        items.sort()
+        items.sort()  # 오름차순 정렬
 
     bringing = ''
     if num == 1:  # 명령행의 인수가 1개이면
