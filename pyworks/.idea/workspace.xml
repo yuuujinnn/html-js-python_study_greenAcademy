@@ -5,14 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="69811672-8e82-436b-b03f-d8e3cdd6d96a" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/ch09/sort1.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/member/templates/update.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/member/datetime1.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/member/sql_connect.py" beforeDir="false" afterPath="$PROJECT_DIR$/member/sql_connect.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/member/start_app.py" beforeDir="false" afterPath="$PROJECT_DIR$/member/start_app.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/member/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/member/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/member/templates/boardlist.html" beforeDir="false" afterPath="$PROJECT_DIR$/member/templates/boardlist.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/member/templates/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/member/templates/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/member/templates/writing.html" beforeDir="false" afterPath="$PROJECT_DIR$/member/templates/writing.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tiny/picnic.py" beforeDir="false" afterPath="$PROJECT_DIR$/tiny/picnic.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/member/templates/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/member/templates/update.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../sqlworks/pydb/memberdb.db" beforeDir="false" afterPath="$PROJECT_DIR$/../sqlworks/pydb/memberdb.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -64,7 +64,7 @@
     </key>
   </component>
   <component name="RunManager" selected="Python.start_app (1)">
-    <configuration name="exchange_select" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="datetime1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pyworks" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -72,11 +72,11 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ch08" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/member" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ch08/exchange_select.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/member/datetime1.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -98,6 +98,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ch09/sort1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="sql_connect" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="pyworks" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/member" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/member/sql_connect.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -148,34 +169,13 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="stock_price" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="pyworks" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/ch08" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/ch08/stock_price.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python.start_app (1)" />
+        <item itemvalue="Python.datetime1" />
+        <item itemvalue="Python.sql_connect" />
         <item itemvalue="Python.sort1" />
         <item itemvalue="Python.start_app" />
-        <item itemvalue="Python.stock_price" />
-        <item itemvalue="Python.exchange_select" />
       </list>
     </recent_temporary>
   </component>
