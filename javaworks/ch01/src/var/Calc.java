@@ -11,7 +11,7 @@ public class Calc {
 		System.out.println(x * y);
 		//정수 연산 : 결과 -정수 -> 실수 연산(자료형을 실수로 바꿔야함)
 		//double형으로 형 변환
-		System.out.println(x / (double)y);
+		System.out.println(x / (double)y);  
 	}
 
 }
