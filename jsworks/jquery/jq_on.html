@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery - on()함수</title>
+    <script src="./jquery-3.6.4.js"></script>
+</head>
+<body>
+    <h2 onclick="hide()" id="text">나를 클릭하면, 내가 사라질 것이다.</h2>
+    
+    <script>
+        // ready(익명함수(){}), click(익명함수(){})
+        $(document).ready(function(){
+            // 클릭 이벤트 - on()함수
+            // 이벤트 여러 개 사용
+            $("#text").on('mouseover', function(){
+                $(this).hide();
+            });
+            $("#text").on('mouseout', function(){
+                $(this).show();
+            });
+        });
+
+    </script>
+</body>
+</html>

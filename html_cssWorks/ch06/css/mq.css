@@ -1,0 +1,22 @@
+@charset "utf-8";
+
+*{margin: 0; padding: 0;}
+#container{
+    width: 100%;
+    margin: 0 auto;
+    background: #f00;
+    color: #fff;
+}
+header{height: 100px; border: 1px solid #fff}
+section{height: 600px; border: 1px solid #fff}
+footer{height: 100px; border: 1px solid #fff}
+
+/* 태블릿 기준 */
+@media screen and (min-width: 780px){
+    #container{background: #0f0;}
+}
+
+/* PC 기준 */
+@media screen and (min-width: 1024px){
+    #container{width: 1024px; background: #00f;}
+}

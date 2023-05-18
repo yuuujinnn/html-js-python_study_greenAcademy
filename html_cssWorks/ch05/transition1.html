@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition 속성</title>
+    <style>
+        .tr{
+            width: 100px;
+            height: 100px;
+            background: #00f;
+            border: 1px solid #000;
+            position: absolute;
+            top: 100px;
+            left: 100px;
+
+            /* transition-property: width, height;
+            transition-duration: 2s, 1s; */
+            /* 한 번에 속성 설정 - 콤머로 구분 */
+            /* transition: width, height, background-color, 1s, 2s, 0.5s; */
+            /* 모든 속성에 대해 시간을 똑같이 설정 */
+            transition: all 2s ease-in;
+            /*
+                ease-in : 느리게 시작
+                ease-out : 느리게 끝남
+                ease-in-out : 느리게 시작하고 느리게 끝남
+            */
+        }
+        .tr:hover{
+            width: 200px;
+            height: 120px;
+            background-color: #0f0;
+        }
+    </style>
+</head>
+<body>
+    <div class="tr"></div>
+</body>
+</html>

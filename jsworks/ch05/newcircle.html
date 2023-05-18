@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사용자 객체</title> 
+    <script>
+        function Circle(radius){ //생성자 함수
+          this.radius = radius;
+    
+          this.length = function(){ //원의 둘레 = 2 x PI x 반지름
+            let length = 2 * Math.PI * this.radius;
+            return length;
+          }
+    
+          this.area = function(){ //원의 면적 = PI x 반지름 x 반지름
+            let area = Math.PI * this.radius * this.radius;
+            return area;
+          }
+        }
+    
+        let c1 = new Circle(5);
+        let c2 = new Circle(10);
+    
+        document.write("작은 원의 둘레 : " + c1.length().toFixed(2) + "cm<br>");
+        document.write("작은 원의 면적 : " + c1.area().toFixed(2) + "cm<sup>2</sup><br>")
+        document.write("큰 원의 둘레 : " + c2.length().toFixed(2) + "cm<br>");
+        document.write("큰 원의 면적 : " + c2.area().toFixed(2) + "cm<sup>2</sup><br>")
+      </script>
+</head>
+<body>
+  
+</body>
+</html>

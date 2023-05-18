@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>after 선택자</title>
+    <style>
+        ul li{margin: 15px;}
+        ul li.new::after{
+            content: "New";
+            background: #f00;
+            border-radius: 2px;
+            color: #fff;
+            /* font-size: 10px; */
+            font-size: x-small;
+            padding: 3px;
+            margin: 0 5px;
+        }
+    </style>
+</head>
+<body>
+    <article class="goods">
+        <h2>상품 목록</h2>
+        <ul>
+            <li class="new">라면</li>
+            <li>생수</li>
+            <li class="new">커피</li>
+            <li>두부</li>
+        </ul>
+    </article>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주사위 던지기 게임</title>
+    <script>
+        // 주사위 2개를 10번 던지기
+        for(let i=1; i<=10; i++){
+            let dice1 = Math.floor(Math.random()*6) + 1;
+            let dice2 = Math.floor(Math.random()*6) + 1;
+            let diceSum = dice1 + dice2
+            // console.log(diceSum)
+            if(diceSum === 8){
+                console.log(dice1,dice2,"Eight Thrown!");
+            }
+            else if(diceSum === 11){
+                console.log(dice1,dice2,"Eleven Thrown!");
+            }
+            else if(dice1 === dice2){
+                console.log(dice1,dice2,"Double Thrown!");
+            }
+            else{
+                console.log(dice1,dice2)
+            }
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

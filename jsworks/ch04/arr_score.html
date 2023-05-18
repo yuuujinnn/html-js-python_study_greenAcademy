@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열의 연산</title>
+    <script>
+        // 5명의 학생의 수학점수
+        let score =[90, 85, 60, 80, 70];
+        let sum = 0; // 충점 저장할 변수
+        let avg; // 평균은 총점 / 갯수
+
+        // 점수 추가 5번인덱스 95
+        score.push(95);
+
+        console.log(score[0]);
+        // 배열로 조회
+        console.log(score); // 출력 [, ,]
+        document.write(score+"<br>");
+        // 전체 조회
+        for(let i in score){
+            console.log(score[i]);
+            document.write(score[i]+" "+"<br>");
+        }
+        /*
+            i=0, score[0] 90
+            i=1, score[1] 85
+            i=2, score[2] 60
+            i=3, score[3] 80
+            i=4, score[4] 70
+        */
+       // 총점
+       for(let i =0; i<score.length; i++){
+        sum += score[i];// 누적 합계
+        avg = sum / score.length;
+           }
+       document.write(sum+"<br>");
+       document.write(avg)
+
+       score.add[5]= 90;
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

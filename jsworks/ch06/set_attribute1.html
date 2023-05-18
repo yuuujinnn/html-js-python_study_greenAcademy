@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>속성을 가져오거나 수정하는 함수</title>
+</head>
+<body>
+    <input type="text" value="OK" class="input">
+    <p>입력상자를 버튼으로 변경하려면 클릭하세요</p>
+
+    <button onclick="myFunction()">Try it</button>
+
+    <script>
+        function myFunction(){
+            // 객체의 속성 변경 - setAttribute(속성, 속성값)
+            let input = document.querySelector(".input")
+            input.setAttribute("type", "button");
+        }
+    </script>
+</body>
+</html>

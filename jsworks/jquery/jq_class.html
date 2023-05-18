@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>class 속성 추가, 삭제 함수 - addClass(), removeClass()</title>
+    <script src="./js/jquery-3.6.4.js"></script>
+    <style>
+        .text{color: red;}
+    </style>
+    <script>
+        $(function(){
+            $('#btn1').click(function(){
+                $('p').addClass('text');
+            });
+            $('#btn2').click(function(){
+                $('p').removeClass('text');
+            });
+            $('#btn3').click(function(){
+                $('p').toggleClass('text');
+            });
+        })
+    </script>
+</head>
+<body>
+    <p>요소에 class 속성을 추가합니다.</p>
+
+    <button id="btn1">addClass</button>
+    <button id="btn2">removeClass</button>
+    <button id="btn3">toggleClass</button>
+</body>
+</html>

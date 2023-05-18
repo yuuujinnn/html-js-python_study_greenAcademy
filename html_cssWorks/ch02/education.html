@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>표 만들기4</title>
+    <style>
+        #wrap{
+            width: 1200px;
+            margin: 0px auto;
+            text-align: center;
+        }
+        table, th, td{
+            border: 1px solid #555;
+            padding: 10px;
+            border-collapse: collapse;
+            width: 600px;
+            margin: 0 auto; /* 표 가운데 정렬 */
+        }
+        thead{
+            background-color: darkgrey;
+        }
+        caption{
+            margin: 0px 10px 0px 0px;
+            /* margin-bottom: 10px; */
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <h2>Education</h2>
+        <table>
+            <caption>학력 사항</caption>
+            <thead>
+                <tr>
+                    <th>출신학교</th>
+                    <th>전공</th>
+                    <th>기간</th>
+                    <th>구분</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>서일대학교</td>
+                    <td>정보통신공학과</td>
+                    <td>2017.3~2022.2</td>
+                    <td>졸업</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>  
+</body>
+</html>

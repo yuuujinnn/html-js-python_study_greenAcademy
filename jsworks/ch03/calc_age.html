@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>나이 계산 프로그램</title>
+    <style>
+        .content{
+            width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        p{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h2>나이를 계산하는 프로그램</h2>
+        <button onclick="calcAge()">계산하기</button>
+        <hr>
+        <p id="show"></p>
+    </div>
+
+    <script>
+        // 나이 = 현재년도 - 태어난 년도 + 1
+        function calcAge(){
+            const CURRENT_YEAR = 2023;
+            let birthYear = prompt("출생 년도를 입력하세요", "yyyy");
+            let age; //할당 안함
+
+            // isNaN(문자) -> true
+            // 취소 - null 또는 문자 입력시 isNaN()
+            if(birthYear === null || isNaN(birthYear)){
+                document.getElementById("show").innerHTML = "입력이 취소되었습니다."
+            }
+            else{
+                age = CURRENT_YEAR - parseInt(birthYear) + 1;
+                document.getElementById("show").innerHTML = 
+                "당신의 나이는 " + age + "세 이군요"; 
+            }
+        }
+    </script>
+</body>
+</html>

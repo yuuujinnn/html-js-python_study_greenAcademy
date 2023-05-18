@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array 객체의 map() 함수</title>
+</head>
+<body>
+    <h2>Array map()</h2>
+    <p id="demo"></p>
+    <script>
+        const numbers = [4,9,16,25];
+
+        //배열복사
+        //let arr = []; // 빈 배열 생성
+        let arr = new Array(4);
+        arr = numbers;
+        console.log(arr);
+
+        // map() - 배열 내의 요소 각각에 대해 정의한 함수를 
+        // 호출한거로 새로운 배열을 반환한다.
+        // 함수의 매개변수 - 변수
+        // 함수의 매개변수 - 함수
+    
+        let arr2 = numbers.map(myNumber);
+        function myNumber(num){
+            return num;
+        }
+        document.getElementById("demo").innerHTML = arr2
+    </script>
+</body>
+</html>

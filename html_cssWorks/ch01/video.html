@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>비디오 관련 태그</title>
+</head>
+<body>
+    <!-- 재생 플레이어 활성화 : controls -->
+    <!-- <video src="./media/animal.mp4" controls width="500"></video> -->
+
+    <!-- 무음 자동 반복 재생 -->
+    <!-- <video src="./media/animal.mp4" autoplay muted width="500" loop></video> -->
+
+    <!-- source 태그를 함께 사용 : 브라우저에서 지원이 안될경우 사용
+         poster 속성은 video가 재생 안될경우 대체 이미지임 -->
+    <video controls poster="./images/animal.PNG">
+        <source src="./media/animal.mp4" type="video/mp4">
+    </video>
+
+    <!-- 외부 영상 연결 -->
+    <div>
+        <a href="https://m.sports.naver.com/video/1040977">
+            <image src="./images/son.PNG" alt="손흥민 골 영상"></image>
+        </a>
+    </div>
+</body>
+</html>

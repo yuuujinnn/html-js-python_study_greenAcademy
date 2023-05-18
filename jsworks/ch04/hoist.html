@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>호이스트(hoist)</title>
+</head>
+<body>
+    <script>
+        // 코드는 순차적으로 위에서 아래로 해석(인터프리터)
+        // 호이스트 (hoist) - 자바스크립트 엔진이 a, 1을 함께 기억하면서 오류를
+        // var 자료형을 쓰는 경우 - 자바스크립트 엔진이 a, 1을 함께
+        // 기억하면서 오류를 발생시키지 않음
+        // let 자료형은 오류를 발생시킴 (실행(런타임)중 오류)
+        console.log(a);
+        var a = 1;
+    </script>
+</body>
+</html>

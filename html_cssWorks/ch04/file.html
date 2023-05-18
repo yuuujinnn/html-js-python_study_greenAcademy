@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>파일 첨부</title>
+    <style>
+        /* fieldset{
+            margin-bottom: 10px;
+        } */
+        .button input{
+            /* top right bottom left */
+            margin: 10px 2px;
+            padding: 5px 10px;
+            /* border: none; */
+            /* cursor : 커서 모양 변경 - pointer : 손모양 */
+            cursor: pointer; 
+        }
+    </style>
+</head>
+<body>
+    <h1>레드향 주문하기</h1>
+    <form>
+        <fieldset>
+            <legend>반품 정보</legend>
+            <p>만일 수령한 상품에 문제가 있다면 즉시 <b>반품 신청</b>해 주세요</p>
+            <p>반품 신청시 상품의 상태를 사진으로 첨부해 주세요</p>
+            <hr>
+            <input type="file" name="file">
+        </fieldset>
+        <div class="button">
+            <input type="submit" value="반품 신청">
+            <input type="reset" value="취소하기">
+        </div>
+    </form>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>removechild() 사용</title>
+    <script>
+        function myFunction(){
+           let list = document.getElementById("myList");
+           //list.removeChild(list.firstElementChild);
+           //list.removeChild(list.lastElementChild);
+           //list.removeChild(list.children[1]); //특정 위치에서 삭제
+           list.removeChild(list.children[1].nextElementSibling);
+        }
+    </script>
+</head>
+<body>
+    <h2>removechild() 사용</h2>
+    <button onclick="myFunction(); this.onclick='' ">삭제</button>
+
+    <ul id="myList">
+        <li>Coffee</li>
+        <li>Tea</li>
+        <li>Water</li>
+    </ul>
+</body>
+</html>

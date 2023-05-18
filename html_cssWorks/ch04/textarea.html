@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>textarea 태그</title>
+    <style>
+        textarea{
+            margin-top: 10px;
+        }
+        p{margin-top: 10px 0px;}
+    </style>
+</head>
+<body>
+    <form method="post">
+        <fieldset>
+            <legend>배송 업무</legend>
+            <!-- rows=보이는 행의 수, cols=가로글자수, placeholder=힌트문자 -->
+            <!-- 시작태그와 끝태그는 붙어야 한다 (띄워져있으면 안됨) -->
+            <textarea rows="5" cols="60" name="memo"
+                      placeholder="배송시 요청사항을 적어주세요."></textarea>
+            <p>
+                <!-- <input type="submit" value="전송"> -->
+                <button type="submit">전송</button>
+            </p>
+        </fieldset>
+    </form>
+</body>
+</html>

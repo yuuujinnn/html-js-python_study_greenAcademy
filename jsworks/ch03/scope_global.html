@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>변수의 유효 범위</title>
+</head>
+
+<body>
+    <h3>전역 변수의 유효 범위</h3>
+    <script>
+
+
+        /* 
+        전역 변수 - 메모리 영역 (정적[static] 영역)
+        생성 - 메인 영역에서 생성하면 전체에 영향을 미치며 값이 누적(공유)
+        소멸 - 프로그램이 종료될때 메모리 (전역 공간)에서 해제
+         */
+        
+        let x = 1;
+        
+        function oneUp() {
+            x++;
+            return x;
+        }
+        //let num = oneUp();
+        document.write(oneUp() + "<br>"); // 2
+        document.write(oneUp() + "<br>"); // 3
+        document.write(oneUp() + "<br>"); // 4
+        document.write(x);
+    </script>
+</body>
+
+</html>

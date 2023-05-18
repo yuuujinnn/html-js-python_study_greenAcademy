@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>게시판 목록입니다.</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+    <div id="container">
+        {% include 'header.html' %}
+        <div id="main-pic">
+            <img src="{{ url_for('static', filename='images/header1.jpg') }}">
+        </div>
+        <section id="boardlist">
+            <h2>게시판 목록</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>글번호</th><th>글제목</th><th>작성일</th><th>조회수</th><th>글쓴이</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for board in boardlist %}
+                    <tr>
+                        <td>{{ board[0] }}</td>
+                        <td>
+                            <a href="{{ url_for('detail', bno=board[0]) }}">
+                                {{ board[1] }}</a>
+                        </td>
+                        <td>{{ board[3] }}</td>
+                        <td>{{ board[5] }}</td>
+                        <td>{{ board[6] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            <div class="btnWrite">
+                <a href="{{ url_for('writing') }}">
+                    <button type="button">글쓰기</button>
+                </a>
+            </div>
+        </section>
+        {% include 'footer.html' %}
+    </div>
+</body>
+</html>

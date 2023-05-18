@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>원의 둘레와 면적 계산하기</title>
+    <script>
+        // 생성자 함수(class)
+        // 원 - 반지름(radius)
+        function Circle(radius){
+            this.radius = radius; //멤버 변수
+
+            // 원의 둘레 계산 함수
+            this.length = function(){
+                value = 2 * Math.PI * radius;
+                return value;
+            }
+            this.area = function(){
+                return Math.PI * radius * radius;
+            }
+        }
+        
+    
+        // 객체 생성 및 사용 - 힙(heap) 메모리 적재
+        let c1 = new Circle(5);
+        document.write("반지름 : " + c1.radius + "cm<br>");
+        document.write("원의 둘레 : " + c1.length().toFixed(2) + "cm<br>");
+        document.write("원의 면적 : " + c1.area().toFixed(2) + "cm<sup>2<br>");
+
+
+        let c2 = new Circle(10);
+        let c3 = new Circle(20);
+
+
+        let circle = [c1, c2, c3];
+        /* console.log(circle[0].radius);
+        console.log(circle[1].radius);
+        console.log(circle[2].radius); */
+        for(let i=0; i<circle.length; i++){
+            console.log(circle[1].radius + " ");
+        }
+
+        for(let i in circle)
+            console.log(circlr[i].radius + " ");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

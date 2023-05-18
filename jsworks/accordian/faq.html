@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>아코디언 기능 실습</title>
+    <link rel="stylesheet" href="./css/ui.css">
+    <script src="./js/jquery-3.6.4.js"></script>
+</head>
+<body>
+    <section id="content">
+        <h3>한라북스의 자주 묻는 질문을 모았습니다.</h3>
+        <div class="accordio_box">
+            <ol>
+                <li class="on">
+                    <h4><span>Q1</span>도서와 관련된 실습 소스는 받을 수 있나요?</h4>
+                    <p><a href="#" target="_blank">한라북스 자료실</a>에서
+                        다운로드 할 수 있습니다.<br>
+                        원하는 도서명을 검색하여 도서와 관련된 추가 자료를 다운로드
+                        할 수 있습니다.
+                    </p>
+                </li>
+                <li>
+                    <h4><span>Q2</span>동영상 강의가 있나요?</h4>
+                    <p>동영상 강의는 제공하지 않습니다.</p>
+                </li>
+                <li>
+                    <h4><span>Q3</span>책은 어디서 구매하나요?</h4>
+                    <p>상단 메뉴의 한라쇼핑몰 > 구매사이트로 바로 연결됩니다.</p>
+                </li>
+                <li>
+                    <h4><span>Q4</span>문의 사항은 어디에 남기면 되나요?</h4>
+                    <p>메뉴의 고객센터 > 도서 문의에 하시면 됩니다.</p>
+                </li>
+            </ol>
+        </div>
+    </section>
+
+    <script>
+        $(document).ready(function(){
+            $('.accordio_box ol li').click(function(){
+                $('.accordio_box ol li').removeClass('on');  // 위쪽 li
+                $(this).addClass('on'); // 현재 클릭된 li
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+ /* 전체 선택 - 박스 크기 : border-box */
+        *{margin: 0; padding: 0; box-sizing: border-box;}
+        #content{
+            width: 330px;
+            height: 380px;
+            border: 2px solid #00f;
+            border-radius: 10px;
+            margin: 10px auto;
+            padding: 10px 30px;
+            position: relative;  /*부모 기준*/
+        }
+        h2{padding: 30px;}
+        p{line-height: 2;}
+        .detail{margin-bottom: 30px;}
+        .detail b{color: red;}
+        .smallText{font-size: 0.9em;}
+        .close{position: absolute; bottom: 20px; right: 40px;} /*창닫기 위치*/
+        .close a{text-decoration: none; color: #00f;}
+        .close a:hover{text-decoration: underline; }

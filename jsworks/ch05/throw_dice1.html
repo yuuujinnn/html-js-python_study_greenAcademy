@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주사위 던지기</title> 
+    <script>
+      /*주사위 게임 - 주사위 2개를 10번 던지기
+      두 눈의 합계가 8이면 "Eight Thrown!", 11이면 "Eleven Thrown!",
+      두 눈의 수가 같으면 "Double Thrown!!" 출력
+      */
+      for(var i = 1; i <= 10; i++){
+          let dice1 = Math.floor(Math.random()*6) + 1;
+          let dice2 = Math.floor(Math.random()*6) + 1;
+          let total = dice1 + dice2;
+          console.log(total);
+
+          if(total == 8){
+              console.log("Eight Thrown!");
+          }
+          if(total == 11){
+              console.log("Eleven Thrown!");
+          }
+          if(dice1 == dice2){
+              console.log("Double Thrown!");
+          }
+      }
+    </script>
+    
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>짝수/홀수 판정 결과</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div id="container">
+        <header>
+            <h1>짝수/홀수 판정 결과</h1>
+        </header>
+        <section id="result">
+            <h3>{{ num }}는(은) {{ result }}</h3>
+        </section>
+    </div>
+</body>
+</html>

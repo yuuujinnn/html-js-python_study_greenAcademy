@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>후손 선택자와 자식 선택자</title>
+    <style>
+        #wrap{width: 500px;}
+        /* 하위 선택(후손 선택) 적용 - 상위 요소와 하위 요소를 (공백 문자)한 칸 띄움 */
+        /* #wrap ul{
+            border: 1px dotted blue;
+        } */
+        /* 자식 선택 적용 - 상위 요소와 하위 요소를 (부등호 문자)>를 사용 */
+        #wrap > ul{
+            border: 1px dotted blue;
+        }
+    </style>
+</head>
+<body>
+    <section id="wrap">
+        <h1>예약 방법 및 요금</h1>
+        <p>행복 펜션에 예약하려면...</p>
+        <ul>
+            <li>예약 방법
+                <ul>
+                    <li>직접 통화</li>
+                    <li>문자 남기기</li>
+                </ul>
+            </li>
+            <li>요금
+                <ul>
+                    <li>1인 : 40,000원</li>
+                    <li>2인 : 60,000원</li>
+                    <li>3인 : 80,000원</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+</body>
+</html>

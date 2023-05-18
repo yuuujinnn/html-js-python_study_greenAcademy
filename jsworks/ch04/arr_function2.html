@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열</title> 
+</head>
+<body>
+    <script>
+       //배열 요소를 특정한 위치에서 추가, 삭제
+       var animal = ['bear', 'chicken', 'dog', 'horse'];
+
+       //특정 인덱스에서 제거(삭제) 
+       animal.splice(2, 1);  //2번 인덱스에서 1개 삭제
+
+       document.write("animal : " + animal + '<br>');
+
+       //특정 인데스에서 요소 추가
+       animal.splice(1, 0, 'cow'); //1번 인덱스에 삭제하지 않고 'cow' 추가
+       
+       document.write("animal : " + animal + '<br>');
+
+    //    for(var i in animal){
+    //        document.write(animal[i] + ' ');
+    //    }
+
+       //배열 요소 합치기, 연결하기
+       var numbers = [1, 2, 3];
+       var chars = ['a', 'b', 'c'];
+    
+      
+       //두 배열 합치기 - concat()
+       var list = numbers.concat(chars);  //배열의 순서 주의!!
+       document.write(list + '<br>');
+
+        //구분기호 연결하기 - join() -> 매개변수로 구분기호 전달
+        document.write(numbers.join("-") + '<br>');  //1-2-3
+        document.write(numbers.join() + '<br>');  //기본 콤머로 구분 1,2,3
+        document.write(chars.join("-") + '<br>');  //a-b-c
+
+        document.write(list.join(":"));
+    
+    </script>
+</body>
+</html>

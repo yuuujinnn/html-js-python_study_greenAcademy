@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>querySelectorAll()</title>
+</head>
+<body>
+    <h2 class="heading">국가의 수도(Capital)</h2>
+    <p>대한민국의 수도는 서울입니다.</p>
+
+    <h2>세계의 수도</h2>
+    <ul>
+        <li class="city">베를린</li>
+        <li class="city">도쿄</li>
+        <li class="city">뻬이징</li>
+        <li class="city">워싱턴</li>
+    </ul>
+
+    <script>
+        //1개의 요소 선택
+        document.querySelector(".heading").style.color = "blue";
+
+        //여러개의 요소 선택 - 배열
+        let cityList = document.querySelectorAll(".city");
+        cityList[0].style.color = "green";
+        cityList[3].style.color = "orange";
+    </script>
+</body>
+</html>

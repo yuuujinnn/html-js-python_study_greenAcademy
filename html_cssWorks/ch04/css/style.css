@@ -1,0 +1,41 @@
+#container{
+    width: 1000px;
+    margin: 0 auto;
+    border: none;
+}
+div{
+    width: 700px;
+    margin: 20px auto;
+    border: 1px solid #555;
+    padding: 20px;
+}
+#description{
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+p{
+    line-height: 2;
+}
+div.bg{
+    width: 350px;
+    height: 250px;
+    background: url("../images/tangerine.png") no-repeat;
+    border: none; /* 테두리 숨기기 */
+    margin-left: 10px;
+}
+ol li{
+    line-height: 2;
+}
+table, th, td{
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+}
+th, td{
+    padding: 10px;
+    text-align: center;
+}
+caption{margin-bottom: 10px;}
+#package{
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}

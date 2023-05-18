@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>검색 폼</title>
+    </head>
+    <body>
+        <!-- action: 경로(주소)
+             method : post -보안, get -일반적인경우(보여도 될때)
+             search.jsp : 서버사이드(측) 언어  
+             html, css : 클라이언트측 언어 -->
+        <form action="search.jsp" method="post">
+            <input type="text" name="query">
+            <input type="submit" value="검색">
+        </form>
+    </body>
+</html>

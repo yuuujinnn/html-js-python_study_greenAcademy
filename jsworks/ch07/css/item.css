@@ -1,0 +1,16 @@
+#wrapper{
+    width: 600px; margin: 50px auto;
+}
+/* 폼 스타일 */
+h2{text-align: center;}
+form{background: #0094ff; padding: 30px; text-align: center;}
+input{width: 420px; padding: 10px;}
+.btnAdd{width: 60px; padding: 10px;}
+
+/* 목록 스타일 */
+ul{margin: 0; padding: 0;}
+ul li{list-style: none; padding: 10px 10px 10px 40px;
+    background: #eee; position: relative;}
+ul li:hover{background: #ddd;}
+.close{position: absolute; top: 0; right: 0; padding: 10px 20px;}
+.close:hover{background: rgb(30, 100, 200); color: #fff; cursor: pointer;}

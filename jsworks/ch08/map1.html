@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array 객체 - map() 함수</title>
+</head>
+<body>
+    <h2>map() 함수 - 새로운 배열을 생성해 줌</h2>
+    <p id="demo"></p>
+
+    <script>
+        // 객체 = {속성 : 속성값}, 사용 .연산자 접근
+        // let obj = {과일 : 'apple', 차 : 'sonata'}
+        // console.log(obj.과일);
+
+        const persons = [
+            {이름 : 'Jobs', 성 : 'steve'},
+            {이름 : '그래', 성 : '장'},
+            {이름 : 'Gates', 성 : 'Bill'},
+        ];
+
+        console.log(persons[0].성 + ":" + persons[0].이름);
+
+        for(let i=0; i<persons.length; i++){
+            console.log(persons[i].성 + " " + persons[i].이름);
+        }
+				
+        // map() 새로운 배열 생성
+        let arr = persons.map(myFunction);
+        console.log(arr)
+
+        document.getElementById("demo").innerHTML = arr;
+
+        function myFunction(item){  // item - persons 각각의 요소
+            return [item.성, item.이름].join(" ");  // 문자열을 구분기호로 구분
+        }
+				  
+    </script>
+</body>
+</html>

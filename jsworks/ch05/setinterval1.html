@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window객체의 setInterval()</title> 
+</head>
+<body>
+  <h3>3초 후에 알림창이 뜨고, 1초에 한번 계속 창이 뜹니다.</h3>
+   <script>
+    // // setInterval(기능,시간)
+    //   let timer = setInterval(
+    //     function(){
+    //       alert("안녕하세요");
+    //      } , 1000) // 1000ms -> 1초
+
+    //winHello()함수호출
+        setInterval(winHello, 3000);
+
+        function winHello(){
+          alert("안녕하세요");
+        }
+   </script>
+</body>
+</html>

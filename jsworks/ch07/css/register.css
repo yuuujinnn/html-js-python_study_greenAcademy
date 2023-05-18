@@ -1,0 +1,22 @@
+#container{width: 460px; margin: 30px auto;}
+h2{padding-left: 30px;}
+form{border: 1px solid #ccc; padding: 10px 0;}
+ul li{list-style: none; margin: 20px;}
+.field{
+    width: 120px;
+    float: left;
+    line-height: 2em;
+}
+input[type="text"],[type="email"], [type="password"]{
+    width: 220px;
+    height: 30px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+input[type="radio"]{margin-top: 10px;}
+.button{
+    border: 1px solid #ccc;
+    border-radius: 2px;
+    padding: 10px;
+    margin: 5px 10px 5px 0;
+}

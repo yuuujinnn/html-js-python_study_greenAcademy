@@ -1,0 +1,31 @@
+#wrap{
+    width: 640px;
+    margin: 0 auto;
+}
+#check{
+    border: 1px solid #ccc;
+}
+h1{
+    font-size: 1em;
+    background-color: #000;
+    color: #fff;
+    padding: 10px;
+    margin: 0; /* 기본 16px을 0px로 수정함 */
+    letter-spacing: 3px;
+}
+h2{
+    color: red;
+    font-size: 1.5em;
+    text-align: center;
+}
+p{
+    text-align: center;
+    line-height: 2;
+    font-weight: bold;
+}
+.accent{
+    color: blue;
+}
+.smalltext{
+    font-size: 0.7em;
+}

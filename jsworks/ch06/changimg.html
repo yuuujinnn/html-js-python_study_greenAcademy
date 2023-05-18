@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js 객체의 onclick 속성 사용</title>
+</head>
+<body>
+    <img src="images/cup-1.png" alt="컵" id="pic">
+
+    <script>
+       let pic = document.getElementById("pic");
+
+       //pic 객체의 onclick 속성 사용
+       pic.onclick = changePic;  //함수 호출(함수 괄호가 생략됨)
+
+       function changePic(){
+         pic.src = "images/cup-2.png";
+       }
+
+       //익명 함수로 호출
+       /*pic.onclick = function(){
+          pic.src = "images/cup-2.png";
+       }*/
+
+    </script>
+</body>
+</html>

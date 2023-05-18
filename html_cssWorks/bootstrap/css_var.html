@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css var() 함수</title>
+    <style>
+        :root{
+            /* color */
+            --red-color: rgb(128, 13, 13);
+            --blue-color: rgb(151, 144, 214);
+            
+            /* margin */
+            --my-2 : 0.5rem 0;
+            --my-3 : 1rem 0;
+            --mx-3 : 0 1rem;
+            --mx-3 : 0 1rem;
+
+        }
+
+        h1{
+            /* var() 함수는 속성값을 정의해서 변수처럼 사용하는 함수 */
+            color: var(--red-color);
+        }
+        div{
+            width: 200px;
+            height: 100px;
+            margin: var(--mx-3);
+            background: var(--blue-color);
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <h1>소프트웨어 엔지니어</h1>
+    <div></div>
+    <div></div>
+</body>
+</html>

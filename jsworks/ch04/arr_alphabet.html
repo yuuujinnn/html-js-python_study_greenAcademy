@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열</title> 
+    <script>
+        //알파벳 대문자를 저장할 배열을 선언하고 출력하기
+        let alphabet = new Array(26);
+        let ch = 'A';
+
+        ch = ch.charCodeAt(0);
+        //console.log(ch); //code - 65
+        //ch++;
+        //console.log(ch); //code - 66
+        //let ch2 = String.fromCharCode(ch)  
+        //console.log(ch2); //'A'
+
+        //배열에 저장
+        for(var i = 0; i < alphabet.length; i++){
+            alphabet[i] = ch;  
+            ch++;    //코드(숫자) 1 증가
+        }
+
+        //출력
+        for(var i = 0; i < alphabet.length; i++){
+            //코드와 문자로 출력
+            console.log(alphabet[i] + ", " + String.fromCharCode(alphabet[i]));
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

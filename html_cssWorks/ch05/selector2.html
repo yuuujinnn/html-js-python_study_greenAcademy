@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>후손 선택자와 자식 선택자</title>
+    <style>
+        #wrap{width: 500px;}
+        /* 인접 형제 선택자('+' 기호 사용) */
+        h1 + ul{
+            color: #00f;
+            font-weight: 700;
+        }
+        /* 형제 전체 선택자('~' 기호 사용) */
+        /* h1 ~ ul{
+            color: #00f;
+            font-weight: 700;
+        } */
+    </style>
+</head>
+<body>
+    <section id="wrap">
+        <h1>예약 방법 및 요금</h1>
+        <ul>
+            <li>직접 통화</li>
+            <li>문자 남기기</li>
+        </ul>
+        <ul>
+            <li>1인 : 40,000원</li>
+            <li>2인 : 60,000원</li>
+            <li>3인 : 80,000원</li>
+        </ul>
+    </section>
+</body>
+</html>

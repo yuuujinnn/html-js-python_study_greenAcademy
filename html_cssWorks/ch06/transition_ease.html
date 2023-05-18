@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transition ease 속성</title>
+    <style>
+        #ex div{
+            float: left;
+            width: 100px;
+            height: 50px;
+            background: #00f;
+            margin: 10px;
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+        }
+        /* 느리게 시작 */
+        #ex .ease-in:hover{
+            transition: 2s ease-in;
+            height: 200px;
+        }
+        /* 느리게 끝남 */
+        #ex .ease-out:hover{
+            transition: 2s ease-out;
+            height: 200px;
+        }
+        /* 느리게 시작 느리게 끝남 */
+        #ex .ease-in-out:hover{
+            transition: 2s ease-in-out;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="ex">
+        <div class="ease-in">ease-in</div>
+        <div class="ease-out">ease-out</div>
+        <div class="ease-in-out">ease-in-out</div>
+    </div>
+</body>
+</html>

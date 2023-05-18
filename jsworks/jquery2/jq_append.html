@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery - 삽입 관련 메서드</title>
+    <script src="./js/jquery-3.6.4.js"></script>
+</head>
+<body>
+
+    <div id="m1">
+        <strong>내용</strong>
+    </div>
+
+    <script>
+        $(function(){
+            //자식요소중 첫번째 요소로 삽입
+            $('#m1').prepend("<p>삽입1_1</p>");
+            //자식요소중 마지막 요소로 삽입
+            $('#m1').append("<p>삽입1_2</p>");
+            //부모 요소중 이전에 삽입
+            $('#m1').before("<p>삽입1_3</p>");
+            //부모 요소중 이전에 삽입
+            $('#m1').after("<p>삽입1_4</p>");
+        })
+    </script>
+</body>
+</html>

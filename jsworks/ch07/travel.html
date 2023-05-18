@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>여행 준비물 점검 목록</title>
+    <link rel="stylesheet" href="./css/item.css">
+</head>
+<body>
+    <div id="wrapper">
+        <h2>여행 준비물 점검 목록</h2>
+        <form action="addItem.jsp" method="post">
+            <input type="text" id="item" name="item" autofocus>
+            <button type="button" id="add" class="btnAdd">추가</button>
+        </form>
+        <div id="itemList"></div>
+    </div>
+
+    <script src="./js/travel.js"></script>  
+</body>
+</html>

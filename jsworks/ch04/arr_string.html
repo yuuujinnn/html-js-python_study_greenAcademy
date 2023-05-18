@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array 객체 - 배열</title>
+</head>
+
+<body>
+    <script>
+        // 문자열은 특별한 1차원 배열이다.
+        let fruit1 = "apple";
+        //fruit1.push('s');
+        console.log(fruit1.indexOf('e')); //4
+        console.log(fruit1[0]);
+
+
+
+        let fruit2 = ['a', 'p', 'p', 'l', 'e'];
+        fruit2.push('s');
+        console.log(fruit2[0]);
+        console.log(fruit2.indexOf('e')); //4
+        console.log(fruit2);
+        fruit2.pop(); // 맨뒤 삭제
+        console.log(fruit2);
+
+        // 1번 인덱스에 't'를 삽입
+        fruit2.splice(1, '0', 't');
+        console.log(fruit2);
+
+        // 점수의 총점과 평균
+        let even = [2, 4, 6, 8, 10];
+        let sumV = 0;
+        let avgV;
+
+        for (let i = 0; i < even.length; i++) {
+            sumV = sumV + even[i];
+            console.log(even[i]+sumV);
+        }
+        avgV = sumV / even.length;
+        document.write("합계 = " + sumV + "<br>");
+        document.write("평균 = " + avgV);
+    </script>
+</body>
+
+</html>

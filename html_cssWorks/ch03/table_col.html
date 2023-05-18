@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table, th, td{
+            border: 1px solid #ccc;
+        }
+        th, td{
+            width: 100px;
+            height: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <!-- 2행 3열의 표 -->
+    <table>
+        <!-- 부서명 칼럼(열)에 색상 지정 -->
+        <colgroup>
+            <col style="background: #eee;">
+            <col style="background: #0f0;">
+            <col>
+        </colgroup>
+        <thead>
+            <tr>
+                <th>부서번호</th>
+                <th>부서명</th>
+                <th>부서인원</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td rowspan="2">1</td>
+                <td>관리부</td>
+                <td>10</td>
+            </tr>
+            <tr>
+                <td>전산실</td>
+                <td>5</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>

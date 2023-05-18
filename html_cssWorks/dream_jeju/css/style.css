@@ -1,0 +1,332 @@
+/* 전체 스타일 */
+@import url('https://fonts.googleapis.com/css2?family=Merienda:wght@500&family=Nanum+Gothic+Coding&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 16:9 화면상 1600px로 설정 */
+#container {
+    width: 100%;
+    margin: 0 auto;
+}
+
+main {
+    width: 1200px;
+    box-sizing: border-box;
+    /* margin과 padding 자유롭게 가능 (알아서 줄여줌) */
+    margin: 0 auto;
+}
+
+/* header 영역 스타일 */
+header {
+    height: 80px;
+    background: rgb(1, 85, 1);
+}
+
+header #logo {
+    width: 300px;
+    float: left;
+    padding-left: 30px;
+    line-height: 80px;
+}
+
+#logo h1 a {
+    color: yellowgreen;
+    text-decoration: none;
+    font-family: Merienda;
+}
+
+nav {
+    width: 800px;
+    float: right;
+    line-height: 80px;
+    /* text-align: right;
+    margin-right: 100px;    > 이런식으로 위치조절 가능 */
+}
+
+nav #topMenu {
+    list-style: none;
+}
+
+#topMenu li {
+    display: inline-block;
+    padding: 0 20px;
+}
+
+#topMenu li a {
+    color: white;
+    text-decoration: none;
+}
+
+#topMenu li a:hover {
+    color: #2fb2fd;
+}
+
+/* main 영역 스타일 */
+#contents section {
+    margin: 30px 10px;
+}
+
+section div {
+    margin: 10px;
+}
+
+section p {
+    line-height: 2;
+}
+
+/* section의 높이를 지정해줌 */
+#healing,
+#activity {
+    height: 300px;
+}
+
+#healing img,
+#activity img {
+    float: left;
+    margin-right: 20px;
+    border-radius: 10px;
+}
+
+.schedule h3 {
+    margin-top: 20px;
+}
+
+.schedule ul li {
+    list-style: none;
+    margin: 10px;
+}
+
+#sightseeing ul li {
+    list-style: square;
+    margin: 10px 30px;
+}
+
+#sightseeing ul li a {
+    text-decoration: none;
+    color: blue;
+}
+
+#sightseeing ul li a:hover {
+    text-decoration: underline;
+}
+
+/* footer 영역 스타일 */
+footer {
+    width: 1200px;
+    margin: 0 auto;
+    border-top: 2px solid #555;
+}
+
+footer #bottomMenu {
+    list-style: none;
+    padding: 20px;
+}
+
+#bottomMenu li {
+    display: inline-block;
+    margin: 0px;
+    border-right: 1px solid #777;
+    padding: 0 10px;
+}
+
+#bottomMenu li a {
+    text-decoration: none;
+    color: #444;
+}
+
+#bottomMenu li:last-child {
+    border: none
+}
+
+/* #bottomMenu li:nth-child(4){
+    border: none;
+} */
+
+
+/* product 스타일 */
+#product p {
+    line-height: 2;
+}
+
+#product h2 {
+    margin-bottom: 10px;
+}
+
+#description {
+    width: 800px;
+    margin: 30px auto;
+    padding: 20px 60px;
+    border: 1px dotted #333;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+}
+
+#description img {
+    margin: 0 10px 10px 10px;
+    border-radius: 10px;
+}
+
+#receipe {
+    width: 800px;
+    margin: 0 auto;
+    padding: 20px 60px;
+    border: 1px dotted #333;
+}
+
+#receipe ol {
+    padding-left: 20px;
+    margin-top: 10px;
+}
+
+#receipe ol li {
+    line-height: 1.7;
+}
+
+#package {
+    width: 800px;
+    margin: 30px auto;
+    padding: 20px 60px;
+    border: 1px dotted #333;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+}
+
+#package table,
+th,
+td {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    padding: 10px 20px;
+}
+
+/* q & a 스타일 */
+#board section h2 {
+    margin: 30px 10px;
+    text-align: center;
+}
+
+#board #tbl_board {
+    border: 1.5px solid rgb(31, 153, 31);
+    border-collapse: collapse;
+    width: 700px;
+    margin: 0 auto 50px;
+}
+
+#tbl_board thead {
+    background-color: beige;
+}
+
+#tbl_board td:nth-child(1),
+td:nth-child(3),
+td:nth-child(4) {
+    text-align: center
+}
+
+#tbl_board td:nth-child(1) {
+    width: 50px;
+}
+
+.btn {
+    text-align: right;
+    margin-right: 250px;
+}
+
+.btn button {
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+
+/* About Me 스타일 */
+#profile section {
+    margin: 30px 10px;
+}
+
+#profile section h2 {
+    margin: 10px;
+    color: blue;
+}
+
+#profile section div {
+    margin: 20px 10px 40px 10px;
+}
+
+#profile ul li {
+    margin: 16px 50px;
+}
+
+#intro {
+    height: 350px;
+}
+
+#intro h1 {
+    font-size: 2em;
+}
+
+#intro p {
+    line-height: 1.8;
+}
+
+#intro img {
+    float: left;
+    margin-right: 30px;
+    border-radius: 5px;
+}
+
+#intro a {
+    text-decoration: none;
+    color: #00f;
+}
+
+#intro a:hover {
+    text-decoration: underline;
+}
+
+#career ul li:nth-child(1) {
+    color: #f00;
+}
+
+/* #profile #career ul li:nth-of-type(1){color: #f00;} */
+#skill ul li a {
+    text-decoration: none;
+    color: #00f;
+}
+
+#skill ul li a:hover {
+    text-decoration: underline;
+}
+
+
+/* register 스타일 */
+#register section h2 {
+    margin: 30px 10px;
+    text-align: center;
+}
+
+#tbl_write {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    width: 700px;
+    margin: 0 auto 50px;
+}
+
+#tbl_write input[type="text"]{
+    width: 650px;
+    height: 25px;
+}
+
+#tbl_write textarea{
+    width: 650px;
+}
+
+#tbl_write input[type="submit"],input[type="reset"]{
+    width: 100px;
+    height: 50px;
+}
+
+#tbl_write td:last-child {
+    text-align: center;
+}

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열</title> 
+</head>
+<body>
+    <script>
+        let str = "Hello world, welcome world";
+
+        //indexOf() - 문자열의 첫번째 위치 반환, 못 찾으면 -1 반환
+        let n1 = str.indexOf("world");  //6
+        let n2 = str.indexOf("asia");   //-1
+
+        //lastIndexOf() - 문자열의 뒤에서 찾아서 위치 반환
+        let n3 = str.lastIndexOf("world");  //21
+
+        document.write(n1 + "<br>");
+        document.write(n2 + "<br>");
+        document.write(n3 + "<br>");
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>continue 문</title>
+    <script>
+        /* break문
+        for(var i = 1; i <= 10; i++){
+            // 1부터 5까지 출력
+            if(i > 5){
+                break;
+            }
+            console.log(i);
+        } */
+
+        // continue문
+        for(var i = 1; i <= 10; i++){
+            // 1부터 10까지 출력 (5만 제외하고 출력)
+            // 반복문 내부에서 continue 문을 만나면
+            // 이후 반복되는 부분을 수행하지 않음(증감식은 수행함)
+            if(i == 5){
+                continue;
+            }
+            console.log(i);
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

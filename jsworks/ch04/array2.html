@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열</title> 
+</head>
+<body>
+    <script>
+        //배열 선언과 동시에 저장
+        let lang = ['Java', 'Javascript', 'Python'];
+
+        document.write("배열의 길이 : " + lang.length + "개<br>");
+
+        //조회 - 일반 for
+        for(let i = 0; i < lang.length; i++){
+            document.write(lang[i] + " ")
+        }
+
+        document.write('<br>')
+
+        //for ~ in 출력
+        for(let i in lang)
+            document.write(lang[i] + " " )
+    </script>
+  
+</body>
+</html>

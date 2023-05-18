@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform 속성</title>
+    <style>
+        div{
+            width: 150px;
+            height: 80px;
+            background-color: #0f0;
+        }
+        div.a:hover{
+            /* 시계방향으로 20도 회전 */
+            transform: rotate(20deg);
+            /* 브라우저 접두사(prefix) */
+            /* 크롬, 사파리 */
+            -webkit-transform: rotate(20deg);
+            /* 익스플로러 */
+            -ms-transform: rotate(20deg);
+            /* 파이어폭스 */
+            -moz-transform: rotate(20deg);
+            /* 오페라 */
+            -o-transform: rotate(20deg);
+        }
+        div.b:hover{
+            /* X축 방향으로 100px 이동 */
+            transform: translateX(100px);
+            -webkit-transform: translateX(100px);
+            -ms-transform: translateX(100px);
+            -moz-transform: translateX(100px);
+        }
+        div.c:hover{
+            /* 크기가 1.5배 y 축으로 커짐 */
+            transform: scaleY(1.5);
+            -webkit-transform: scaleY(1.5);
+            -ms-transform: scaleaY(1.5);
+            -moz-transform: scaleY(1.5);
+        }
+    </style>
+</head>
+<body>
+    <h2>변형전 개체</h2>
+    <div class="a">Hello World!</div>
+    <h2>변형전 개체</h2>
+    <div class="b">Hello World!</div>
+    <h2>변형전 개체</h2>
+    <div class="c">Hello World!</div>
+</body>
+</html>

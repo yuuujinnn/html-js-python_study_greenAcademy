@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열</title> 
+</head>
+<body>
+    <script>
+        //최대값
+        let number = [33, 25, 17, 92, 56, 100, 81];
+        let maxV = number[0];   //33
+
+        for(let i = 1; i < number.length; i++){
+            //값의 비교
+            if(maxV < number[i]){
+                maxV = number[i];
+            }
+        }
+
+        document.write("최대값 : " +  maxV);
+
+        //최소값 찾기
+        let minV = number[0];
+
+        for(let i = 1; i < number.length; i++){
+            //값의 비교
+            if(minV > number[i]){
+                minV = number[i];
+            }
+        }
+
+        document.write("<br>최소값 : " +  minV);
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>switch~case 문</title>
+    <style>
+        body{
+            background-color: rgb(24, 24, 116);
+            color: #c5c5c5;
+            text-align: center;
+            margin-top: 50px;
+        }
+        p{
+            /* text-shadow: 가로그림자크기 세로그림자크기 번짐정도 색상; */
+            text-shadow: 2px 2px 2px #222;
+            font-size: 2em;   /* 1em = 16px / 2em = 32px */
+        }
+        strong{
+            color: yellow;
+            font-size: 1.2em; /* 부모태그인 p태그 상태에서 1.2배로 적용 (32 * 1.2 = 38.4) */
+        }
+    </style>
+    <script>
+        //1-마케팅, 2-개발, 3-디자인
+        let session = prompt("관심 세션을 선택해 주세요. ", "1-마케팅, 2-개발, 3-디자인" );
+
+        switch(session){  //입력받은 숫자를 문자형태로 기록
+            case '1':
+                document.write("<p>마케팅 세션은 <strong>201호</strong>에서 진행됩니다.</p>");
+                break;
+            case '2':
+                document.write("<p>개발 세션은 <strong>203호</strong>에서 진행됩니다.</p>");
+                break;
+            case '3':
+                document.write("<p>디자인 세션은 <strong>205호</strong>에서 진행됩니다.</p>");
+                break;
+            default:
+                document.write("<p>진행되는 세션이 없습니다.</p>");
+                break;
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

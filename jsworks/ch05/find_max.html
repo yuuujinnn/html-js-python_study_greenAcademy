@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열에서 최대값과 최소값 찾기</title>
+    <script>
+        let number = [33, 44, 17, 92, 56, 100];
+        let sumV = 0;
+
+        // 최대값
+        let maxV = number[0];  //최대값으로 설정
+        for(let i=1; i<number.length; i++){
+            // 값 비교
+            if(maxV < number[i]){
+                maxV = number[i];
+            }
+        }
+        /*
+            i=1, 33<44(true), maxV=44
+            i=2, 44<17(false), maxV=44
+            i=3, 44<92(true), maxV=92
+            i=4, 92<56(false), maxV=92
+            i=5, 92<100(true), maxV=100
+
+        */
+
+        console.log("max = " + maxV);
+
+
+        // 최소값
+        let minV = number[0];
+        for(let i=1; i<number.length; i++){
+            // 값 비교
+            if(minV > number[i]){
+                minV = number[i];
+            }
+        }
+        /*
+            i=1, 33>44(false), minV=33
+            i=2, 44>17(true), minV=17
+            i=3, 17>92(false), minV=17
+            i=4, 17>56(false), minV=17
+            i=5, 17>100(false), minV=17
+
+        */
+
+        console.log("min = " + minV);
+
+
+
+
+        // 개수 - number.length
+        // 합계 - sumV += number[i]
+        // 평균 - sumV / number.length
+
+        for(let i=0; i<number.length; i++){
+            sumV += number[i];
+        }
+
+        let avgV = sumV / number.length;
+
+        console.log("count = " + number.length)
+        console.log("sum = " + sumV)
+        console.log("average = " + avgV.toFixed(2));
+        
+        </script>
+</head>
+<body>
+    
+</body>
+</html>

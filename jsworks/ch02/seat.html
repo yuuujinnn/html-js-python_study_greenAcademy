@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>자리 배치 프로그램</title>
+    <script>
+        // 입장객 수에 따른 좌석의 줄(행)수 계산
+        let customer = parseInt(prompt("입장객은 몇 명인가요? ")); //입장객 수
+        let colNum = parseInt(prompt("한 줄에 몇명씩 앉나요? "));    //열의 수
+        let rowNum;        //행(줄)의 수
+
+        // 나머지가 있는지 없는지 처리
+        if(customer == null || colNum == null || isNaN(customer) || isNaN(colNum)){
+            document.write("입력이 취소되었습니다.");
+        }
+        else{
+            if(customer % colNum == 0){
+                rowNum = customer / colNum;
+            }
+            else{
+                rowNum = parseInt(customer / colNum) + 1
+            }
+
+            document.write(rowNum + "개의 줄이 필요합니다.");
+        }
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display 속성</title>
+    <style>
+        div{
+            width: 300px;
+            height: 250px;
+            border: 2px solid rgb(255, 42, 0);
+            border-radius: 20px;
+            margin: 10px;
+            /* 속성(크기, 여백)이 포함되면 inline은 적용 안됨 */
+            display: inline-block;
+        }
+        #bg{
+            background: url("./images/cat.jpg") no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body>
+    <div class="round"></div>
+    <div class="round" id="bg"></div>
+</body>
+</html>

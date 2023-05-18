@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>car select - onchange 속성</title>
+</head>
+<body>
+    <p>자동차 목록</p>
+    <select id="car" onchange="myFunction()">
+        <option value="Audi">Audi</option>
+        <option value="BMW">BMW</option>
+        <option value="Morning">Morning</option>
+        <option value="Sonata">Sonata</option>
+    </select>
+
+    <p id="display"></p>
+
+    <script>
+        function myFunction(){
+           let car = document.getElementById("car").value;
+           document.getElementById("display").innerHTML = 
+                "당신이 선택한 차는 " + car;
+        }
+    </script>
+</body>
+</html>

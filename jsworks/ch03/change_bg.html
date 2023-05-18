@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배경색 바꾸기</title>
+    <link rel="stylesheet" href="./css/bg.css">
+</head>
+<body>
+    <div class="menu">
+        <ul>
+            <li>
+                <a href="#" onclick="changeBg('green')">Green</a>
+            </li>
+            <li>
+                <a href="#" onclick="changeBg('black')">Black</a>
+            </li>
+            <li>
+                <a href="#" onclick="changeBg('pink')">Pink</a>
+            </li>
+        </ul>
+    </div>
+    <div class="box" id="rect"></div>
+
+    <script>
+        function changeBg(color){
+            let rect = document.getElementById("rect")
+            rect.style.backgroundColor = color;
+        }
+    </script>
+</body>
+</html>

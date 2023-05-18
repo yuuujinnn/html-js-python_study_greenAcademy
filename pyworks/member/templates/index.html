@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>강남 커뮤니티입니다.</title>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="{{ url_for('static', filename='js/main-js.js') }}"></script>
+</head>
+<body>
+    <div id="container">
+        {% include 'header.html' %}
+        <!-- 배경 이미지 -->
+        <div id="main-pic">
+            <img src="{{ url_for('static', filename='images/header1.jpg') }}" id="pic">
+        </div>
+        <section id="main">
+            <h2>안녕하세요! 강남 커뮤니티입니다.</h2>
+            <div class="img1">
+                <img src="{{ url_for('static', filename='images/gangnam.jpg') }}">
+            </div>
+            <!-- 시계 위치-->
+            <p id="demo"></p>
+        </section>
+        {% include 'footer.html' %}
+    </div>
+</body>
+</html>

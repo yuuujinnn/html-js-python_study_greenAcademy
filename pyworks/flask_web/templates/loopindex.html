@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>loop.index 예제</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div id="container">
+    <header>
+      <h1>loop.index 예제</h1>
+    </header>
+    <section>
+        <!-- loop.index는 순번을 출력해줌(1번에서 시작) -->
+        <ul>
+            {% for item in items %}
+            <li>
+               {{ loop.index }} - {{ item }}
+            </li>
+            {% endfor %}
+        </ul>
+        <ul>
+            {% for item in items %}
+                {% if loop.index < 3 %}
+                <li>
+                   {{ loop.index }} - {{ item }}
+                </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </section>
+  </div>
+</body>
+</html>

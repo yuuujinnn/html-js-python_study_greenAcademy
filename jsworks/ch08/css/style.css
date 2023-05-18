@@ -1,0 +1,39 @@
+body {
+    height: 2000px;
+}
+section {
+    height: 1000px;
+    background: url("../images/desert.jpg") no-repeat fixed;
+    background-size: cover;
+}
+h1 {
+    width: 200px;
+    font-size: 5em;
+    color: #fff;
+    position: absolute;
+    top: 100px;
+    left: 300px;
+    animation-name: go_slide;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+@keyframes go_slide {
+    from{
+        left: -100px;
+        opacity: 0.2;
+    }
+    to{
+        left: 300px;
+        opacity: 1;
+    }
+}
+@keyframes back_slide {
+    from{
+        left: 300px;
+        opacity: 1;
+    }
+    to{
+        left: -100px;
+        opacity: 0.2;
+    }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>박스 모델</title>
+    <style>
+        /* 전체 선택자 - '*' */
+        *{
+            margin: 0px;
+        }
+        /* 마진 중첩(수직 배치시에 위마진과 아래마진이 서로 만날때 
+            큰 마진값으로 설정된다.)*/
+        .box1{
+            width: 400px;
+            height: 100px;
+            /* border: 1px solid #ccc; */
+            background-color: orange;
+            /* margin - 바깥여백(top, right, bottom, left) */
+            margin: 10px 10px 20px 10px;
+            /* margin-top: 10px;
+            margin-right: 10px;
+            margin-bottom: 30px;
+            margin-left: 20px; */
+        }
+        .box2{
+            width: 400px;
+            height: 100px;
+            background-color: yellowgreen;
+            margin: 10px;
+        }
+        .box3{
+            width: 400px;
+            height: 100px;
+            background-color: purple;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+    <div class="box3"></div>
+</body>
+</html>

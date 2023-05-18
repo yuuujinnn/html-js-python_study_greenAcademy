@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>배열</title> 
+</head>
+<body>
+    <script>
+        var array = new Array(5);  
+        console.log("배열의 길이 : " + array.length + "개");
+        console.log("array " + array);
+
+        //초기화
+        var fruit = new Array("딸기", "사과", "바나나", '귤', 200, 3.14);
+        //타입이 다른 자료도 함께 저장됨
+        console.log("fruit : " + fruit);
+
+        //인덱스로 가져오기
+        console.log("fruit[2] : " + fruit[2]);
+
+        //수정
+        fruit[4] = '감';
+        fruit[5] = '포도';
+
+        for(var i=0; i<fruit.length; i++){
+            console.log(fruit[i]);
+        }
+
+        for(var i in fruit)
+            console.log(fruit[i]);
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Math 내장 객체</title> 
+</head>
+<body>
+  <script>
+    //1~10까지의 자연수 중 무작위로 추출하기
+    var rand = Math.floor(Math.random()*10) + 1;
+    console.log(rand);
+
+    var rand2 = Math.floor(Math.random()*6) + 1;
+    console.log(rand2);
+
+    //주사위 10번 던지기
+    var dice = function(){
+        var rand = Math.floor(Math.random()*6) + 1;
+        return rand;
+    }
+
+    //console.log("주사위 눈 : "  + dice());
+
+    for(var i=1; i<=10; i++){
+        console.log("주사위 눈 : "  + dice());
+    }
+</script>
+</body>
+</html>

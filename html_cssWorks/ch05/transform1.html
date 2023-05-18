@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>transform 속성</title>
+    <style>
+        div.a{
+            width: 150px;
+            height: 80px;
+            background-color: #0f0;
+        }
+        div.b{
+            width: 150px;
+            height: 80px;
+            background-color: #0f0;
+            /* 시계방향으로 20도 회전 */
+            transform: rotate(20deg);
+        }
+        div.c{
+            width: 150px;
+            height: 80px;
+            background-color: #0f0;
+            /* X축 방향으로 100px 이동 */
+            transform: translateX(100px);
+        }
+        div.d{
+            width: 150px;
+            height: 80px;
+            background-color: #0f0;
+            /* 크기가 1.5배 y 축으로 커짐 */
+            transform: scaleY(1.5);
+        }
+    </style>
+</head>
+<body>
+    <h2>변형전 개체</h2>
+    <div class="a">Hello World!</div>
+    <h2>변형전 개체</h2>
+    <div class="b">Hello World!</div>
+    <h2>변형전 개체</h2>
+    <div class="c">Hello World!</div>
+    <h2>변형전 개체</h2>
+    <div class="d">Hello World!</div>
+</body>
+</html>

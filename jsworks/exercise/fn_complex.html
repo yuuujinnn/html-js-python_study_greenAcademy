@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>return 연습 문제</title>
+    <script>
+        // 두 수가 같으면 곱하고, 다르면 두수를 더하기
+        function fnComplex(x, y){
+            if(x === y){
+                return x * y;
+            }
+            else{ //x !== y
+                return x + y;
+            }
+        }
+        let num1 = fnComplex(10, 10);
+        let num2 = fnComplex(5, 10);
+        document.write("num1 = " + num1 + "<br>");
+        document.write("num2 = " + num2 + "<br>");
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

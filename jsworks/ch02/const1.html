@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상수(constant variable)</title>
+    <script>
+        // 변경해서는 안되는 진리나 사실 - 자료형은 const 사용
+        // let month = 12;
+        const MONTH = 12;  //상수는 관례상 대문자로 사용함
+        // month = 13;  //const 선언한 변수는 변경할 수 없음
+
+        // 원의 넓이 : 반지름 X 반지름 X PI
+        // 원의 둘레 : 2 X 반지름 X PI
+        let radius = 5
+        const PI = 3.1415;
+        let area, length;
+        // PI = 3;
+
+        // 면적
+        area = radius * radius * PI
+        // 둘레
+        length = 2 * radius * PI
+        
+
+        document.write("반지름 : " + radius + "<br>");
+        document.write("원의 넓이 : " + area.toFixed(2) + "<br>");
+        document.write("원의 둘레 : " + length.toFixed(2) + "<br>");
+
+        document.write("1년은 " + MONTH + "달이 있습니다.");
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

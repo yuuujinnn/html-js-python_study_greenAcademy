@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery - html()</title>
+    <script src="https://code.jquery.com/jquery-3.6.4.js" integrity="sha256-a9jBBRygX1Bh5lt8GZjXDzyOB+bWve9EiO7tROUtj/E=" 
+            crossorigin="anonymous"></script>
+    <script>
+        // 제이쿼리 환경 - 간단한 방식
+        $(function(){
+            // html내의 태그는 하위(자식)요소로 추가
+            $('.add').click(function(){
+                $('.pic').html("<img src ='images/bear.jpg' alt = '곰인형'>")
+                $('.pic').css('margin-top', '10px');
+            });
+        });
+    </script>
+</head>
+<body>
+    <a href="#" class="add">사진 추가</a>
+    <div class="pic"></div>
+</body>
+</html>
