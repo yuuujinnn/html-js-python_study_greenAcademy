@@ -9,20 +9,19 @@ public class Array2 {
 		// "Sonata"를 검색하시오
 		System.out.println(cars[1]);
 		
-		// "K7"을 "BMW"로 변경하시오
+		// K7을 BMW로 변경하시오
 		cars[3] = "BMW";
 		
 		// 전체 출력
 		for(int i = 0; i < cars.length; i++) {
 			System.out.print(cars[i] + " ");
 		}
+		System.out.println();
 		
-		// 향상된 for문
-		// for(자료형 변수 : 배열이름){}
+		// 향상된 for 문
+		// for(자료형 변수 : 배열 이름){}
 		for(String car : cars) {
 			System.out.print(car + " ");
 		}
-
 	}
-
 }

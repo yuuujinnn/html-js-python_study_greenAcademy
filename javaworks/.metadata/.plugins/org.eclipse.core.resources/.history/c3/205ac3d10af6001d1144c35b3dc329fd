@@ -1,0 +1,19 @@
+package taketrans;
+
+// 사람 클래스(참조 자료형) 
+public class Person {
+
+	String name;
+	int age;
+	int money; // 가진 돈
+	
+	Person(String name, int money) {
+		this.name = name;
+		this.money = money;
+	}
+	
+	// void takeBus();
+	// void showInfo();
+	
+
+}

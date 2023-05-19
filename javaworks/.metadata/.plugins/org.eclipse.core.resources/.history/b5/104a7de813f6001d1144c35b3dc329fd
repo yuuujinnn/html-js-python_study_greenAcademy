@@ -1,0 +1,13 @@
+package hiding;
+
+public class AccountTest {
+
+	public static void main(String[] args) {
+		// 계좌 객체 생성
+		Account a1 = new Account("1000-1234", "이몽룡", 50000);
+		
+		a1.setAno("2000-1234");
+		System.out.println(a1.getAno());
+	}
+
+}

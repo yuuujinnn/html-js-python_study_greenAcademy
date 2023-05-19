@@ -2,15 +2,15 @@
 # 리스트의 첫번째 자료부터 하나씩 비교하면서 같은 값이 나오면
 # 그 위치를 돌려주고(반환), 못찾으면 -1을 반환함
 
-def search_list(a, x):
+def search_list(a, x):  # 리스트, 찾는값
     n = len(v)
-    for i in range(0, n):
-        if a[i] == x:
-            return i
+    for i in range(0, n):   # 모든 값을 차례로 반ㄴ복
+        if a[i] == x:       # 리스트의 값이 찾는 값과 비교하여 같으면
+            return i        # 위치를 반환함
     return -1
 
 def search_list2(a, x):
-    same_num = []
+    same_num = []   # 중복 위치를 저장할 리스트 생성
     n = len(a)
     for i in range(0, n):
         if a[i] == x:
