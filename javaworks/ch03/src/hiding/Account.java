@@ -1,10 +1,10 @@
 package hiding;
 
 public class Account {
-	// 멤버변수, 생성자, 메서드
-	private String ano;		//계좌 번호
-	private String owner;	//계좌주
-	private int balance;	// 잔고
+	//멤버변수, 생성자, 메서드
+	private String ano;    //계좌 번호
+	private String owner;  //계좌주
+	private int balance;   //잔고
 	
 	public Account(String ano, String owner, int balance) {
 		this.ano = ano;
@@ -12,12 +12,12 @@ public class Account {
 		this.balance = balance;
 	}
 	
-	// get() 메서드 : get + 멤버변수이름()
+	//get() 메서드 : get + 멤버변수이름()
 	public String getAno() {
 		return ano;
 	}
-
-	// set() 메서드 : set + 멤버변수이름()
+	
+	//set() 메서드 : set + 멤버변수이름()
 	public void setAno(String ano) {
 		this.ano = ano;
 	}
@@ -37,4 +37,5 @@ public class Account {
 	public void setBalance(int balance) {
 		this.balance = balance;
 	}
+	
 }
