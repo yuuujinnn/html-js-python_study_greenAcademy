@@ -1,24 +1,21 @@
 package taketrans;
 
-//지하철 클래스 만들기
 public class Subway {
-	
 	String lineNumber;
-	int passenger;
+	int passengerCount;
 	int money;
-	
-	Subway(String lineNumber){
+
+	public Subway(String lineNumber) {
 		this.lineNumber = lineNumber;
 	}
 	
-	void take(int money) {
+	public void take(int money) {
 		this.money += money;
-		passenger++;
+		passengerCount++;
 	}
 	
-	//버스의 정보
-	void showInfo() {
-		System.out.printf("지하철 %s의 수입은 %,d원이고, "
-				+ "승객수는 %d명입니다.\n", lineNumber, money, passenger);
+	public void showInfo() {
+		System.out.printf("지하철 %s의 수입은 %,d원이고, 승객 수는 %d명입니다.\n",
+				lineNumber, money, passengerCount);
 	}
 }

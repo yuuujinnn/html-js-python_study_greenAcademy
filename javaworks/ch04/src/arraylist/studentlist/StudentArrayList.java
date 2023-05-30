@@ -11,7 +11,7 @@ public class StudentArrayList {
 		s1.addSubject("과학", 75);
 		
 		s1.showInfo();
-
+		
 	}
 
 }

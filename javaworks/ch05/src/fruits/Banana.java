@@ -4,7 +4,7 @@ public class Banana extends Fruit{
 	
 	public Banana() {
 		name = "바나나";
-		weight = "650g";
-		price = 3000;
+		weight = "800g";
+		price = 5000;
 	}
 }

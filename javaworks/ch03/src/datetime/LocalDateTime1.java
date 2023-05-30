@@ -1,14 +1,15 @@
 package datetime;
 
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
 public class LocalDateTime1 {
-
+	
 	public static void main(String[] args) {
-		// LocalDate -날짜, LocalTime-시간, LocalDateTime- 날짜와 시간
+		// LocalDate - 날짜, LocalTime - 시간, LocalDateTime - 날짜와 시간
+
 		// 날짜
 		LocalDate date = LocalDate.now();
 		System.out.println(date);
@@ -20,12 +21,10 @@ public class LocalDateTime1 {
 		// 날짜와 시간
 		LocalDateTime now = LocalDateTime.now();
 		System.out.println(now);
-
+		
 		// 날짜와 시간 형식 - DateTimeFormatter
-		DateTimeFormatter datetime = DateTimeFormatter.ofPattern("yyyy-MM-dd hh:mm:ss a");
+		DateTimeFormatter datetime = DateTimeFormatter.ofPattern("yyyy-MM-dd a hh:mm:ss");
 		String current_time = now.format(datetime);
 		System.out.println(current_time);
-
 	}
-
 }

@@ -14,25 +14,25 @@ public class ArrayCalc {
 		score[2] = 85;
 		score[3] = 60;
 		
-		//총점 계산
+		// 총점 계산
 		for(int i = 0; i < score.length; i++) {
 			total += score[i];
 		}
+		
 		//평균
 		avg = (double)total / score.length;
 		
-		//최고 점수
-		int maxV = score[0]; //첫번째 값을 최고 점수로 설정
-		for(int i = 1; i < score.length; i++) {
-			if(maxV < score[i]) { //최대값이 다음점수보다 작으면
-				maxV = score[i];   //다음 점수로 최대값 설정
+		// 최고 점수
+		int maxV = score[0];	// 첫 번째 값을 최고 점수로 설정
+		for(int i=1; i<score.length; i++) {
+			if(maxV < score[i]) {	// 최대값이 다음 점수보다 작으면 
+				maxV = score[i];	// 다음 점수로 최대값 설정
 			}
 		}
 		
-		//출력
+		// 출력
 		System.out.println("총점 : " + total);
 		System.out.println("평균 : " + avg);
-		System.out.println("최고점수 : " + maxV);
+		System.out.println("최고 점수 : " + maxV);
 	}
-
 }

@@ -8,13 +8,13 @@ import java.sql.SQLException;
 
 //DB 연결 및 종료 기능을 하는 클래스
 public class JDBCUtil {
-	// 필드
-	static String driverClass = "oracle.jdbc.OracleDriver"; // 오라클 드라이버
-	static String url = "jdbc:oracle:thin:@localhost:1521:xe"; // db 경로(위치)
+	//필드
+	static String driverClass = "oracle.jdbc.OracleDriver"; //오라클 드라이버
+	static String url = "jdbc:oracle:thin:@localhost:1521:xe"; //db 경로(위치)
 	static String username = "c##mydb";
 	static String password = "mydb";
-
-	// DB 연결 메서드
+	
+	//DB 연결 메서드
 	public static Connection getConnection() {
 		try {
 			Class.forName(driverClass);
@@ -26,10 +26,10 @@ public class JDBCUtil {
 		}
 		return null;
 	}
-
-	// DB 연결 종료 메서드
+	
+	//DB 연결 종료 메서드
 	public static void close(Connection conn, PreparedStatement pstmt) {
-		if (pstmt != null) { // sql 처리가 되고 있다면
+		if(pstmt != null) { //sql 처리가 되고 있다면
 			try {
 				pstmt.close();
 			} catch (SQLException e) {
@@ -38,8 +38,8 @@ public class JDBCUtil {
 				pstmt = null;
 			}
 		}
-
-		if (conn != null) { // db가 연결이 되어있다면
+		
+		if(conn != null) { //db가 연결이 되어있다면
 			try {
 				conn.close();
 			} catch (SQLException e) {
@@ -49,10 +49,11 @@ public class JDBCUtil {
 			}
 		}
 	}
-
-	// DB 연결 종료 메서드(ResultSet이 있는 경우)
-	public static void close(Connection conn, PreparedStatement pstmt, ResultSet rs) {
-		if (rs != null) { // 가져올 자료가 있으면
+	
+	//DB 연결 종료 메서드(ResultSet이 있는 경우)
+	public static void close(Connection conn, PreparedStatement pstmt, 
+					ResultSet rs) {
+		if(rs != null) { //가져올 자료가 있으면
 			try {
 				rs.close();
 			} catch (SQLException e) {
@@ -61,7 +62,8 @@ public class JDBCUtil {
 				rs = null;
 			}
 		}
-		if (pstmt != null) { // sql 처리가 되고 있다면
+		
+		if(pstmt != null) { //sql 처리가 되고 있다면
 			try {
 				pstmt.close();
 			} catch (SQLException e) {
@@ -70,8 +72,8 @@ public class JDBCUtil {
 				pstmt = null;
 			}
 		}
-
-		if (conn != null) { // db가 연결이 되어있다면
+		
+		if(conn != null) { //db가 연결이 되어있다면
 			try {
 				conn.close();
 			} catch (SQLException e) {
@@ -81,4 +83,5 @@ public class JDBCUtil {
 			}
 		}
 	}
+	
 }

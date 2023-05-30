@@ -3,8 +3,8 @@ package enums;
 public class SeasonTest {
 
 	public static void main(String[] args) {
-		//Season season = null;  //null로 초기화
-		//사용 - enum 이름으로 직접 접근
+		// Season season = null; // null로 초기화
+		// 사용 - enum 이름으로 직접 접근
 		Season season = Season.여름;
 		
 		switch(season) {
@@ -22,7 +22,6 @@ public class SeasonTest {
 			break;
 		}
 		System.out.println("현재 계절은 " + season + "입니다.");
-		
 		if(season == Season.여름) {
 			System.out.println("무더위와 장마가 많이 옵니다.");
 		}else {

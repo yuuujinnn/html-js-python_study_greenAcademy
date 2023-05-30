@@ -3,7 +3,7 @@ package exception;
 public class ExceptionHandling1 {
 
 	public static void main(String[] args) {
-		//ArrayIndexOutOfBoundsException
+		// ArrayIndexOutOfBoundsException
 		try {
 			int[] num = new int[2];
 			

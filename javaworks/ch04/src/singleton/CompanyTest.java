@@ -6,7 +6,7 @@ public class CompanyTest {
 		Company com1 = Company.getInstance();
 		Company com2 = Company.getInstance();
 		
-		//주소가 같은지 비교
+		// 주소가 같은지 비교
 		System.out.println(com1 == com2);
 		
 		System.out.println(com1);

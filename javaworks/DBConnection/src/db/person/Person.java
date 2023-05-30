@@ -6,8 +6,10 @@ public class Person {
 	private String name;
 	private int age;
 	
+	//기본 생성자
 	public Person() {}
 	
+	//외부 입력가능한 생성자
 	public Person(String userId, String userPw, String name, int age) {
 		this.userId = userId;
 		this.userPw = userPw;
@@ -15,6 +17,7 @@ public class Person {
 		this.age = age;
 	}
 	
+	//setter, getter
 	public String getUserId() {
 		return userId;
 	}

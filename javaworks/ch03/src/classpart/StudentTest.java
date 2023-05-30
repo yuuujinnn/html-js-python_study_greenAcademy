@@ -10,10 +10,10 @@ public class StudentTest {
 		s1.studentID = 100;
 		s1.studentName = "강하늘";
 		
-		//출력
+		// 출력
 		s1.showInfo();
-		//System.out.println(s1.studentID);
-		//System.out.println(s1.studentName);
+		// System.out.println(s1.studentID);
+		// System.out.println(s1.studentName);
 
 	}
 

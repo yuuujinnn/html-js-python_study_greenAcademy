@@ -11,12 +11,12 @@ public class ShallowCopy {
 		array1[1] = new Book("Tiny Python Project", "켄 유엔스-클락");
 		array1[2] = new Book("혼자 공부하는 자바", "신용권");
 		
-		//array1을 array2에 복사
+		// array1을 array2에 복사
 		for(int i=0; i<array1.length; i++) {
 			array2[i] = array1[i];
 		}
 		
-		//첫번째 책 내용을 수정(변경)
+		// 첫 번째 책 내용을 수정(변경)
 		array2[0].setBookName("미생1");
 		array2[0].setAuthor("윤태호");
 		
@@ -24,14 +24,11 @@ public class ShallowCopy {
 		for(int i=0; i<array1.length; i++) {
 			array1[i].bookInfo();
 		}
-		System.out.println("====================================");
+		System.out.println("=================================");
 		
 		// array2 출력
 		for(int i=0; i<array2.length; i++) {
 			array2[i].bookInfo();
 		}
-		
-		
 	}
-
 }

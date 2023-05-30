@@ -9,7 +9,7 @@ public class Main {
 		// Alcohol 객체 생성
 		Alcohol soju = new Alcohol("소주", 4000, 5, 15.5f);
 		
-		Drink.printTitle(); //클래스 이름으로 직접 접근(제목)
+		Drink.printTitle();	// 클래스 이름으로 직접 접근(제목)
 		coffee.printData();
 		tea.printData();
 		
@@ -18,12 +18,11 @@ public class Main {
 		Alcohol.printTitle();
 		soju.printData();
 		
-		//총 판매금액
+		// 총 판매금액
 		int total = coffee.getTotalPrice() + tea.getTotalPrice()
-		            + soju.getTotalPrice();
-		
+					+ soju.getTotalPrice();
 		
 		System.out.printf("\n\n*** 합계 금액 : %,d원 ***\n", total);
+		System.out.println("\n*** 합계 금액 ****");
 	}
-
 }

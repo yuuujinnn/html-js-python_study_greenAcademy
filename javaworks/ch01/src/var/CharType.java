@@ -3,7 +3,7 @@ package var;
 public class CharType {
 
 	public static void main(String[] args) {
-		//문자 자료형
+		// 문자 자료형
 		System.out.println("*** 아스키 ***");
 		char ch1 = 'A';
 		int ch2 = 66;
@@ -20,15 +20,10 @@ public class CharType {
 		System.out.println(uniCode1);
 		System.out.println(uniCode2);
 		
-		//영어 소문자 전체 출력
+		// 영어 소문자 전체 출력
 		for(char c=97; c<123; c++) {
 			System.out.print(c + " ");
 		}
-		
-		
-		
-		
-		
 	}
 
 }

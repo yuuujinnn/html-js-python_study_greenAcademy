@@ -15,8 +15,6 @@ public class StudentTest {
 		
 		park.showInfo();
 		lee.showInfo();
-		
-
 	}
 
 }
