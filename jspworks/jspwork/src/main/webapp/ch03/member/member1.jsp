@@ -7,6 +7,7 @@
 <title>Java Beans</title>
 </head>
 <body>
+	<!-- 실제 클래스의 이름 - 패키지이름.클래스이름 -->
 	<jsp:useBean id="member" class="beans.MemberBean" />
 	
 	<p>아이디: <%=member.getId() %></p>

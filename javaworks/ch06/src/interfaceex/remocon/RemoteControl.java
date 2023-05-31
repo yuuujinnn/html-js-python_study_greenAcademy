@@ -1,4 +1,4 @@
-package Interfaceex.remocon;
+package interfaceex.remocon;
 
 public interface RemoteControl {
 	// 상수

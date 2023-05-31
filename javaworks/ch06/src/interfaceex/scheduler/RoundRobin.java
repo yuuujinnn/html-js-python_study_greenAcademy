@@ -1,4 +1,4 @@
-package Interfaceex.scheduler;
+package interfaceex.scheduler;
 
 // RoundRobin(구현 클래스)
 public class RoundRobin implements Scheduler{

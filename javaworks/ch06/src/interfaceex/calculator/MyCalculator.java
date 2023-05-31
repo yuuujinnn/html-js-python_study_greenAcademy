@@ -1,4 +1,4 @@
-package Interfaceex.calculator;
+package interfaceex.calculator;
 
 // 구현 클래스
 public class MyCalculator implements Calculator{

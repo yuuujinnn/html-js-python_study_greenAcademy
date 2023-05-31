@@ -1,4 +1,4 @@
-package Interfaceex.scheduler;
+package interfaceex.scheduler;
 
 public class PriorityAllocation implements Scheduler{
 

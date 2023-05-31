@@ -7,6 +7,9 @@
     <fullyQualifiedTypeName name="abstractex.template.Car"/>
     <fullyQualifiedTypeName name="interfaceex.calculator.MyCalculator"/>
     <fullyQualifiedTypeName name="java.rmi.Remote"/>
-    <fullyQualifiedTypeName name="interfaceex.remocon.RemoteControl"/>
     <fullyQualifiedTypeName name="java.sql.SQLException"/>
+    <fullyQualifiedTypeName name="banking.bankarray.Account"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="interfaceex.remocon.RemoteControl"/>
+    <fullyQualifiedTypeName name="interfaceex.tire.KumTire"/>
 </qualifiedTypeNameHistroy>

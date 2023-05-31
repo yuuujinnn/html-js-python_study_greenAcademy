@@ -1,4 +1,4 @@
-package Interfaceex.remocon;
+package interfaceex.remocon;
 
 public class Television implements RemoteControl {
 	
