@@ -9,7 +9,8 @@
     <fullyQualifiedTypeName name="java.rmi.Remote"/>
     <fullyQualifiedTypeName name="java.sql.SQLException"/>
     <fullyQualifiedTypeName name="banking.bankarray.Account"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="interfaceex.remocon.RemoteControl"/>
     <fullyQualifiedTypeName name="interfaceex.tire.KumTire"/>
+    <fullyQualifiedTypeName name="Interfaceex.inheritance.MyClass"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
 </qualifiedTypeNameHistroy>

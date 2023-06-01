@@ -4,10 +4,10 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>로그인 성공</title>
+<title>Insert title here</title>
 </head>
 <body>
 	<p>로그인을 실패했습니다.</p>
-	<a href="loginForm.jsp">로그인 가기</a>
+	<a href="">로그인 가기</a>
 </body>
 </html>

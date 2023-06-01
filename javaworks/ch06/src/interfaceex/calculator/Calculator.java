@@ -1,4 +1,4 @@
-package interfaceex.calculator;
+package interfaceex.Calculator;
 
 public interface Calculator {
 	// 정수형 계산기

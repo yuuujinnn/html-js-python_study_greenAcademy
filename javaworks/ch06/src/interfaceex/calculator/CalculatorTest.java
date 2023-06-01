@@ -1,4 +1,4 @@
-package interfaceex.calculator;
+package interfaceex.Calculator;
 
 public class CalculatorTest {
 

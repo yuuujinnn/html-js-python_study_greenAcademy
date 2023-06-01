@@ -5,12 +5,12 @@
 <jsp:setProperty property="passwd" name="login" />
 
 <%
-	//로그인 체크 함수 호출 (반환값 - true/false)
+	// 로그인 체크 함수 호출 (반환값 - true/false)
 	boolean result = login.checkUser();
 
-	if(result){  //result == true
+	if(result){ // result == true
 		out.println(login.getUserid() + "님 환영합니다.");
-	} else {
+	}else{
 		out.println("아이디나 비밀번호를 확인해 주세요.");
 	}
 %>
