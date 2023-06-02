@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+#container {width: 90%; margin: 50px auto; 
+	text-align: center;}
+	
+/* 주소 등록 스타일 */
+#tbl_reg {width: 450px; margin: 10px auto;}
+#tbl_reg, td {border: 1px solid #ccc; border-collapse: collapse;}
+#tbl_reg td {padding: 10px;}
+#tbl_reg input[type='text'] {padding: 5px; width: 230px;}
+#tbl_reg input[type='submit'], [type='reset'] {padding: 5px 10px; margin-right: 5px;}
+#tbl_reg select {padding: 5px;}
+
+/* 주소 목록 스타일 */
+#tbl_list {width: 600px; margin: 20px auto;}
+#tbl_list, th, td {border: 1px solid #ccc; border-collapse: collapse;}
+#tbl_list th, td {padding: 10px;}
+#tbl_list thead {background: #eee;}
