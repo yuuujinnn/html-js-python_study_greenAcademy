@@ -6,8 +6,8 @@
 <meta charset="UTF-8">
 <title>유효성 검사</title>
 <script type="text/javascript">
-	function checkForm() {
-		//alert("testing");
+	function checkForm(){
+		// alert("testing");
 		alert("아이디: " + document.loginForm.userid.value + "\n" +
 			  "비밀번호: " + document.loginForm.passwd.value);
 	}

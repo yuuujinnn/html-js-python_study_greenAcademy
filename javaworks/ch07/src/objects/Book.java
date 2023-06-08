@@ -12,7 +12,8 @@ public class Book {
 		this.bookTitle = bookTitle;
 	}
 	
-	//메서드 재정의
+	
+	//toString() 재정의
 	@Override
 	public String toString() {
 		return bookNumber + ", " + bookTitle;

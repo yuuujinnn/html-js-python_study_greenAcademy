@@ -11,7 +11,7 @@
 
 	// login 객체 생성
 	LoginBean login = new LoginBean();
-	login.setUserid(uid); // 아이디 설정(입력)
+	login.setuserid(uid); // 아이디 설정(입력)
 	login.setPasswd(pwd); // 비밀번호 설정
 
 	// checkUser() 호출

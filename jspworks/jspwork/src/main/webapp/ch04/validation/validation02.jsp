@@ -6,22 +6,23 @@
 <meta charset="UTF-8">
 <title>유효성 검사</title>
 <script type="text/javascript">
-	function checkForm() {
+	function checkForm(){
+		// name 속성을 사용
 		let form = document.loginForm;
 		let userid = form.userid;
 		let passwd = form.passwd;
 		
-		//아이디나 비밀번호가 입력되지 않았을때 유효성 검사
-		if(userid.value == "") {
+		// 아이디나 비밀번호가 입력되지 않았을 때 유효성 검사
+		if(userid.value == ""){
 			alert("아이디를 입력해 주세요");
 			userid.focus();
 			return false;
-		} else if(passwd.value.length < 5) {
-			alert("비밀번호를 5자 이상 입력해 주세요");
-			userid.focus();
+		}else if(passwd.value.length < 5){
+			alert("비밀번호를 5자 이상으로 입력해 주세요");
+			passwd.focus();
 			return false;
-		} else {
-			form.submit(); //폼 전송
+		}else{
+			form.submit(); // 폼 전송
 		}
 	}
 </script>

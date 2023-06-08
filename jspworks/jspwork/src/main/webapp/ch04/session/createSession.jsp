@@ -10,6 +10,6 @@
 	<h2>세션 사용</h2>
 	
 	<p><%=session %></p>
-	<p><%=session.getId() %>
+	<p><%=session.getId() %></p>
 </body>
 </html>

@@ -21,6 +21,9 @@ def get_price(unit_price, num):  # 매개변수 - 가격, 수량
     else:
         return price
 
+
+
+
 order1 = get_price(15000, 2)
 order2 = get_price(5000, 3)
 print(f'주문1 가격은 {order1}원 입니다.')
