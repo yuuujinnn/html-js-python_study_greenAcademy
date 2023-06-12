@@ -23,14 +23,14 @@ public class First extends HttpServlet {
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// RequestDispatcher 인터페이스의 객체 생성 - 포워딩
+		//RequestDispatcher 인터페이스의 객체 생성 - 포워딩
 		RequestDispatcher dispatch =
-				request.getRequestDispatcher("second?name=Minjae");
+				request.getRequestDispatcher("second?name=kang");
 		
-		// second 페이지의 내용이 출력 - 주소는 first로 유지됨
+		//second 페이지의 내용이 출력 - 주소는 first로 유지됨
 		dispatch.forward(request, response);
 	}
-
+	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		doGet(request, response);

@@ -21,15 +21,17 @@ public class Second extends HttpServlet {
 	}
 
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		  //컨텐츠 유형 설정
-	      response.setContentType("text/html; charset=utf-8");
-	      
-	      PrintWriter out = response.getWriter();
-	      
-	      String name = request.getParameter("name");
-	      
-	      out.println("<h3>dispatch를 이용한 포워딩 실습입니다.</h3>");
-	      out.println("<p>이름: " + name + "</p>");
+		//컨테츠 유형 설정
+		response.setContentType("text/html; charset=utf-8");
+		
+		//출력 스트림 객체 생성
+		PrintWriter out = response.getWriter();
+		
+		//second?name=kang
+		String name = request.getParameter("name");
+		
+		out.println("<h3>dispatch를 이용한 포워딩 실습입니다.</h3>");
+		out.println("<p>이름: " + name + "</p>");
 	}
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

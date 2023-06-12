@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>액션 태그</title>
 </head>
 <body>
 	<h2>액션 태그 - param</h2>

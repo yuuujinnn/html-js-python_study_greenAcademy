@@ -9,11 +9,11 @@
 <body>
 	<form action="/member/login" method="post">
 		<p>
-			<label for="userid">아이디</label>
+			<label for="userid">아이디 </label>
 			<input type="text" id="userid" name="userid">
 		</p>
 		<p>
-			<label for="passwd">비밀번호</label>
+			<label for="passwd">비밀번호 </label>
 			<input type="password" id="passwd" name="passwd">
 		</p>
 		<input type="hidden" name="phone" value="010-3355-7979">

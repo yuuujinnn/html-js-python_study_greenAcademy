@@ -11,30 +11,26 @@ import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/redir/first")
 public class FirstServlet extends HttpServlet {
-   private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-   
-   public void init(ServletConfig config) throws ServletException {
-      
-   }
+	public void init(ServletConfig config) throws ServletException {
+		
+	}
 
-   
-   protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-      //문자 인코딩 설정
-      request.setCharacterEncoding("utf-8");
-      
-      //SecondServlet로 이동(/redir/second)
-      response.sendRedirect("second");
-   }
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		//문자 인코딩 설정
+		request.setCharacterEncoding("utf-8");
+		
+		//SecondServlet로 이동(/redir/second)
+		response.sendRedirect("second");
+	}
 
-   
-   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-      
-      
-   }
-   
-   public void destroy() {
-      
-   }
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	
+	}
+	
+	public void destroy() {
+		
+	}
 
 }

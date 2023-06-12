@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>로그인 처리</title>
 </head>
 <body>
 	<p>로그인 되었습니다.</p>

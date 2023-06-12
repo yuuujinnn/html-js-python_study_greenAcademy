@@ -7,8 +7,8 @@
 <meta charset="UTF-8">
 <title>상품 목록</title>
 <style>
-	#container {width: 80%; margin: 30px auto; text-align: center;}
-	select {padding: 5px;}
+	#container{width: 80%; margin: 30px auto; text-align: center;}
+	select{padding: 5px;}
 </style>
 </head>
 <jsp:useBean id="product" class="product.Product" />
@@ -18,7 +18,7 @@
 		<hr>
 		<form action="selProduct.jsp" method="post">
 			<select name="select">
-			<%-- product.productList  <%=product.getProductList() %> --%>
+			<%-- product.productList -> <%=product.getProductList() %> --%>
 			<c:forEach var="product" items="${product.productList}">
 				<option><c:out value="${product}" /></option>
 				<!-- <option>참외</option>

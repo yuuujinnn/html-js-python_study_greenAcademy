@@ -17,19 +17,20 @@ public class HelloServlet extends HttpServlet {
 	public void init(ServletConfig config) throws ServletException {
 		System.out.println("init() 호출");
 	}
-	
+
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		// 문서의 커넨츠 유형 - 한글 인코딩
+		//문서의 컨텐츠 유형 - 한글 인코딩
 		response.setContentType("text/html; charset=utf-8");
 		
-		// 출력 스트림 out 객체 생성
+		//출력 스트림 out 객체 생성
 		PrintWriter out = response.getWriter();
 		
 		out.println("Hello~ Servlet!<br>");
 		out.println("안녕~ Servlet!");
 	}
-
+	
 	public void destroy() {
 		System.out.println("destroy() 호출");
 	}
+
 }

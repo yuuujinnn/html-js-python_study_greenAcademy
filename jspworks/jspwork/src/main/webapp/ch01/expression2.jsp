@@ -9,8 +9,8 @@
 <body>
 	<h2>짝수/홀수 판정 프로그램</h2>
 	<%
-	    int num = 11;
-	
+		int num = 12;
+		
 		String result = "";
 		if(num % 2 == 0){
 			result = "짝수입니다.";
@@ -18,7 +18,7 @@
 		else{
 			result = "홀수입니다.";
 		}
-		// out.println("결과는 " + result);
+		//out.println("결과는 " + result);
 	%>
 	<p>결과는 <%=result %> </p>
 </body>

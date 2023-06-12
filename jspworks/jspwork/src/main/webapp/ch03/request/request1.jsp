@@ -8,8 +8,8 @@
 </head>
 <body>
 	<form action="process.jsp" method="get">
-		<p>
-			<label for="uname">이름</label>
+	    <p>
+			<label for="uname">이름 </label>
 			<input type="text" id="uname" name="uname">
 		</p>
 		<p><button type="submit">등록</button></p>

@@ -6,10 +6,10 @@
 <%
 	int dan = Integer.parseInt(request.getParameter("dan"));
 
-	// 자바 클래스의 메서드 호출 (times() 호출)
-	int[] result = gugudan.times(dan);	// 계산 결과값이 저장된 배열
+	//자바 클래스의 메서드 호출 (times() 호출)
+	int[] result = gugudan.times(dan);  //계산 결과값이 저장된 배열
 	
 	for(int i=1; i<10; i++){
-		out.println(dan + "x" + i + " = " + result[i-1] + "<br>");
+		out.println(dan + " x " + i + " = " + result[i-1] + "<br>");
 	}
 %>

@@ -12,7 +12,7 @@
 	<jsp:setProperty property="id" name="member"/>
 	<jsp:setProperty property="name" name="member"/>
 	
-	<p>아이디: <jsp:getProperty property="id" name="member"/> </p>
-	<p>이  름: <jsp:getProperty property="name" name="member"/> </p>
+	<p>아이디: <jsp:getProperty property="id" name="member" /> </p>
+	<p>이  름: <jsp:getProperty property="name" name="member" /> </p>
 </body>
 </html>

@@ -1,4 +1,4 @@
-<%@page import="java.net.URLEncoder"%>
+<%@ page import="java.net.URLEncoder"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -9,7 +9,7 @@
 </head>
 <body>
 	<jsp:include page="param2_data.jsp">
-		<jsp:param value='<%= URLEncoder.encode("관리자") %>' name="id"/>
+		<jsp:param value='<%= URLEncoder.encode("관리자") %>'  name="id"/>
 	</jsp:include>
 </body>
 </html>

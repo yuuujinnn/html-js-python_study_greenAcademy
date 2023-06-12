@@ -10,7 +10,7 @@
 </head>
 <body>
 	<%
-		String str = "하늘";
+		String str = null;
 		out.println(str.toString());
 	%>
 </body>

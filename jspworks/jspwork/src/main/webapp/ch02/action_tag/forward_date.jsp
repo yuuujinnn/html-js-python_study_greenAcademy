@@ -1,4 +1,4 @@
-<%@page import="java.time.LocalDateTime"%>
+<%@ page import="java.time.LocalDateTime"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -13,6 +13,7 @@
 	<%
 		LocalDateTime now = LocalDateTime.now();
 	%>
+	
 	<%=now %>
 </body>
 </html>

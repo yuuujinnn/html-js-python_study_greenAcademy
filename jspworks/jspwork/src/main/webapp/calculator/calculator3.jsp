@@ -21,7 +21,7 @@
 			</select>
 			<input type="text" name="num2">
 			<button type="submit">계산</button>
-			<button type="reset">다시 입력</button>
+			<button type="reset">다시입력</button>
 		</form>
 	</div>
 </body>
