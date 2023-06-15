@@ -12,16 +12,15 @@ public class ReaderTest {
 		
 		int data;
 		/*while(true) {
-			data = fr.read(); //코드값으로 저장
-			if(data == -1) { //읽을 데이터가 없으면
-				break;		 //빠져나옴
-			}
-			System.out.print((char)data); //문자로 출력
+			data = fr.read();  //코드값으로 저장
+			if(data == -1)  //읽을 데이터가 없으면
+				break;      //빠져 나옴
+			System.out.print((char)data);  //문자로 출력
 		}*/
-		
 		while((data = fr.read()) != -1) {
 			System.out.print((char)data);
 		}
+		
 		fr.close();
 	}
 }

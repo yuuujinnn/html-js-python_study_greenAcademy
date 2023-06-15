@@ -7,7 +7,7 @@ import java.io.Reader;
 
 public class ReaderTest2 {
 
-	public static void main(String[] args) {
+	public static void main(String[] args){
 		
 		Reader fr = null;
 		try {
@@ -17,7 +17,6 @@ public class ReaderTest2 {
 			while((data = fr.read()) != -1) {
 				System.out.print((char)data);
 			}
-			
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally {

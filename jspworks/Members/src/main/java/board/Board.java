@@ -4,7 +4,7 @@ import java.io.Serializable;
 import java.sql.Timestamp;
 
 public class Board implements Serializable{
-	
+
 	private static final long serialVersionUID = 4L;
 	//필드
 	private int bnum;
@@ -15,7 +15,7 @@ public class Board implements Serializable{
 	private int hit;
 	private String memberId;
 	
-	//생성자
+	//getter, setter 메서드
 	public int getBnum() {
 		return bnum;
 	}
@@ -58,7 +58,4 @@ public class Board implements Serializable{
 	public void setMemberId(String memberId) {
 		this.memberId = memberId;
 	}
-	
-	
-	
 }

@@ -15,7 +15,5 @@ public class WriteSample {
 		os.write(30);
 		
 		os.close();
-
 	}
-
 }

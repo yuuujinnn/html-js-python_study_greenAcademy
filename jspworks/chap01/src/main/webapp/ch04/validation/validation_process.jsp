@@ -10,4 +10,3 @@
 <p>연락처: <%=request.getParameter("phone1") %>
           - <%=request.getParameter("phone2") %>
           - <%=request.getParameter("phone3") %>
-<p>이메일: <%=request.getParameter("email") %>

@@ -10,17 +10,14 @@
 <link rel="stylesheet" href="resources/css/style.css">
 </head>
 <body>
-	<c:if test="${empty sessionId}">
-		<script>
-			alert("로그인을 해주세요.")
-			location.href = "/loginForm.do"; //페이지 이동
-		</script>
-	</c:if>
 	<jsp:include page="../header.jsp" />
 	<div id="container">
 	   <section id="memberlist">
 		<h2>회원 목록</h2>
-		<table id="tbl_list">
+		<div class="logout">
+			<p><a href="/logout.do">[관리자 로그아웃]</a></p>
+		</div>
+		<table>
 			<thead>
 				<tr>
 					<th>아이디</th>
@@ -28,6 +25,7 @@
 					<th>이름</th>
 					<th>성별</th>
 					<th>가입일</th>
+					<th>삭제</th>
 				</tr>
 			</thead>
 			<tbody>
@@ -35,19 +33,28 @@
 				<tr>
 					<td>
 						<a href="/memberView.do?memberId=${member.memberId}">
-						<c:out value="${member.memberId}" /></a> 
+							<c:out value="${member.memberId}" /></a>
 					</td>
 					<td><c:out value="${member.passwd}" /> </td>
 					<td><c:out value="${member.name}" /> </td>
 					<td><c:out value="${member.gender}" /> </td>
 					<%-- <td><c:out value="${member.joinDate}" /> </td> --%>
 					<td><fmt:formatDate value="${member.joinDate}"
-							pattern="yyyy-MM-dd hh:mm:ss" /> </td>
-					
+							pattern="yyyy-MM-dd HH:mm:ss" /> </td>
+					<td>
+						<a href="/deleteMember.do?memberId=${member.memberId}"
+							onclick="return confirm('정말로 삭제하시겠습니까?')">
+							<button type="button">삭제</button>
+						</a>
+					</td>
 				</tr>
 				</c:forEach>
 			</tbody>
 		</table>
+			<div class="banner">
+				<h3>이벤트 추첨 링크</h3>
+				<a href="/memberEvent.do"><img alt="한식뷔페" src="../resources/images/bronx.png"></a>
+			</div>
 		</section>
 	</div>
 	<jsp:include page="../footer.jsp" />

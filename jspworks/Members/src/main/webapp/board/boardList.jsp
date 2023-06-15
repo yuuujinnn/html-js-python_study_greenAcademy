@@ -28,8 +28,24 @@
 				<c:forEach var="board" items="${boardList}">
 				<tr>
 					<td><c:out value="${board.bnum}" /></td>
-					<td><c:out value="${board.title}" /></td>
-					<td><c:out value="${board.regDate}" /></td>
+					<td>
+						<a href="/boardView.do?bnum=${board.bnum}">
+							<c:out value="${board.title}" />
+						</a>
+					</td>
+					<td>
+						<c:choose>
+                    		<c:when test = "${not empty board.modifyDate}">
+                    			<fmt:formatDate value="${board.modifyDate}"
+                                 	pattern="yyyy-MM-dd HH:mm:ss" />
+      
+                            </c:when>
+                             <c:otherwise>
+              					<fmt:formatDate value="${board.regDate}"
+                            		pattern="yyyy-MM-dd HH:mm:ss" />
+                             </c:otherwise>
+                     	</c:choose>
+					</td>
 					<td><c:out value="${board.hit}" /></td>
 					<td><c:out value="${board.memberId}" /></td>
 				</tr>
