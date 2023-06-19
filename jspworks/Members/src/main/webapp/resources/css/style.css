@@ -27,34 +27,26 @@ h2{text-align: center;}
 
 /* footer 스타일 */
 footer{height: 80px; border-top: 2px solid #222;}
-#bottomMenu{margin: 10px 10px 10px 20px;  text-align: center;}
+#bottomMenu{margin: 10px 10px 10px 20px;}
 #bottomMenu li{display: inline-block; margin: 10px 0; padding: 0 10px;
     border-right: 1px solid #ccc;}
 #bottomMenu li a{color: #444; font-size: 0.9em;}
 #bottomMenu li:last-child{border: none;}
 
 /* memberList 스타일  */
-#memberlist{width: 550px; margin: 40px auto;}
+#memberlist{width: 550px; margin: 40px auto 100px;}
 #memberlist .logout{text-align: right; margin-right: 5%}
 #memberlist table{width: 550px; margin: 15px auto 100px;}
 #memberlist table, th, td{border: 1px solid #ccc; 
 	border-collapse: collapse; text-align: center;}
 #memberlist table th, td{padding: 10px 0; font-size: 0.9em;}
 #memberlist table thead{background: #eee;}
-#memberlist .banner {text-align: center;}
-#memberlist .banner a img{margin-top: 20px}
 #memberlist table td:nth-of-type(6){width: 60px;}
-
-/* memberEvent 스타일 */
-#memberEvent{width: 80%; margin: 40px auto 100px; text-align: center}
-#memberEvent .banner{margin: 30px auto;}
-#memberEvent button{padding: 10px 20px; font-size: 1em;}
-#memberEvent #display{width: 320px; height: 100px; margin: 20px auto;
-	border: 1px solid #ccc; letter-spacing: 1px; padding-top: 60px;
-	background: #80ffff;}
+#memberlist .banner{margin-top: 20px; text-align:center}
+#memberlist h3{text-align: center;}
 
 /* register 스타일 */
-#register{width: 450px; margin: 30px auto;}
+#register{width: 530px; margin: 30px auto;}
 #register form{margin: 30px auto;}
 #register form fieldset{padding-bottom: 20px;}
 #register form ul li{margin: 30px 20px;}
@@ -66,6 +58,7 @@ footer{height: 80px; border-top: 2px solid #222;}
 #register form .button{width: 400px; height: 50px; text-align: center;}
 #register form input[type='button']{width: 80px; height: 30px; margin-top: 30px;}
 #register form input[type='reset']{width: 80px; height: 30px; margin-top: 30px;}
+#register .btn_check{padding: 5px; margin-left: 5px;}
 
 /* detail 스타일 */
 #detail{width: 400px; margin: 30px auto 100px;}
@@ -73,8 +66,7 @@ footer{height: 80px; border-top: 2px solid #222;}
 #detail table, td{border: 1px solid #ccc;
     border-collapse: collapse; text-align: center;}
 #detail table td{padding: 10px 0; font-size: 0.9em;}
-#detail table input[type='text'] {width: 200px;}
-#detail table input[type='password']{width: 200px;}
+#detail table input[type='text'], input[type='password']{width: 200px; padding: 5px;}
 #detail table td button{padding: 5px 10px;}
 
 /* 로그인 스타일 */
@@ -88,6 +80,14 @@ footer{height: 80px; border-top: 2px solid #222;}
 #login form input[type='text']{padding: 5px; width: 210px;}
 #login form input[type='password']{padding: 5px; width: 210px;}
 #login form input[type='submit']{padding: 10px 15px; margin-top: 10px;}
+
+/* memberEvent 스타일 */
+#memberEvent{width: 80%; margin: 40px auto 100px; text-align: center}
+#memberEvent .banner{margin: 30px auto;}
+#memberEvent button{padding: 10px 20px; font-size: 1em;}
+#memberEvent #display{width: 320px; height: 100px; margin: 20px auto;
+	border: 1px solid #ccc; padding-top: 60px; letter-spacing: 1px;
+	background: #80ffff;}
 
 /* boardList 스타일 */
 #boardlist{width: 650px; margin: 40px auto 200px;}
@@ -120,6 +120,14 @@ footer{height: 80px; border-top: 2px solid #222;}
 	padding: 5px; line-height: 1.5; font-family: '맑은고딕'}
 #board_detail table button[type='button']{width: 80px; height: 30px;}
 
-
-
+/* board_update 스타일 */
+#board_update{width: 550px; margin: 40px auto 100px;}
+#board_update table{width: 550px; margin: 30px auto; border-collapse: collapse;}
+#board_update table input[type='text']{width: 520px; height: 25px; 
+	padding: 5px;}
+#board_update table tr:nth-of-type(3) td{text-align: left; padding-left: 10px;}
+#board_update table tr:nth-of-type(4) td{text-align: left; padding-left: 10px;}
+#board_update table textarea{width: 520px; height: 350px; resize: none; 
+	padding: 5px; line-height: 1.5; font-family: '맑은고딕'}
+#board_update table button[type='button']{width: 80px; height: 30px;}
 

@@ -51,10 +51,13 @@
 				</c:forEach>
 			</tbody>
 		</table>
-			<div class="banner">
-				<h3>이벤트 추첨 링크</h3>
-				<a href="/memberEvent.do"><img alt="한식뷔페" src="../resources/images/bronx.png"></a>
-			</div>
+		
+		<h3>이벤트 추첨 링크</h3>
+		<div class="banner">
+			<a href="/memberEvent.do">
+				<img src="../resources/images/bronx.png" alt="한식뷔페">
+			</a>
+		</div>
 		</section>
 	</div>
 	<jsp:include page="../footer.jsp" />

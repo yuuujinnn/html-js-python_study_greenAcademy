@@ -115,10 +115,9 @@ public class BoardDAO {
 	public void updateBoard(Board board) {
 		//현재 시간 객체 생성
 		Timestamp now = new Timestamp(System.currentTimeMillis());
-		
 		conn = JDBCUtil.getConnection();
-		String sql = "UPDATE t_board SET title =?, content =?, "
-				+ "modifydate = ? WHERE bnum =?";
+		String sql = "UPDATE t_board SET title=?, content=?, "
+				+ "modifydate=? WHERE bnum = ?";
 		try {
 			pstmt = conn.prepareStatement(sql);
 			pstmt.setString(1, board.getTitle());
