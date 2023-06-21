@@ -1,0 +1,12 @@
+<!--유효성 검사 - 오류 처리 시작-->
+{% if form.errors %}
+    <div class="alert alert-danger">
+    {% for field in form %}   <!-- 폼을 필드를 순회하면서  -->
+        {% if field.errors %} <!-- 필드에 오류가 있으면 -->
+        <strong>{{ field.label }}</strong>
+            {{ field.errors }}  <!-- 에러 출력 -->
+        {% endif %}
+    {% endfor %}
+    </div>
+{% endif %}
+<!-- 오류 처리 끝-->

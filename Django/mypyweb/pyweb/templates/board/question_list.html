@@ -1,21 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>안녕하세요~</title>
-</head>
-<body>
-    <h1>질문 목록</h1>
-    {% if question_list %}
-        <ul>
-        {% for question in question_list %}
-            <li>
-                <a href="{% url 'board:detail' question.id %}">{{ question.subject }}</a>
-            </li>
-        {% endfor %}
-        </ul>
-    {% else %}
-        <p>질문이 없습니다.</p>
-    {% endif %}
-</body>
-</html>
+{% extends 'base.html' %}
+{% block content %}
+<div class="container my-3">
+    <section id="question_list">
+        <table class="table">
+            <thead>
+                <tr class="table-primary">
+                    <th>번호</th><th>제목</th><th>작성일</th><th>글쓴이</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% if question_list %}
+                    {% for question in question_list %}
+                    <tr>
+                        <td>{{ forloop.counter }}</td>   <!-- 1부터 번호 시작-->
+                        <td>
+                            <a href="{% url 'board:detail' question.id %}">{{ question.subject }}</a>
+                        </td>
+                        <td>{{ question.create_date }}</td>
+                        <td>{{ question.author }}</td>
+                    </tr>
+                    {% endfor %}
+                {% else %}
+                    <tr>
+                        <td>질문이 없습니다.</td>
+                    </tr>
+                {% endif %}
+            </tbody>
+        </table>
+        <!--질문 등록 메뉴-->
+        <a href="{% url 'board:question_create' %}"
+            class="btn btn-primary">질문 등록</a>
+    </section>
+</div>
+{% endblock %}
