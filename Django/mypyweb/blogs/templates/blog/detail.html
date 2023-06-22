@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+<div class="container">
+    <h3>{{ post.title }}</h3>
+    <h5 style="white-space: pre-line; line-height:1.5em">
+        {{ post.content }}
+    </h5>
+    <p>(작성일 : {{ post.pub_date }})</p>
+</div>
+{% endblock %}
