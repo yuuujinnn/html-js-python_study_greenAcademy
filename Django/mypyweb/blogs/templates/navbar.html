@@ -6,9 +6,18 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        {% if not user.is_authenticated %}
         <li class="nav-item">
-          <a class="nav-link" href="#">로그인</a>
-        </li><li class="nav-item">
+          <a class="nav-link" href="{% url 'common:login' %}">로그인</a>
+        </li>
+        {% else %}
+        <li class="nav-item">
+          <a class="nav-link" href="{% url 'common:logout' %}">
+            {{ user.username }}(로그아웃)
+          </a>
+        </li>
+        {% endif %}
+        <li class="nav-item">
           <a class="nav-link" href="{% url 'blog:post_list' %}">Blog</a>
         </li><li class="nav-item">
           <a class="nav-link" href="{% url 'blog:post_create' %}">글쓰기</a>

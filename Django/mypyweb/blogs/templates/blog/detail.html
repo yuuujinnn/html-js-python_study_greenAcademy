@@ -1,10 +1,30 @@
 {% extends 'base.html' %}
+{% block title %}포스트 상세 목록입니다.
+{% endblock %}
 {% block content %}
-<div class="container">
-    <h3>{{ post.title }}</h3>
-    <h5 style="white-space: pre-line; line-height:1.5em">
-        {{ post.content }}
-    </h5>
-    <p>(작성일 : {{ post.pub_date }})</p>
+<div class="container" xmlns="http://www.w3.org/1999/html">
+    <section id="detail">
+        {% if post.category %}
+            <h6 class="text-end">[{{ post.category }}]</h6>
+        {% endif %}
+        <h3>{{ post.title }}</h3>
+        <h5 style="white-space: pre-line; line-height:1.5em">
+            {{ post.content }}
+        </h5>
+        <p>(작성일 : {{ post.pub_date }})</p>
+        {% if post.photo %}
+            <img src="{{ post.photo.url }}">
+        {% endif %}
+    </section>
+    <aside id="category">
+        <h4>분류(Category)</h4>
+        <div>
+            <ul>
+                {% for category in categories %}
+                    <li>{{ category.name }}({{ category.post_set.count }})</li>
+                {% endfor %}
+            </ul>
+        </div>
+    </aside>
 </div>
 {% endblock %}
