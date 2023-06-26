@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>로그인</title>
+<title>회원 가입</title>
 <link rel="stylesheet" href="resources/css/style.css">
 </head>
 <body>
@@ -24,7 +24,7 @@
 							<label for="passwd">비밀번호 </label>
 							<input type="password" id="passwd" name="passwd"
 								placeholder="PASSWORD" required="required">
-						</li>		
+						</li>
 					</ul>
 				</fieldset>
 			<div class="button">

@@ -1,5 +1,5 @@
 {% extends 'base.html' %}
-{% block title %} 로그인 폼입니다.
+{% block title %}로그인 폼입니다.
 {% endblock %}
 {% block content %}
 <div class="container">
@@ -14,26 +14,24 @@
               </span>
           </div>
       </div>
-      <!--로그인 폼-->
+      <!-- 로그인 폼 -->
       <form action="" method="post">
           {% csrf_token %}
           {% include 'form_errors.html' %}
           <div class="form-group">
               <label for="username">사용자ID</label>
               <input type="text" id="username" name="username"
-                    class="form-control"
-                    value="{{ form.username.value|default_if_none:'' }}">
+                     class="form-control"
+                     value="{{ form.username.value|default_if_none:'' }}">
           </div>
           <div class="form-group">
               <label for="password">비밀번호</label>
               <input type="password" id="password" name="password"
-                    class="form-control"
-                    value="{{ form.password.value|default_if_none:'' }}">
+                     class="form-control"
+                     value="{{ form.password.value|default_if_none:'' }}">
           </div>
-          <button type="submit" class="btn btn-primary">로그인</button>
+          <button type="submit" class="btn btn-primary mt-2">로그인</button>
       </form>
   </section>
 </div>
-
-
 {% endblock %}

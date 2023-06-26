@@ -20,7 +20,7 @@
 					<li><a href="/logout.do">[${sessionId}]로그아웃</a></li>
 					<li><a href="/memberView.do?memberId=${sessionId}">나의 정보</a></li>
 					<li><a href="/boardList.do">게시판</a></li>
-					<li><a href="/memberList.do">회원 목록</a></li>
+					<li><a href="/memberList.do">회원목록</a></li>
 				</ul>
 			</c:otherwise>
 		</c:choose>

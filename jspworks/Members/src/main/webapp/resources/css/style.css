@@ -99,6 +99,11 @@ footer{height: 80px; border-top: 2px solid #222;}
 #boardlist table td:nth-of-type(2){text-align: left; padding-left: 15px;}
 #boardlist .btnWrite{text-align: right; margin-right: 10px;}
 #boardlist button{padding: 10px;}
+#boardlist .pagination {text-align: center;}
+#boardlist .pagination a {margin: 5px;}
+#boardlist .pagination a .page {font-weight: bold; color: red;}
+
+
 
 /* board_reg 스타일 */
 #board_reg{width: 550px; margin: 40px auto 100px;}
@@ -130,4 +135,3 @@ footer{height: 80px; border-top: 2px solid #222;}
 #board_update table textarea{width: 520px; height: 350px; resize: none; 
 	padding: 5px; line-height: 1.5; font-family: '맑은고딕'}
 #board_update table button[type='button']{width: 80px; height: 30px;}
-

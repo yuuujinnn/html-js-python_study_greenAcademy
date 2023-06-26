@@ -36,22 +36,22 @@
 						<td>
 							<c:if test="${member.gender eq '남'}">
 								<input type="radio" name="gender" value="남" checked>남
-							    <input type="radio" name="gender" value="여" >여
-						    </c:if>
+								<input type="radio" name="gender" value="여"> 여
+							</c:if>
 							<c:if test="${member.gender eq '여'}">
 								<input type="radio" name="gender" value="남">남
-							    <input type="radio" name="gender" value="여" checked>여
-						    </c:if>
+								<input type="radio" name="gender" value="여" checked>여
+							</c:if>
 						</td>
 					</tr>
 					<tr>
 						<td><label>가입일</label></td>
 						<td><fmt:formatDate value="${member.joinDate}"
-							pattern="yyyy-MM-dd HH:mm:ss" /></td>
+							pattern="yyyy-MM-dd HH:mm:ss" /> </td>
 					</tr>
 					<tr>
 						<td colspan="2">
-						   <a href="/memberList.do"><button type="button">목록</button></a>
+							<a href="/memberList.do"><button type="button">목록</button></a>
 						</td>
 					</tr>
 				</tbody>
