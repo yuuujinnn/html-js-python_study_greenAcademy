@@ -6,11 +6,12 @@
         <div class="col-4">
             <img src="{{ product.image.url }}" width="100%">
         </div>
-        <div class="col-8">
+        <div class="col">
             <h1 class="display-6">{{ product.name }}</h1>
             <p><span class="badge bg-dark">Price</span>{{ product.price }}</p>
-            <form action="" method="post">
+            <form action="{% url 'cart:product_add' product.id %}" method="post">
                 {% csrf_token %}
+                {{ add_to_cart }}
                 <input type="submit" value="Add to Cart" class="btn btn-primary btn-sm">
             </form>
             <h5><span class="badge bg-secondary">Description</span>
