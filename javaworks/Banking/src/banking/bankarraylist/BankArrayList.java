@@ -4,8 +4,9 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 import banking.bankarray.Account;
+
 public class BankArrayList {
-	// 통장 계좌를 만들 객체 배열 100개 생성
+	// 통장 계좌를 만들 ArrayList 생성
 	static ArrayList<Account> accountList = new ArrayList<>();
 	static Scanner scanner = new Scanner(System.in);
 
@@ -57,17 +58,13 @@ public class BankArrayList {
 				System.out.print("계좌주:  ");
 				String owner = scanner.nextLine();
 				
-				while(true) {
-					System.out.print("초기입금액:  ");
-					int balance = Integer.parseInt(scanner.nextLine());
-					
-					Account account = new Account(ano, owner, balance);
-					accountList.add(account);  //리스트에 신규 계좌를 저장
-					System.out.println("결과: 계좌가 생성되었습니다.");
-					break;
-				} //계좌주 while() 끝
-				break; //정상적으로 계좌 생성 빠져 나옴
+				System.out.print("초기입금액:  ");
+				int balance = Integer.parseInt(scanner.nextLine());
 				
+				Account account = new Account(ano, owner, balance);
+				accountList.add(account);  //리스트에 신규 계좌를 저장
+				System.out.println("결과: 계좌가 생성되었습니다.");
+				break; //정상적으로 계좌 생성 빠져 나옴
 			} //if ~else 끝
 		} //내부 while 끝
 	}
@@ -76,6 +73,7 @@ public class BankArrayList {
 	private static void getAccountList() {
 		for(int i=0; i<accountList.size(); i++) {
 			Account account = accountList.get(i);
+			
 			System.out.print("계좌번호: " + account.getAno() + "\t");
 			System.out.print("계좌주: " + account.getOwner() + "\t");
 			System.out.println("잔액: " + account.getBalance());
@@ -96,8 +94,8 @@ public class BankArrayList {
 				System.out.print("입금액:  "); //입금함
 				int money = Integer.parseInt(scanner.nextLine());
 				
-				//예금 = 잔고 + 예금액
 				Account account = findAccount(ano);
+				//예금 = 잔고 + 예금액
 				account.setBalance(account.getBalance() + money);
 				System.out.println("결과: 정상 처리 되었습니다.");
 				break; //입금 처리후 빠져나옴
@@ -144,11 +142,11 @@ public class BankArrayList {
 		Account account = null;  //빈 계좌 계정을 할당
 		
 		for(int i=0; i<accountList.size(); i++) {
-			String dbAno = accountList.get(i).getAno();  //이미 리스트에 저장된 계좌번호
-			if(dbAno.equals(ano)) { 
+			String dbAno = accountList.get(i).getAno(); //이미 리스트에 저장된 계좌번호
+			if(dbAno.equals(ano)) {
 				account = accountList.get(i); //계좌 객체 저장
-				break;  //빠져나옴
-				}
+				break;
+			}
 		}
 		return account;
 	}

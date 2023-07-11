@@ -18,16 +18,16 @@ public class BoardDAO {
    // 게시글 목록
    public ArrayList<Board> getBoardList(int page){
       ArrayList<Board> boardList = new ArrayList<>();
-      int pageSize = 10;
+      // int pageSize = 10;
       conn = JDBCUtil.getConnection();
       String sql = "SELECT * "
-            + "FROM (SELECT ROWNUM RN, t_board.* "
-            + "FROM t_board ORDER BY bnum DESC) "
-            + "WHERE RN >= ? AND RN <= ?";
+      		+ "FROM (SELECT ROWNUM rn, board.* "
+      		+ "            FROM(SELECT * FROM t_board ORDER BY bnum DESC) board) "
+      		+ "WHERE rn >= ? AND rn <= ? ";
       try {
          pstmt = conn.prepareStatement(sql);
-         pstmt.setInt(1, (page-1)*pageSize + 1);   // 시작 행
-         pstmt.setInt(2, page*pageSize);   // 페이지 x 페이지당 게시글 수
+         pstmt.setInt(1, (page-1)*10 + 1);   // 시작 행
+         pstmt.setInt(2, page*10);   // 페이지 x 페이지당 게시글 수
          rs = pstmt.executeQuery();
          while(rs.next()) {
             Board board = new Board();

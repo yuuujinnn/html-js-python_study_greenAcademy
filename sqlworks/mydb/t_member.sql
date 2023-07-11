@@ -48,18 +48,25 @@ SELECT COUNT(*) AS result
 FROM t_member WHERE memberid = 'cloud';
 
 
--- 페이지 처리
+-- 페이지 처리 (인라인뷰 - 중첩쿼리(서브쿼리))
 select rownum, t_board.*
 from t_board 
 where rownum >= 1 and rownum <= 10
 order by bnum desc;
 
--- 페이지 처리
+-- 페이지 처리2(인라인뷰 - 중첩쿼리(서브쿼리))
 select*
 from
 (select rownum RN, t_board.*
 from t_board order by bnum desc)
 where RN >= 1 and RN <= 10;
+-- order by bnum desc;
+
+-- 페이지 처리2(인라인뷰 - 중첩쿼리(서브쿼리))
+select * 
+FROM (SELECT ROWNUM rn, board.*
+            FROM(SELECT * FROM t_board ORDER BY bnum DESC) board)
+WHERE rn >= 1 AND RN <= 10;  -- 별칭 (rn을 사용해야 가능)
 -- order by bnum desc;
 
 

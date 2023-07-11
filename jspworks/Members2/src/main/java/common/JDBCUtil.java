@@ -8,10 +8,10 @@ import java.sql.SQLException;
 
 public class JDBCUtil {
 
-	static String driverClass = "oracle.jdbc.OracleDriver";  //드라이버 이름
-	static String url = "jdbc:oracle:thin:@localhost:1521:xe"; //db 경로(위치)
-	static String username = "c##mydb";  //user 이름
-	static String password = "mydb";     //비밀번호
+	static String driverClass = "com.mysql.cj.jdbc.Driver";  //드라이버 이름
+	static String url = "jdbc:mysql://localhost:3306/mydb"; //db 경로(위치)
+	static String username = "root";  //user 이름
+	static String password = "root";     //비밀번호
 	
 	//DB 연결 메서드
 	public static Connection getConnection() {
