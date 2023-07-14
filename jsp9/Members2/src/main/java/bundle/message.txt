@@ -1,0 +1,18 @@
+/* login(로그인) */
+login.title=로그인
+login.id=아이디
+login.passwd=비밀번호
+login.button=로그인
+
+/* memberForm(회원가입) */
+signup.title=회원가입
+signup.id=아이디
+signup.dupulite=ID 중복
+signup.passwd1=비밀번호
+signup.passwd2=비밀번호확인
+signup.name=이름
+signup.gender=성별
+signup.man=남
+signup.woman=여
+signup.join=가입
+signup.cancel=취소

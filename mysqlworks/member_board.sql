@@ -33,6 +33,24 @@ values('가입인사', '안녕하세요. 가입했어요..', 'yujin');
 insert into t_board(title, content, memberid)
 values('가입인사', '안녕하세요. 가입했어요..', 'yujin');
 
+-- 댓글 테이블
+create table t_reply(
+	rno	int primary key auto_increment,  -- 댓글 번호
+    bnum int not null,                   -- 게시글 번호(외래키)
+    rcontent text not null,              -- 댓글 내용
+    replyer varchar(30) not null,        -- 작성자
+    rdate timestamp default now(),       -- 작성일
+    rupdate timestamp,                   -- 수정일
+	constraint fk_reply_board foreign key(bnum)  -- 외래키 제약조건
+    references t_board(bnum) on delete cascade
+);
+
+-- 댓글 추가
+insert into t_reply(bnum, rcontent, replyer)
+values(1, '내용에 대한 댓글입니다.', 'today');
+
+-- 댓글 검색
+select * from t_reply;
 
 -- 검색
 select * from t_board;
