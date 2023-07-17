@@ -45,12 +45,23 @@ create table t_reply(
     references t_board(bnum) on delete cascade
 );
 
+select * from t_member;
+
 -- 댓글 추가
 insert into t_reply(bnum, rcontent, replyer)
 values(1, '내용에 대한 댓글입니다.', 'today');
 
 -- 댓글 검색
 select * from t_reply;
+
+-- 댓글 삭제
+delete from t_reply where rno = 4;
+
+-- 특정 댓글 검색
+select * from t_reply where rno = 2;
+
+-- 댓글 수정
+update t_reply set rcontent = "내용수정" where rno = 2;
 
 -- 검색
 select * from t_board;

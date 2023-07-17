@@ -65,13 +65,29 @@ footer{height: 80px; border-top: 2px solid #222;}
 #register form input[type='reset']{width: 80px; height: 40px; margin-top: 20px;}
 #register .btn_check{padding: 10px; margin-left: 5px;}
 
+/* memberUpdateForm 스타일 */
+#member_update{width: 500px; margin: 30px auto;}
+#member_update form{margin: 30px auto;}
+#member_update form fieldset{padding-bottom: 40px;}
+#member_update form ul li{margin: 30px 20px;}
+#member_update form label{width: 150px; float: left; padding-left: 10px;
+    margin-right: 10px;}
+#member_update form input[type='text']{padding: 5px; width: 250px; font-size: 0.8em;}
+#member_update form input[type='password']{padding: 5px; width: 250px; font-size: 0.8em;}
+#member_update form li label.radio{width: 80px; }
+#member_update form li input[type='radio']{margin-right: 5px;}
+#member_update form .button{width: 600px; height: 50px; text-align: center;}
+#member_update form input[type='button']{width: 80px; height: 40px; margin: 20px 5px;}
+#member_update form input[type='reset']{width: 80px; height: 40px; margin-top: 20px;}
+#member_update .btn_check{padding: 10px; margin-left: 5px;}
+
 /* detail 스타일 */
-#detail{width: 400px; margin: 30px auto 100px;}
-#detail table{width: 400px; margin: 30px auto;}
+#detail{width: 500px; margin: 30px auto 100px;}
+#detail table{width: 500px; margin: 30px auto;}
 #detail table, td{border: 1px solid #ccc;
     border-collapse: collapse; text-align: center;}
 #detail table td{padding: 10px 0; font-size: 0.9em;}
-#detail table input[type='text'], input[type='password']{width: 200px; padding: 5px;}
+#detail table input[type='text'], input[type='password']{width: 250px; padding: 5px;}
 #detail table td button{padding: 5px 10px;}
 
 /* 로그인 스타일 */
@@ -104,10 +120,12 @@ footer{height: 80px; border-top: 2px solid #222;}
 #boardlist table thead{background: #eee;}
 #boardlist table td:nth-of-type(2){text-align: left; padding-left: 15px;}
 #boardlist .btnWrite{text-align: right; margin-right: 10px;}
-#boardlist button{padding: 10px;}
+#boardlist button{padding: 8px;}
 #boardlist .pagination{text-align: center;}
 #boardlist .pagination a{margin: 5px;}
 #boardlist .pagination a .page{font-weight: bold; color: #f00;}
+#boardlist .search_form{text-align: right; margin-top: 20px;}
+#boardlist .sel_field, .in_kw{padding: 8px;}
 
 /* board_reg 스타일 */
 #board_reg{width: 550px; margin: 40px auto 100px;}

@@ -53,10 +53,10 @@
 						<td colspan="2">
 						   <a href="/memberList.do"><button type="button">목록</button></a>
 						   <a href="/memberUpdateForm.do?memberId=${member.memberId}">
-						   		<button type="button">회원수정</button></a>
+						   		<button type="button">수정</button></a>
 						   <a href="/deleteMember.do?memberId=${member.memberId}"
 						   	  onclick="return confirm('정말로 삭제하시겠습니까?')">
-						   		<button type="button">회원탈퇴</button>
+						   		<button type="button">탈퇴</button>
 						   </a>
 						</td>
 					</tr>

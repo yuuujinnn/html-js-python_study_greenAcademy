@@ -43,15 +43,46 @@ public class BoardDAO {
 		return boardList;
 	}
 	
-	//게시글 목록(페이지 처리)
-	public ArrayList<Board> getBoardList(int startRow, int pageSize){
+	//게시글 목록(검색 처리)
+	public ArrayList<Board> getBoardList(String field, String kw){
 		ArrayList<Board> boardList = new ArrayList<>();
 		try {
 			conn = JDBCUtil.getConnection();
-			String sql = "select * from t_board order by bnum desc limit ?, ?";
+			String sql = "select * from t_board where " + field + " like ? order by bnum";
 			pstmt = conn.prepareStatement(sql);
-			pstmt.setInt(1, startRow-1);  //시작행(limit는 시작행 0, 10, 20)
-			pstmt.setInt(2, pageSize);  //페이지당 게시글수(10)
+			pstmt.setString(1, "%"+kw+"%");  //검색어가 포함된 단어
+			rs = pstmt.executeQuery();
+			while(rs.next()) {
+				Board board = new Board();
+				board.setBnum(rs.getInt("bnum"));
+				board.setTitle(rs.getString("title"));
+				board.setContent(rs.getString("content"));
+				board.setRegDate(rs.getTimestamp("regdate"));
+				board.setModifyDate(rs.getTimestamp("modifydate"));
+				board.setHit(rs.getInt("hit"));
+				board.setMemberId(rs.getString("memberid"));
+				
+				boardList.add(board);  //개별 board 객체를 추가 저장
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			JDBCUtil.close(conn, pstmt, rs);
+		}
+		return boardList;
+	}
+
+	//게시글 목록(검색 및 페이지 처리)
+	public ArrayList<Board> getBoardList(String field, String kw, int startRow, int pageSize){
+		ArrayList<Board> boardList = new ArrayList<>();
+		try {
+			conn = JDBCUtil.getConnection();
+			String sql = "select * from t_board where " + field
+					+ " like ? order by bnum desc limit ?, ?";
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, "%"+kw+"%");  //검색어가 포함된 단어
+			pstmt.setInt(2, startRow-1);  //시작행(limit는 시작행 0, 10, 20)
+			pstmt.setInt(3, pageSize);  //페이지당 게시글수(10)
 			rs = pstmt.executeQuery();
 			while(rs.next()) {
 				Board board = new Board();

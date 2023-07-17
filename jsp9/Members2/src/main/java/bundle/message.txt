@@ -16,3 +16,6 @@ signup.man=남
 signup.woman=여
 signup.join=가입
 signup.cancel=취소
+
+signup.title2=회원수정
+signup.save=저장
