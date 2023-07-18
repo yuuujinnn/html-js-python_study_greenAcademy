@@ -183,14 +183,20 @@ public class MainController extends HttpServlet {
 			String _field = request.getParameter("field");
 			String _kw = request.getParameter("kw");
 			
-			String field = "title"; //쿼리값이 전달되지 않을 경우 기본값 사용
+			String field = ""; //쿼리값이 전달되지 않을 경우 기본값 사용
+			String kw = "";  //쿼리값이 전달되지 않을 경우 기본값 사용
+			
 			if(_field != null) { //쿼리값이 있는 경우
 				field = _field;
+			} else {
+				field = "title"; //쿼리값이 없는 경우(기본)
 			}
 			
-			String kw = "";  //쿼리값이 전달되지 않을 경우 기본값 사용
+			
 			if(_kw != null) { //쿼리값이 있는 경우
 				kw = _kw;
+			} else {
+				kw = "";  //쿼리값이 없는 경우(기본)
 			}
 			
 			//검색 처리 메서드 호출
@@ -224,7 +230,7 @@ public class MainController extends HttpServlet {
 			request.setAttribute("startPage", startPage);
 			request.setAttribute("endPage", endPage);
 			request.setAttribute("field", field);
-			request.setAttribute("kw", kw);
+			request.setAttribute("kw", kw);  
 			
 			nextPage = "/board/boardList.jsp";
 		}else if(command.equals("/boardForm.do")) {
