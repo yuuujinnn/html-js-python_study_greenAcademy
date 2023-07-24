@@ -21,7 +21,8 @@
   </build>
   
   <dependencies>
-	  <dependency>
+	  <!-- mysql-connector-j -->
+		<dependency>
 		    <groupId>com.mysql</groupId>
 		    <artifactId>mysql-connector-j</artifactId>
 		    <version>8.0.33</version>
@@ -32,7 +33,6 @@
 		    <artifactId>jstl</artifactId>
 	    	<version>1.2</version>
 		</dependency>
-
 		<!-- cos -->
 		<dependency>
 		    <groupId>servlets.com</groupId>

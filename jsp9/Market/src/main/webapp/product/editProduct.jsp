@@ -6,8 +6,6 @@
 <head>
 <meta charset="UTF-8">
 <title>상품 편집</title>
-<link rel="stylesheet" href="resources/css/bootstrap.css">
-<script src="resources/js/bootstrap.js"></script>
 </head>
 <body>
 	<jsp:include page="../header.jsp" />
@@ -28,7 +26,7 @@
 					</c:if>
 					<!-- edit이 delete면 삭제 버튼 -->
 					<c:if test="${edit eq 'delete'}">
-						<a href="/deleteProduct.do?productId=${product.productId}&edit=${edit}"
+						<a href="/deleteProduct.do?productId=${product.productId}"
 						   class="btn btn-danger"
 						   onclick="return confirm('정말로 삭제하시겠습니까?')">삭제 &raquo;</a>
 					</c:if>

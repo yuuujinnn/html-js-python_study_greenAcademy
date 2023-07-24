@@ -5,9 +5,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>배송 정보</title>
-<link rel="stylesheet" href="resources/css/bootstrap.css">
-<script src="resources/js/bootstrap.js"></script>
+<title>상품 등록</title>
 </head>
 <body>
 	<jsp:include page="../header.jsp" />
@@ -15,7 +13,7 @@
 		<h3 class="text-left mx-4 my-4">배송 정보</h3>
 		<div class="row mx-5">
 			<form action="/processShippingInfo.do" method="post">
-				<input type="hidden" name="cartId" value="${cartId}">
+			    <input type="hidden" name="cartId" value="${cartId}">
 				<div class="form-group row">
 					<label class="col-sm-2">성명</label>
 					<div class="col-sm-3 my-2">
@@ -26,7 +24,7 @@
 					<label class="col-sm-2">배송일</label>
 					<div class="col-sm-3 my-2">
 						<input type="text" name="shippingDate" class="form-control"
-						placeholder="yyyy/mm/dd">
+						     placeholder="yyyy/mm/dd">
 					</div>
 				</div>
 				<div class="form-group row">
@@ -50,6 +48,7 @@
 				<div class="form-group row">
 					<div class="col-sm-3 my-2">
 						<input type="submit" value="등록" class="btn btn-primary">
+						<a href="/checkOutCancel.do" class="btn btn-secondary">취소</a>
 					</div>
 				</div>
 			</form>

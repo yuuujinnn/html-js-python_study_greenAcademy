@@ -9,12 +9,12 @@
 <body>
 	<form action="filter02_process.jsp" method="post">
 		<p>
-			아이디 <input type="text" name="id">
-		</p>
+		   아이디 <input type="text" name="id">
+        </p>
 		<p>
-			비밀번호 <input type="password" name="passwd">
-		</p>
-		<button type="submit">로그인</button>
+		   비밀번호 <input type="password" name="passwd">
+        </p>
+        <button type="submit">로그인</button>
 	</form>
 </body>
 </html>

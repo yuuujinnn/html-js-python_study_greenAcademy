@@ -13,11 +13,12 @@
 		PreparedStatement pstmt = null;
 	
 		try{
-			String sql = "insert into user values (103, 'hangang', '한강', '010-1111-3333')";
+			String sql = "insert into user values "
+					 + "(103, 'hangang', '한강', '010-1111-3333')";
 			pstmt = conn.prepareStatement(sql);
 			pstmt.executeUpdate();  //실행 처리
 			out.println("회원 추가");
-		} catch(Exception e) {
+		}catch(Exception e){
 			out.println(e.getMessage());
 		}
 	%>

@@ -6,8 +6,6 @@
 <head>
 <meta charset="UTF-8">
 <title>장바구니</title>
-<link rel="stylesheet" href="resources/css/bootstrap.css">
-<script src="resources/js/bootstrap.js"></script>
 </head>
 <body>
 	<jsp:include page="../header.jsp" />
@@ -20,7 +18,8 @@
 		   				<a href="/deleteCart.do" class="btn btn-danger">삭제하기</a>
 		   			</td>
 		   			<td align="right">
-		   				<a href="/shippingInfo.do?cartId=${cartId}" class="btn btn-success">주문하기</a>
+		   				<a href="/shippingInfo.do?cartId=${cartId}" 
+		   					class="btn btn-success">주문하기</a>
 		   			</td>
 		   		</tr>
 		   </table> 
@@ -47,7 +46,7 @@
 							</tr>
 					</tbody>
 				</table>
-				<a href="/productList.do" class=""></a>
+				<a href="/productList.do" class="btn btn-secondary">&laquo; 쇼핑 계속하기</a>
 			</div>
 		</div>
 	</div>

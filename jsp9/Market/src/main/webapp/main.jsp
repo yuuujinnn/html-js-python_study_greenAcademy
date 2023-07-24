@@ -5,8 +5,6 @@
 <head>
 <meta charset="UTF-8">
 <title>Welcome~</title>
-<link rel="stylesheet" href="resources/css/bootstrap.css">
-<script src="resources/js/bootstrap.js"></script>
 </head>
 <body>
 	<jsp:include page="header.jsp" />

@@ -6,14 +6,12 @@
 <head>
 <meta charset="UTF-8">
 <title>상품 정보</title>
-<link rel="stylesheet" href="resources/css/bootstrap.css">
-<script src="resources/js/bootstrap.js"></script>
 <script type="text/javascript">
-	function addToCart(){
+	function addToCart(){		
 		if(confirm('상품을 장바구니에 추가하시겠습니까?')){
 			document.addForm.submit();  //폼을 전송
 		}else{
-			document.addForm.reset();
+			document.addForm.reset(); 
 		}
 	}
 </script>

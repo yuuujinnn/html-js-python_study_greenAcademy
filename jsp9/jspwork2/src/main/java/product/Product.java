@@ -1,14 +1,16 @@
 package product;
 
 public class Product {
-	private String pid; //상품 코드
+	
+	private String pid;   //상품 코드
 	private String pname; //상품 이름
 	private String maker; //제조사
-	private int price;	  //가격
-	private String date; //날짜
+	private int price;    //가격
+	private String date;  //등록일
 	
 	//생성자
-	public Product(String pid, String pname, String maker, int price, String date) {
+	public Product(String pid, String pname, String maker, 
+			int price, String date) {
 		super();
 		this.pid = pid;
 		this.pname = pname;
@@ -57,6 +59,4 @@ public class Product {
 	public void setDate(String date) {
 		this.date = date;
 	}
-	
-	
 }

@@ -1,6 +1,7 @@
 package controller;
 
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.List;
 
 import javax.servlet.RequestDispatcher;
@@ -17,17 +18,15 @@ import product.ProductService;
 public class ProductController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
-	ProductService service;
+	private ProductService service;
 
 	@Override
 	public void init() throws ServletException {
 		service = new ProductService();
 	}
-	
 
-	
-	
-	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	protected void service(HttpServletRequest request, HttpServletResponse response) 
+			throws ServletException, IOException {
 		//url 설정 - action 패턴 사용
 		String action = request.getParameter("action");
 		String nextPage = null;
@@ -40,30 +39,24 @@ public class ProductController extends HttpServlet {
 			request.setAttribute("productList", productList);
 			
 			nextPage = "/product/productList.jsp";
-		} else if(action.equals("info")) {
+		}else if(action.equals("info")) {
 			String pid = request.getParameter("pid");
 			
 			Product product = service.getProduct(pid);
-					
+			
 			request.setAttribute("product", product);
 			
 			nextPage = "/product/productInfo.jsp";
 		}
-		
 		//페이지 이동 - 포워딩
-		RequestDispatcher dispatcher = request.getRequestDispatcher(nextPage);
+		RequestDispatcher dispatcher =
+				request.getRequestDispatcher(nextPage);
 		dispatcher.forward(request, response);
-				
-				
-		
 	}
-
+	
 	@Override
 	public void destroy() {
-		// TODO Auto-generated method stub
 		super.destroy();
 	}
-
-
 
 }

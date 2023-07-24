@@ -111,4 +111,53 @@ public class ProductDAO {
 			JDBCUtil.close(conn, pstmt);
 		}
 	}
+	
+	//상품 수정
+	public void updateProduct(Product product) {
+		conn = JDBCUtil.getConnection();
+		String sql = "UPDATE product SET p_name=?, p_unitPrice=?, p_description=?, "
+				+ "p_category=?, p_manufacturer=?, p_unitsInStock=?, p_condition=?, "
+				+ "p_productImage=? WHERE p_id=?";
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, product.getPname());
+			pstmt.setInt(2, product.getUnitPrice());
+			pstmt.setString(3, product.getDescription());
+			pstmt.setString(4, product.getCategory());
+			pstmt.setString(5, product.getManufacturer());
+			pstmt.setLong(6, product.getUnitsInStock());
+			pstmt.setString(7, product.getCondition());
+			pstmt.setString(8, product.getProductImage());
+			pstmt.setString(9, product.getProductId());
+			pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			JDBCUtil.close(conn, pstmt);
+		}
+	}
+	
+	//상품 수정
+	public void updateProductNoImage(Product product) {
+		conn = JDBCUtil.getConnection();
+		String sql = "UPDATE product SET p_name=?, p_unitPrice=?, p_description=?, "
+				+ "p_category=?, p_manufacturer=?, p_unitsInStock=?, p_condition=? "
+				+ "WHERE p_id=?";
+		try {
+			pstmt = conn.prepareStatement(sql);
+			pstmt.setString(1, product.getPname());
+			pstmt.setInt(2, product.getUnitPrice());
+			pstmt.setString(3, product.getDescription());
+			pstmt.setString(4, product.getCategory());
+			pstmt.setString(5, product.getManufacturer());
+			pstmt.setLong(6, product.getUnitsInStock());
+			pstmt.setString(7, product.getCondition());
+			pstmt.setString(8, product.getProductId());
+			pstmt.executeUpdate();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} finally {
+			JDBCUtil.close(conn, pstmt);
+		}
+	}
 }

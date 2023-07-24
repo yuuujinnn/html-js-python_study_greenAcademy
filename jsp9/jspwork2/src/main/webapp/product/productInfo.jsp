@@ -5,6 +5,9 @@
 <head>
 <meta charset="UTF-8">
 <title>상품 정보</title>
+<style type="text/css">
+	ul li{margin: 12px;}
+</style>
 </head>
 <body>
 	<h2>상품 정보</h2>

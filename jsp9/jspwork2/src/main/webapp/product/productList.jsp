@@ -7,7 +7,7 @@
 <meta charset="UTF-8">
 <title>상품 목록</title>
 <style>
-	table, th, td {
+	table, th, td{
 		border: 1px solid #ccc;
 		border-collapse: collapse;
 		padding: 8px;
@@ -24,14 +24,19 @@
 			</tr>
 		</thead>
 		<tbody>
-			<c:forEach items="${productList}" var="product" varStatus="i">
-				<tr>
-					<td>${i.index}</td>
-					<td><a href="/jspwork2/pcontrol?action=info&pid=${product.pid}">${product.pname}</a></td>
-					<td>${product.maker}</td>
-					<td>${product.price}</td>
-				</tr>
-			</c:forEach>
+		 <c:forEach items="${productList}" var="product" 
+		 		varStatus="i">
+		 	<tr>
+		 		<td>${i.count}</td>
+		 		<td>
+		 			<a href="/jspwork2/pcontrol?action=info&pid=${product.pid}">
+		 				${product.pname}
+		 			</a>
+		 		</td>
+		 		<td>${product.maker}</td>
+		 		<td>${product.price}</td>
+		 	</tr>
+		 </c:forEach> 
 		</tbody>
 	</table>
 </body>
